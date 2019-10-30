@@ -1,0 +1,2083 @@
+/*! normalize.css v2.1.2 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+/* line 11, ../src/stylesheets/normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+/* line 30, ../src/stylesheets/normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 41, ../src/stylesheets/normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 50, ../src/stylesheets/normalize.scss */
+[hidden] {
+  display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 64, ../src/stylesheets/normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+/* line 74, ../src/stylesheets/normalize.scss */
+body {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+/* line 86, ../src/stylesheets/normalize.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 94, ../src/stylesheets/normalize.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 108, ../src/stylesheets/normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+/* line 117, ../src/stylesheets/normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 125, ../src/stylesheets/normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+/* line 134, ../src/stylesheets/normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+/* line 142, ../src/stylesheets/normalize.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 152, ../src/stylesheets/normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+/* line 161, ../src/stylesheets/normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+/* line 173, ../src/stylesheets/normalize.scss */
+pre {
+  white-space: pre-wrap;
+}
+
+/**
+ * Set consistent quote types.
+ */
+/* line 181, ../src/stylesheets/normalize.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 189, ../src/stylesheets/normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 197, ../src/stylesheets/normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 205, ../src/stylesheets/normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 209, ../src/stylesheets/normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+/* line 221, ../src/stylesheets/normalize.scss */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+/* line 229, ../src/stylesheets/normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+/* line 241, ../src/stylesheets/normalize.scss */
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 253, ../src/stylesheets/normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 264, ../src/stylesheets/normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 275, ../src/stylesheets/normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 289, ../src/stylesheets/normalize.scss */
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+/* line 301, ../src/stylesheets/normalize.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 314, ../src/stylesheets/normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 326, ../src/stylesheets/normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ */
+/* line 336, ../src/stylesheets/normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 348, ../src/stylesheets/normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+/* line 360, ../src/stylesheets/normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 369, ../src/stylesheets/normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+/* line 380, ../src/stylesheets/normalize.scss */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 393, ../src/stylesheets/normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*! Hint.css - v1.2.1 - 2013-03-24
+* http://kushagragour.in/lab/hint/
+* Copyright (c) 2013 Kushagra Gour; Licensed MIT */
+/*-------------------------------------*\
+  HINT.css - A CSS tooltip library
+\*-------------------------------------*/
+/**
+ * HINT.css is a tooltip library made in pure CSS.
+ *
+ * Source: https://github.com/chinchang/hint.css
+ * Demo: http://kushagragour.in/labs/hint/
+ *
+ * Release under The MIT License
+ *
+ */
+/**
+ * source: hint-core.scss
+ *
+ * Defines the basic styling for the tooltip.
+ * Each tooltip is made of 2 parts:
+ *  1) body (:after)
+ *  2) arrow (:before)
+ * 
+ * Classes added:
+ *  1) hint
+ */
+/* line 28, ../src/stylesheets/hint.scss */
+.hint, [data-hint] {
+  position: relative;
+  display: inline-block;
+  /**
+   * tooltip arrow
+   */
+  /**
+   * tooltip body
+   */
+}
+
+/* line 37, ../src/stylesheets/hint.scss */
+.hint:before, .hint:after, [data-hint]:before, [data-hint]:after {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1000000;
+  pointer-events: none;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+/* line 46, ../src/stylesheets/hint.scss */
+.hint:hover:before, .hint:hover:after, [data-hint]:hover:before, [data-hint]:hover:after {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* line 49, ../src/stylesheets/hint.scss */
+.hint:before, [data-hint]:before {
+  content: '';
+  position: absolute;
+  background: transparent;
+  border: 6px solid transparent;
+  z-index: 1000001;
+}
+
+/* line 55, ../src/stylesheets/hint.scss */
+.hint:after, [data-hint]:after {
+  content: attr(data-hint);
+  background: #383838;
+  color: white;
+  text-shadow: 0 -1px 0px black;
+  padding: 8px 10px;
+  font-size: 12px;
+  line-height: 12px;
+  white-space: nowrap;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/**
+ * source: hint-position.scss
+ *
+ * Defines the positoning logic for the tooltips.
+ * 
+ * Classes added:
+ *  1) hint--top
+ *  2) hint--bottom
+ *  3) hint--left
+ *  4) hint--right
+ */
+/**
+ * set default color for tooltip arrows
+ */
+/* line 80, ../src/stylesheets/hint.scss */
+.hint--top:before {
+  border-top-color: #383838;
+}
+
+/* line 83, ../src/stylesheets/hint.scss */
+.hint--bottom:before {
+  border-bottom-color: #383838;
+}
+
+/* line 86, ../src/stylesheets/hint.scss */
+.hint--left:before {
+  border-left-color: #383838;
+}
+
+/* line 89, ../src/stylesheets/hint.scss */
+.hint--right:before {
+  border-right-color: #383838;
+}
+
+/**
+ * top tooltip
+ */
+/* line 95, ../src/stylesheets/hint.scss */
+.hint--top:before {
+  margin-bottom: -12px;
+}
+
+/* line 97, ../src/stylesheets/hint.scss */
+.hint--top:after {
+  margin-left: -18px;
+}
+
+/* line 99, ../src/stylesheets/hint.scss */
+.hint--top:before, .hint--top:after {
+  bottom: 100%;
+  left: 50%;
+}
+
+/* line 102, ../src/stylesheets/hint.scss */
+.hint--top:hover:before, .hint--top:hover:after {
+  -webkit-transform: translateY(-8px);
+  -moz-transform: translateY(-8px);
+  transform: translateY(-8px);
+}
+
+/**
+ * bottom tooltip
+ */
+/* line 110, ../src/stylesheets/hint.scss */
+.hint--bottom:before {
+  margin-top: -12px;
+}
+
+/* line 112, ../src/stylesheets/hint.scss */
+.hint--bottom:after {
+  margin-left: -18px;
+}
+
+/* line 114, ../src/stylesheets/hint.scss */
+.hint--bottom:before, .hint--bottom:after {
+  top: 100%;
+  left: 50%;
+}
+
+/* line 117, ../src/stylesheets/hint.scss */
+.hint--bottom:hover:before, .hint--bottom:hover:after {
+  -webkit-transform: translateY(8px);
+  -moz-transform: translateY(8px);
+  transform: translateY(8px);
+}
+
+/**
+ * right tooltip
+ */
+/* line 125, ../src/stylesheets/hint.scss */
+.hint--right:before {
+  margin-left: -12px;
+  margin-bottom: -6px;
+}
+
+/* line 128, ../src/stylesheets/hint.scss */
+.hint--right:after {
+  margin-bottom: -14px;
+}
+
+/* line 130, ../src/stylesheets/hint.scss */
+.hint--right:before, .hint--right:after {
+  left: 100%;
+  bottom: 50%;
+}
+
+/* line 133, ../src/stylesheets/hint.scss */
+.hint--right:hover:before, .hint--right:hover:after {
+  -webkit-transform: translateX(8px);
+  -moz-transform: translateX(8px);
+  transform: translateX(8px);
+}
+
+/**
+ * left tooltip
+ */
+/* line 141, ../src/stylesheets/hint.scss */
+.hint--left:before {
+  margin-right: -12px;
+  margin-bottom: -6px;
+}
+
+/* line 144, ../src/stylesheets/hint.scss */
+.hint--left:after {
+  margin-bottom: -14px;
+}
+
+/* line 146, ../src/stylesheets/hint.scss */
+.hint--left:before, .hint--left:after {
+  right: 100%;
+  bottom: 50%;
+}
+
+/* line 149, ../src/stylesheets/hint.scss */
+.hint--left:hover:before, .hint--left:hover:after {
+  -webkit-transform: translateX(-8px);
+  -moz-transform: translateX(-8px);
+  transform: translateX(-8px);
+}
+
+/**
+ * source: hint-color-types.scss
+ *
+ * Contains tooltips of various types based on color differences.
+ * 
+ * Classes added:
+ *  1) hint--error
+ *  2) hint--warning
+ *  3) hint--info
+ *  4) hint--success
+ *  
+ */
+/**
+ * Error
+ */
+/* line 169, ../src/stylesheets/hint.scss */
+.hint--error:after {
+  background-color: #b34e4d;
+  text-shadow: 0 -1px 0px #5a2626;
+}
+
+/* line 172, ../src/stylesheets/hint.scss */
+.hint--error.hint--top:before {
+  border-top-color: #b34e4d;
+}
+
+/* line 174, ../src/stylesheets/hint.scss */
+.hint--error.hint--bottom:before {
+  border-bottom-color: #b34e4d;
+}
+
+/* line 176, ../src/stylesheets/hint.scss */
+.hint--error.hint--left:before {
+  border-left-color: #b34e4d;
+}
+
+/* line 178, ../src/stylesheets/hint.scss */
+.hint--error.hint--right:before {
+  border-right-color: #b34e4d;
+}
+
+/**
+ * Warning
+ */
+/* line 184, ../src/stylesheets/hint.scss */
+.hint--warning:after {
+  background-color: #c09854;
+  text-shadow: 0 -1px 0px #6d5228;
+}
+
+/* line 187, ../src/stylesheets/hint.scss */
+.hint--warning.hint--top:before {
+  border-top-color: #c09854;
+}
+
+/* line 189, ../src/stylesheets/hint.scss */
+.hint--warning.hint--bottom:before {
+  border-bottom-color: #c09854;
+}
+
+/* line 191, ../src/stylesheets/hint.scss */
+.hint--warning.hint--left:before {
+  border-left-color: #c09854;
+}
+
+/* line 193, ../src/stylesheets/hint.scss */
+.hint--warning.hint--right:before {
+  border-right-color: #c09854;
+}
+
+/**
+ * Info
+ */
+/* line 199, ../src/stylesheets/hint.scss */
+.hint--info:after {
+  background-color: #3986ac;
+  text-shadow: 0 -1px 0px #193c4c;
+}
+
+/* line 202, ../src/stylesheets/hint.scss */
+.hint--info.hint--top:before {
+  border-top-color: #3986ac;
+}
+
+/* line 204, ../src/stylesheets/hint.scss */
+.hint--info.hint--bottom:before {
+  border-bottom-color: #3986ac;
+}
+
+/* line 206, ../src/stylesheets/hint.scss */
+.hint--info.hint--left:before {
+  border-left-color: #3986ac;
+}
+
+/* line 208, ../src/stylesheets/hint.scss */
+.hint--info.hint--right:before {
+  border-right-color: #3986ac;
+}
+
+/**
+ * Success
+ */
+/* line 214, ../src/stylesheets/hint.scss */
+.hint--success:after {
+  background-color: #458746;
+  text-shadow: 0 -1px 0px #1a331a;
+}
+
+/* line 217, ../src/stylesheets/hint.scss */
+.hint--success.hint--top:before {
+  border-top-color: #458746;
+}
+
+/* line 219, ../src/stylesheets/hint.scss */
+.hint--success.hint--bottom:before {
+  border-bottom-color: #458746;
+}
+
+/* line 221, ../src/stylesheets/hint.scss */
+.hint--success.hint--left:before {
+  border-left-color: #458746;
+}
+
+/* line 223, ../src/stylesheets/hint.scss */
+.hint--success.hint--right:before {
+  border-right-color: #458746;
+}
+
+/**
+ * source: hint-always.scss
+ *
+ * Defines a persisted tooltip which shows always.
+ * 
+ * Classes added:
+ *  1) hint--always
+ *  
+ */
+/* line 235, ../src/stylesheets/hint.scss */
+.hint--always:after, .hint--always:before {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* line 238, ../src/stylesheets/hint.scss */
+.hint--always.hint--top:after, .hint--always.hint--top:before {
+  -webkit-transform: translateY(-8px);
+  -moz-transform: translateY(-8px);
+  transform: translateY(-8px);
+}
+
+/* line 242, ../src/stylesheets/hint.scss */
+.hint--always.hint--bottom:after, .hint--always.hint--bottom:before {
+  -webkit-transform: translateY(8px);
+  -moz-transform: translateY(8px);
+  transform: translateY(8px);
+}
+
+/* line 246, ../src/stylesheets/hint.scss */
+.hint--always.hint--left:after, .hint--always.hint--left:before {
+  -webkit-transform: translateX(-8px);
+  -moz-transform: translateX(-8px);
+  transform: translateX(-8px);
+}
+
+/* line 250, ../src/stylesheets/hint.scss */
+.hint--always.hint--right:after, .hint--always.hint--right:before {
+  -webkit-transform: translateX(8px);
+  -moz-transform: translateX(8px);
+  transform: translateX(8px);
+}
+
+/**
+ * source: hint-rounded.scss
+ *
+ * Defines rounded corner tooltips.
+ * 
+ * Classes added:
+ *  1) hint--rounded
+ *  
+ */
+/* line 264, ../src/stylesheets/hint.scss */
+.hint--rounded:after {
+  border-radius: 4px;
+}
+
+/*********************************************************
+*  Variables
+*********************************************************/
+/*********************************************************
+*  General
+*********************************************************/
+/* line 49, ../src/stylesheets/blog.scss */
+body {
+  line-height: 1.5;
+  color: #555555;
+  margin: 0 0;
+  font-family: "Catamaran", sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+/* line 54, ../src/stylesheets/blog.scss */
+a {
+  color: #2b6cc2;
+  text-decoration: none;
+}
+
+/* line 55, ../src/stylesheets/blog.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 56, ../src/stylesheets/blog.scss */
+a.visited {
+  color: #285188;
+}
+
+/* line 57, ../src/stylesheets/blog.scss */
+.right {
+  float: right;
+}
+
+/* line 59, ../src/stylesheets/blog.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+}
+
+/* line 61, ../src/stylesheets/blog.scss */
+h1 {
+  font-size: 48px;
+}
+
+/* line 62, ../src/stylesheets/blog.scss */
+h2 {
+  font-size: 22px;
+}
+
+/* line 63, ../src/stylesheets/blog.scss */
+h3 {
+  font-size: 18px;
+}
+
+/* line 64, ../src/stylesheets/blog.scss */
+h4 {
+  font-size: 14px;
+}
+
+/* line 65, ../src/stylesheets/blog.scss */
+h5 {
+  font-size: 12px;
+}
+
+/* line 66, ../src/stylesheets/blog.scss */
+h6 {
+  font-size: 12px;
+}
+
+/* line 68, ../src/stylesheets/blog.scss */
+textarea, input[type=text] {
+  font-size: 16px;
+  padding: 5px;
+  border: 1px solid #ddd;
+}
+
+/* line 73, ../src/stylesheets/blog.scss */
+input[type='submit'] {
+  width: auto;
+  background: #2b6cc2;
+  border: 1px solid #1e728c;
+  border-radius: 3px;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  -moz-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5);
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5);
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0;
+  padding: 10px 20px 11px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  -moz-transition: background-color 0.15s ease-in-out;
+  -o-transition: background-color 0.15s ease-in-out;
+  -webkit-transition: background-color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
+}
+
+/* line 93, ../src/stylesheets/blog.scss */
+input[type='submit']:hover {
+  background: #285188;
+}
+
+/* line 96, ../src/stylesheets/blog.scss */
+input[type='submit']:active {
+  background: #2b6cc2;
+}
+
+/* line 100, ../src/stylesheets/blog.scss */
+.alert {
+  font-size: 14px;
+  margin: 10px 0px 10px 60px;
+  width: 800px;
+  max-width: 100%;
+  position: relative;
+  padding: 8px;
+  border: 1px solid #ddd;
+  color: #2b6cc2;
+  background: #fff;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  /* creates the smaller  triangle */
+}
+/* line 112, ../src/stylesheets/blog.scss */
+.alert:before {
+  content: "";
+  position: absolute;
+  /* FIXME - This is computed from the border below? Why isn't it using scss variables? */
+  top: -10px;
+  /* value = - border-top-width - border-bottom-width */
+  bottom: auto;
+  left: 20px;
+  right: auto;
+  /* controls horizontal position */
+  border-width: 0 10px 10px;
+  border-style: solid;
+  border-color: #ccc transparent;
+  /* reduce the damage in FF3.0 */
+  display: block;
+  width: 0;
+}
+/* line 129, ../src/stylesheets/blog.scss */
+.alert:after {
+  content: "";
+  position: absolute;
+  /* FIXME - Computed? What adds up to -9??? */
+  top: -9px;
+  /* value = - border-top-width - border-bottom-width */
+  bottom: auto;
+  left: 20px;
+  right: auto;
+  /* value = (:before right) + (:before border-right) - (:after border-right) */
+  border-width: 0 10px 10px;
+  border-style: solid;
+  border-color: #fff transparent;
+  /* reduce the damage in FF3.0 */
+  display: block;
+  width: 0;
+}
+
+/* line 146, ../src/stylesheets/blog.scss */
+#container {
+  width: 1260px;
+  margin: auto;
+  position: relative;
+}
+
+/*********************************************************
+*  Topbar and Header
+*********************************************************/
+/* line 159, ../src/stylesheets/blog.scss */
+#header_parent {
+  padding-bottom: 5px;
+}
+
+/* line 163, ../src/stylesheets/blog.scss */
+.posthaven-user-menu {
+  position: absolute;
+  top: 5px;
+  right: 0px;
+}
+/* line 168, ../src/stylesheets/blog.scss */
+.posthaven-user-menu .posthaven-anon {
+  font-size: 0px;
+  width: 32px;
+  height: 32px;
+  display: block;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #656565 0%, #444444 100%);
+  overflow: hidden;
+}
+/* line 176, ../src/stylesheets/blog.scss */
+.posthaven-user-menu .posthaven-anon a {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  text-align: right;
+}
+/* line 181, ../src/stylesheets/blog.scss */
+.posthaven-user-menu .posthaven-anon a:before {
+  content: '';
+  width: 10px;
+  height: 32px;
+  background: linear-gradient(180deg, #8bcdff 0%, #539eff 100%);
+  display: inline-block;
+}
+/* line 189, ../src/stylesheets/blog.scss */
+.posthaven-user-menu .posthaven-anon a:hover {
+  text-decoration: none;
+}
+
+/* line 195, ../src/stylesheets/blog.scss */
+#topbar {
+  margin-left: 60px;
+  max-width: 800px;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 201, ../src/stylesheets/blog.scss */
+#topbar .posthaven-tab {
+  float: left;
+  background-image: url("images/posthaven-tab-1x.png");
+  background-size: 100px 32px;
+  width: 100px;
+  height: 32px;
+}
+/* line 209, ../src/stylesheets/blog.scss */
+#topbar .account {
+  float: left;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 14px;
+  line-height: 31px;
+}
+/* line 215, ../src/stylesheets/blog.scss */
+#topbar .account a {
+  margin-left: 10px;
+}
+
+/* line 219, ../src/stylesheets/blog.scss */
+#header {
+  text-align: center;
+  max-width: 800px;
+  padding: 100px 0;
+  margin: auto;
+}
+/* line 225, ../src/stylesheets/blog.scss */
+#header h1 {
+  margin: 0px;
+  line-height: 58px;
+  text-transform: uppercase;
+}
+/* line 226, ../src/stylesheets/blog.scss */
+#header h1 a {
+  color: #000;
+}
+/* line 228, ../src/stylesheets/blog.scss */
+#header h1 a:hover {
+  text-decoration: none;
+}
+/* line 230, ../src/stylesheets/blog.scss */
+#header h2 {
+  color: #000;
+  opacity: 0.6;
+  margin: 0px;
+  line-height: 27px;
+}
+
+/* line 238, ../src/stylesheets/blog.scss */
+#main_container {
+  position: relative;
+  margin-top: 20px;
+}
+
+/* line 242, ../src/stylesheets/blog.scss */
+.main-content {
+  min-height: 300px;
+}
+
+/*********************************************************
+*  Navigation
+*********************************************************/
+/* line 250, ../src/stylesheets/blog.scss */
+#menu_navigation {
+  padding: 12px 30px 5px 5px;
+}
+/* line 252, ../src/stylesheets/blog.scss */
+#menu_navigation ul {
+  padding: 0 0;
+  margin: 0 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 254, ../src/stylesheets/blog.scss */
+#menu_navigation ul li {
+  list-style: none;
+  margin-right: 20px;
+  float: left;
+}
+/* line 258, ../src/stylesheets/blog.scss */
+#menu_navigation ul li a {
+  color: #000;
+  font-size: 20x;
+  font-weight: bold;
+}
+/* line 259, ../src/stylesheets/blog.scss */
+#menu_navigation ul li a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+/*********************************************************
+*  Sidebar (for Archive only)
+*********************************************************/
+/* line 270, ../src/stylesheets/blog.scss */
+#sidebar {
+  clear: both;
+  position: absolute;
+  top: 0px;
+  width: 150px;
+  font-weight: 300;
+  margin-left: 60px;
+}
+
+/* line 280, ../src/stylesheets/blog.scss */
+#sidebar section, #footer section {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+/* line 283, ../src/stylesheets/blog.scss */
+#sidebar section p, #sidebar section ul li, #footer section p, #footer section ul li {
+  font-size: 14px;
+}
+/* line 284, ../src/stylesheets/blog.scss */
+#sidebar section h3, #footer section h3 {
+  margin: 5px 0px 5px;
+  font-size: 14px;
+  font-weight: normal;
+  color: #444;
+}
+/* line 285, ../src/stylesheets/blog.scss */
+#sidebar section ul, #footer section ul {
+  padding-left: 0px;
+  margin: 0px 0px;
+}
+/* line 286, ../src/stylesheets/blog.scss */
+#sidebar section ul li, #footer section ul li {
+  list-style: none;
+}
+/* line 287, ../src/stylesheets/blog.scss */
+#sidebar section li.hidden-tag, #footer section li.hidden-tag {
+  display: none;
+}
+/* line 289, ../src/stylesheets/blog.scss */
+#sidebar section .menu, #footer section .menu {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+/* line 291, ../src/stylesheets/blog.scss */
+#sidebar section:first-child, #sidebar section:first-child nav:first-child,
+#sidebar section:first-child nav:first-child ul, #footer section:first-child, #footer section:first-child nav:first-child,
+#footer section:first-child nav:first-child ul {
+  margin-top: 0 !important;
+}
+/* line 296, ../src/stylesheets/blog.scss */
+#sidebar h3, #footer h3 {
+  color: #4d423f;
+  font-size: 22px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* line 299, ../src/stylesheets/blog.scss */
+section.subhead {
+  margin-left: 60px;
+}
+
+/* line 302, ../src/stylesheets/blog.scss */
+.back-to-blog {
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+/* line 305, ../src/stylesheets/blog.scss */
+.back-to-blog a {
+  color: #999;
+}
+
+/* line 308, ../src/stylesheets/blog.scss */
+#footer {
+  padding: 50px 80px;
+  background-color: #ddd;
+  color: #000;
+}
+/* line 309, ../src/stylesheets/blog.scss */
+#footer #menu_navigation {
+  max-width: 800px;
+  margin: auto;
+  padding: 0;
+}
+/* line 313, ../src/stylesheets/blog.scss */
+#footer #menu_navigation ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+/* line 318, ../src/stylesheets/blog.scss */
+#footer #menu_navigation ul li {
+  float: none;
+  margin-right: 0px;
+  text-align: center;
+}
+/* line 330, ../src/stylesheets/blog.scss */
+#footer a {
+  color: #888;
+}
+/* line 330, ../src/stylesheets/blog.scss */
+#footer a:hover {
+  color: #999;
+}
+/* line 331, ../src/stylesheets/blog.scss */
+#footer h3 {
+  color: #444;
+  font-size: 12px;
+}
+/* line 333, ../src/stylesheets/blog.scss */
+#footer #menu_blogroll {
+  max-width: 800px;
+  margin: auto;
+}
+/* line 338, ../src/stylesheets/blog.scss */
+#footer .blogroll-menu {
+  text-align: center;
+  margin: 50px 0px;
+}
+/* line 341, ../src/stylesheets/blog.scss */
+#footer .blogroll-menu ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+/* line 346, ../src/stylesheets/blog.scss */
+#footer .blogroll-menu ul li {
+  width: 50%;
+}
+/* line 352, ../src/stylesheets/blog.scss */
+#footer #tag_list_menu {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+/* line 356, ../src/stylesheets/blog.scss */
+#footer #tag_list_menu ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/* line 361, ../src/stylesheets/blog.scss */
+#footer #tag_list_menu ul li {
+  border: 1px solid gray;
+  border-radius: 15px;
+  margin: 5px;
+  padding: 0px 5px;
+}
+/* line 366, ../src/stylesheets/blog.scss */
+#footer #tag_list_menu ul li .tag-count {
+  color: #444444;
+  opacity: 0.3;
+}
+/* line 371, ../src/stylesheets/blog.scss */
+#footer #bio {
+  text-align: center;
+  font-size: 14px;
+}
+/* line 374, ../src/stylesheets/blog.scss */
+#footer #bio .profile-pic img {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #666;
+}
+/* line 379, ../src/stylesheets/blog.scss */
+#footer #bio h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #444;
+}
+/* line 381, ../src/stylesheets/blog.scss */
+#footer #bio h3 a {
+  color: inherit;
+}
+
+/* line 387, ../src/stylesheets/blog.scss */
+.feed-icon {
+  width: 14px;
+  height: 14px;
+  display: block;
+  background-image: url("images/feed14.png");
+}
+
+/*********************************************************
+*  Subscribe Form
+*********************************************************/
+/* line 398, ../src/stylesheets/blog.scss */
+.subscribe-footer {
+  margin: 50px 0px;
+  text-align: center;
+}
+/* line 402, ../src/stylesheets/blog.scss */
+.subscribe-footer .subscribe-wrapper {
+  width: 500px;
+  max-width: 100%;
+  margin: auto;
+}
+/* line 406, ../src/stylesheets/blog.scss */
+.subscribe-footer .subscribe-wrapper span {
+  display: block;
+  color: #999;
+}
+/* line 408, ../src/stylesheets/blog.scss */
+.subscribe-footer .subscribe-wrapper .posthaven-user-subscribe::before {
+  content: "Don't miss out on new posts!";
+}
+/* line 413, ../src/stylesheets/blog.scss */
+.subscribe-footer input {
+  margin-top: 8px;
+  font-size: 12px;
+}
+/* line 418, ../src/stylesheets/blog.scss */
+.subscribe-footer input[type=text] {
+  width: 100%;
+  max-width: 400px;
+}
+/* line 422, ../src/stylesheets/blog.scss */
+.subscribe-footer input[type=submit] {
+  padding: 5px 10px;
+}
+/* line 423, ../src/stylesheets/blog.scss */
+.subscribe-footer .posthaven-subscribe-error {
+  color: #a00;
+}
+
+/* line 428, ../src/stylesheets/blog.scss */
+#sidebar section.subscribe .posthaven-subscribe-prompt strong {
+  display: block;
+}
+/* line 431, ../src/stylesheets/blog.scss */
+#sidebar section.subscribe .posthaven-subscribe-prompt span {
+  color: #555555;
+}
+
+/* line 438, ../src/stylesheets/blog.scss */
+.post-responses .subscribe {
+  margin-top: 8px;
+  font-size: 16px;
+}
+/* line 442, ../src/stylesheets/blog.scss */
+.post-responses .subscribe .posthaven-subscribe-form {
+  display: inline-block;
+}
+/* line 446, ../src/stylesheets/blog.scss */
+.post-responses .subscribe a {
+  margin-left: 0.4em;
+}
+/* line 451, ../src/stylesheets/blog.scss */
+.post-responses .subscribe .posthaven-subscribe-prompt strong {
+  font-weight: normal;
+}
+/* line 452, ../src/stylesheets/blog.scss */
+.post-responses .subscribe .posthaven-subscribe-prompt span {
+  display: none;
+}
+/* line 455, ../src/stylesheets/blog.scss */
+.post-responses .subscribe .posthaven-user-subscribe, .post-responses .subscribe .posthaven-user-unsubscribe {
+  margin-left: 0.3em;
+}
+
+/* line 460, ../src/stylesheets/blog.scss */
+.posthaven-user-subscribed .post-responses .subscribe {
+  display: none;
+}
+
+/*********************************************************
+*  Private Page
+*********************************************************/
+/* line 468, ../src/stylesheets/blog.scss */
+.posthaven-password-field {
+  display: inline-block;
+}
+
+/*********************************************************
+*  Posts
+*********************************************************/
+/* line 476, ../src/stylesheets/blog.scss */
+#main {
+  margin: auto;
+}
+
+/* line 480, ../src/stylesheets/blog.scss */
+#main.archive-results {
+  margin-left: 240px;
+}
+
+/* line 483, ../src/stylesheets/blog.scss */
+.post-aside {
+  margin-top: 60px;
+  width: 125px;
+  color: #aaa;
+  font-size: 12px;
+}
+/* line 488, ../src/stylesheets/blog.scss */
+.post-aside a {
+  color: #aaa;
+}
+/* line 489, ../src/stylesheets/blog.scss */
+.post-aside .tag-count {
+  font-size: 12px;
+}
+/* line 490, ../src/stylesheets/blog.scss */
+.post-aside .show-tags {
+  margin-top: 5px;
+  font-size: 12px;
+}
+/* line 491, ../src/stylesheets/blog.scss */
+.post-aside .actual-date {
+  font-size: 12px;
+  color: #aaa;
+}
+/* line 492, ../src/stylesheets/blog.scss */
+.post-aside h3 {
+  margin: 20px 0px 5px;
+  font-size: 12px;
+  font-weight: normal;
+}
+/* line 493, ../src/stylesheets/blog.scss */
+.post-aside ul {
+  padding-left: 0px;
+  margin: 0px 0px;
+}
+/* line 494, ../src/stylesheets/blog.scss */
+.post-aside ul li {
+  list-style: none;
+}
+
+/* line 496, ../src/stylesheets/blog.scss */
+.post {
+  width: 800px;
+  max-width: 100%;
+  margin: auto;
+  font-size: 18px;
+  color: #555555;
+  /* responsive resize */
+  /* IE8 css bug */
+}
+/* line 505, ../src/stylesheets/blog.scss */
+.post .post-body h1, .post .post-body h2, .post .post-body h3 {
+  color: #333;
+  margin-top: 30px;
+}
+/* line 506, ../src/stylesheets/blog.scss */
+.post .post-body h1 {
+  font-size: 22px;
+}
+/* line 507, ../src/stylesheets/blog.scss */
+.post .post-body h2 {
+  font-size: 20px;
+}
+/* line 508, ../src/stylesheets/blog.scss */
+.post .post-body h3 {
+  font-size: 22px;
+  font-style: italic;
+}
+/* line 510, ../src/stylesheets/blog.scss */
+.post p {
+  margin: 24px auto;
+}
+/* line 511, ../src/stylesheets/blog.scss */
+.post .post-body .posthaven-gallery {
+  margin-left: -100px;
+  margin-right: -100px;
+  text-align: center;
+}
+/* line 517, ../src/stylesheets/blog.scss */
+.post img, .post object, .post embed, .post iframe {
+  max-width: 100%;
+}
+/* line 518, ../src/stylesheets/blog.scss */
+.post img {
+  height: auto;
+}
+/* line 519, ../src/stylesheets/blog.scss */
+.post iframe {
+  max-width: inherit\9;
+}
+/* line 521, ../src/stylesheets/blog.scss */
+.post blockquote p {
+  font-size: 18px;
+}
+/* line 522, ../src/stylesheets/blog.scss */
+.post blockquote {
+  padding-left: 10px;
+  border-left: 4px solid #eee;
+  font-size: 18px;
+  color: #666;
+}
+/* line 524, ../src/stylesheets/blog.scss */
+.post pre {
+  font-size: 13px;
+}
+/* line 525, ../src/stylesheets/blog.scss */
+.post .slash-divider {
+  color: #ddd;
+}
+/* line 526, ../src/stylesheets/blog.scss */
+.post .private-indicator {
+  margin-top: 10px;
+}
+/* line 529, ../src/stylesheets/blog.scss */
+.post .private-indicator .lock-icon {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-image: url("images/lock-icon.png");
+  position: relative;
+  top: -3px;
+}
+/* line 538, ../src/stylesheets/blog.scss */
+.post .post-title {
+  margin: 0 auto 20px;
+  text-align: center;
+}
+/* line 541, ../src/stylesheets/blog.scss */
+.post .post-title h2 {
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+/* line 543, ../src/stylesheets/blog.scss */
+.post .post-title h2 a {
+  color: #000;
+}
+/* line 545, ../src/stylesheets/blog.scss */
+.post .post-title .author {
+  font-size: 13px;
+  color: #999;
+}
+/* line 548, ../src/stylesheets/blog.scss */
+.post .post-title .author a {
+  color: #999;
+}
+/* line 553, ../src/stylesheets/blog.scss */
+.post .display-date {
+  margin: 30px 0;
+  font-size: 14px;
+  color: #999;
+}
+/* line 556, ../src/stylesheets/blog.scss */
+.post .display-date a {
+  color: #999;
+}
+/* line 558, ../src/stylesheets/blog.scss */
+.post .homepage-post-footer {
+  margin: 30px 0;
+  font-size: 14px;
+  text-align: center;
+}
+/* line 562, ../src/stylesheets/blog.scss */
+.post .homepage-post-footer .tags {
+  margin: 10px 0;
+  font-size: 12px;
+}
+/* line 565, ../src/stylesheets/blog.scss */
+.post .homepage-post-footer .tags h6 {
+  font-weight: normal;
+  color: #999;
+  font-size: 12px;
+  display: inline;
+}
+/* line 566, ../src/stylesheets/blog.scss */
+.post .homepage-post-footer .tags ul {
+  padding-left: 10px;
+  margin-left: 0;
+  display: inline;
+}
+/* line 567, ../src/stylesheets/blog.scss */
+.post .homepage-post-footer .tags ul li {
+  display: inline;
+  margin-right: 10px;
+}
+/* line 568, ../src/stylesheets/blog.scss */
+.post .homepage-post-footer .tags ul li a {
+  white-space: nowrap;
+}
+/* line 572, ../src/stylesheets/blog.scss */
+.post table {
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  border-collapse: collapse;
+}
+/* line 573, ../src/stylesheets/blog.scss */
+.post table, .post th, .post td {
+  border-top: 1px solid #ddd;
+}
+/* line 574, ../src/stylesheets/blog.scss */
+.post table th, .post table td {
+  padding: 4px 5px;
+}
+/* line 575, ../src/stylesheets/blog.scss */
+.post table p:first-child {
+  margin-top: 0px;
+}
+/* line 576, ../src/stylesheets/blog.scss */
+.post table p:last-child {
+  margin-bottom: 0px;
+}
+
+/* line 578, ../src/stylesheets/blog.scss */
+.gist {
+  font-size: 13px;
+}
+
+/* line 582, ../src/stylesheets/blog.scss */
+.post:first-child {
+  margin-top: 0px;
+}
+
+/*********************************************************
+*  Pagination
+*********************************************************/
+/* line 590, ../src/stylesheets/blog.scss */
+.pagination {
+  text-align: center;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 592, ../src/stylesheets/blog.scss */
+.pagination ul {
+  margin: 10px 0 40px 0;
+  padding: 0 0;
+}
+/* line 593, ../src/stylesheets/blog.scss */
+.pagination ul li {
+  list-style: none;
+  margin-left: 0px;
+  float: left;
+  display: block;
+  font-size: 12px;
+  height: 40px;
+}
+/* line 595, ../src/stylesheets/blog.scss */
+.pagination ul li a {
+  padding: 5px 10px;
+  background-color: #eee;
+  margin-right: 5px;
+}
+/* line 596, ../src/stylesheets/blog.scss */
+.pagination ul li.gap a {
+  padding: 5px 10px;
+  border: none;
+  margin-right: 5px;
+}
+/* line 597, ../src/stylesheets/blog.scss */
+.pagination ul li.active a {
+  color: #222;
+  font-weight: bold;
+}
+/* line 598, ../src/stylesheets/blog.scss */
+.pagination ul li a:hover {
+  background-color: #aaa;
+  text-decoration: none;
+}
+
+/*********************************************************
+*  Responses
+*********************************************************/
+/* line 608, ../src/stylesheets/blog.scss */
+#post_responses {
+  margin: 40px -3px 100px -5px;
+  padding: 0px 5px;
+  font-weight: 300;
+}
+
+/* line 614, ../src/stylesheets/blog.scss */
+.post-responses {
+  font-weight: 300;
+}
+/* line 617, ../src/stylesheets/blog.scss */
+.post-responses .count {
+  margin: 40px -5px 5px;
+  padding: 5px 5px 0;
+  color: #ccc;
+  font-weight: 100;
+  font-size: 16px;
+}
+/* line 625, ../src/stylesheets/blog.scss */
+.post-responses .count .comment-icon {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-image: url("images/comment-icon.png");
+  position: relative;
+  top: 1px;
+  margin-right: 3px;
+}
+/* line 637, ../src/stylesheets/blog.scss */
+.post-responses .responses .response {
+  position: relative;
+  margin: 10px -10px;
+  padding: 8px 10px;
+  max-width: 550px;
+  font-size: 13px;
+}
+/* line 643, ../src/stylesheets/blog.scss */
+.post-responses .responses .response p {
+  margin: 8px 0px;
+}
+/* line 644, ../src/stylesheets/blog.scss */
+.post-responses .responses .response p:first-child {
+  margin: 0 0 8px;
+}
+/* line 645, ../src/stylesheets/blog.scss */
+.post-responses .responses .response .byline {
+  color: #999;
+}
+/* line 647, ../src/stylesheets/blog.scss */
+.post-responses .responses .response .byline .mdash {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 100;
+}
+/* line 648, ../src/stylesheets/blog.scss */
+.post-responses .responses .response .byline .time-ago {
+  margin-left: 10px;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 11px;
+  color: #ccc;
+  display: none;
+}
+/* line 653, ../src/stylesheets/blog.scss */
+.post-responses .responses .response .comment {
+  color: #444;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+/* line 654, ../src/stylesheets/blog.scss */
+.post-responses .responses .response .upvote {
+  color: #444;
+  font-weight: 500;
+}
+/* line 656, ../src/stylesheets/blog.scss */
+.post-responses .responses .response:hover {
+  background-color: #f0f0f0;
+}
+/* line 658, ../src/stylesheets/blog.scss */
+.post-responses .responses .response:hover .time-ago {
+  display: inline;
+}
+/* line 660, ../src/stylesheets/blog.scss */
+.post-responses .responses .upvote {
+  color: #333;
+  font-size: 13px;
+}
+/* line 660, ../src/stylesheets/blog.scss */
+.post-responses .responses .upvote span.number {
+  font-weight: bold;
+}
+
+/* line 665, ../src/stylesheets/blog.scss */
+.posthaven-share-links .posthaven-share-item {
+  display: inline-block;
+  overflow: visible;
+}
+/* line 669, ../src/stylesheets/blog.scss */
+.posthaven-share-links .posthaven-upvote {
+  min-width: 90px;
+  margin-right: 35px;
+}
+/* line 673, ../src/stylesheets/blog.scss */
+.posthaven-share-links .posthaven-twitter-share {
+  min-width: 107px;
+  margin-right: 20px;
+}
+
+@media handheld, only screen and (max-width: 414px) {
+  /* line 680, ../src/stylesheets/blog.scss */
+  .posthaven-share-links > .posthaven-share-item {
+    display: block;
+    margin: 5px 0;
+  }
+}
+/* line 689, ../src/stylesheets/blog.scss */
+.posthaven-comment-form {
+  padding: 5px 10px;
+  margin: 40px -10px;
+}
+/* line 693, ../src/stylesheets/blog.scss */
+.posthaven-comment-form .posthaven-comment-add-url {
+  font-size: 12px;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+/* line 695, ../src/stylesheets/blog.scss */
+.posthaven-comment-form .posthaven-field {
+  margin: 10px 0px;
+}
+/* line 698, ../src/stylesheets/blog.scss */
+.posthaven-comment-form .posthaven-field label {
+  width: 130px;
+  display: block;
+  margin-bottom: 3px;
+  color: #999;
+  font-size: 13px;
+}
+/* line 706, ../src/stylesheets/blog.scss */
+.posthaven-comment-form .posthaven-field textarea, .posthaven-comment-form .posthaven-field input[type=text] {
+  max-width: 95%;
+  width: 550px;
+}
+/* line 711, ../src/stylesheets/blog.scss */
+.posthaven-comment-form .posthaven-field input[type=checkbox] {
+  margin-right: 3px;
+}
+/* line 716, ../src/stylesheets/blog.scss */
+.posthaven-comment-form .posthaven-field.posthaven-comment-notify-field label {
+  display: inline;
+}
+/* line 721, ../src/stylesheets/blog.scss */
+.posthaven-comment-form .posthaven-comment-verification {
+  width: 500px;
+  margin-bottom: 10px;
+}
+
+/*********************************************************
+*  All tags page
+*********************************************************/
+/* line 728, ../src/stylesheets/blog.scss */
+.all-tags {
+  overflow: hidden;
+  *zoom: 1;
+  margin-bottom: 40px;
+}
+/* line 733, ../src/stylesheets/blog.scss */
+.all-tags ul {
+  padding: 0;
+}
+/* line 734, ../src/stylesheets/blog.scss */
+.all-tags li {
+  margin-right: 10px;
+  list-style: none;
+}
+/* line 736, ../src/stylesheets/blog.scss */
+.all-tags .tag-count {
+  color: #666;
+  font-size: 0.9em;
+}
+
+/*********************************************************
+*  Archive
+*********************************************************/
+/* line 744, ../src/stylesheets/blog.scss */
+.archive-container {
+  position: relative;
+}
+
+/* line 745, ../src/stylesheets/blog.scss */
+.archive-results {
+  margin-bottom: 40px;
+}
+/* line 748, ../src/stylesheets/blog.scss */
+.archive-results ul {
+  padding: 0px;
+}
+
+/* line 754, ../src/stylesheets/blog.scss */
+.posthaven-archive-form input {
+  width: 100%;
+  margin-bottom: 5px;
+  font-size: 17px;
+  padding: 5px 5px 5px 35px;
+  background-image: url("images/search.png");
+  background-repeat: no-repeat;
+  background-position: 7px 10px;
+  background-size: 18px 18px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* line 769, ../src/stylesheets/blog.scss */
+#sidebar .posthaven-archive-form input {
+  margin-bottom: 0px;
+  font-size: 14px;
+  padding: 5px 5px 5px 25px;
+  max-width: 180px;
+  background-repeat: no-repeat;
+  background-position: 5px 7px;
+  background-size: 13px 13px;
+  border: 1px solid #ddd;
+}
+/* line 61, ../../../../../.rvm/gems/ruby-2.3.5@ph-themes/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+#sidebar .posthaven-archive-form input:-moz-placeholder {
+  opacity: 1;
+  color: #ccc;
+}
+/* line 64, ../../../../../.rvm/gems/ruby-2.3.5@ph-themes/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+#sidebar .posthaven-archive-form input::-moz-placeholder {
+  opacity: 1;
+  color: #ccc;
+}
+/* line 67, ../../../../../.rvm/gems/ruby-2.3.5@ph-themes/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+#sidebar .posthaven-archive-form input:-ms-input-placeholder {
+  opacity: 1;
+  color: #ccc;
+}
+/* line 56, ../../../../../.rvm/gems/ruby-2.3.5@ph-themes/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+#sidebar .posthaven-archive-form input::-webkit-input-placeholder {
+  opacity: 1;
+  color: #ccc;
+}
+
+/* line 786, ../src/stylesheets/blog.scss */
+.archive-link {
+  font-size: 13px;
+}
+
+/* line 790, ../src/stylesheets/blog.scss */
+input.archive-search.archive-tooltip {
+  color: #aaa;
+}
+
+/* line 794, ../src/stylesheets/blog.scss */
+li.archive-entry {
+  list-style: none;
+  margin-bottom: 20px;
+}
+/* line 796, ../src/stylesheets/blog.scss */
+li.archive-entry a {
+  display: block;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 3px;
+}
+/* line 798, ../src/stylesheets/blog.scss */
+li.archive-entry em {
+  background-color: #eee;
+  font-style: normal;
+}
+/* line 799, ../src/stylesheets/blog.scss */
+li.archive-entry .archive-date {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 11px;
+  color: #999;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* line 803, ../src/stylesheets/blog.scss */
+li.archive-entry .search-highlight {
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+
+/* line 805, ../src/stylesheets/blog.scss */
+.archive-container {
+  margin-bottom: 100px;
+}
+
+/* line 806, ../src/stylesheets/blog.scss */
+.archive {
+  margin: 0;
+  font-size: 12px;
+}
+/* line 809, ../src/stylesheets/blog.scss */
+.archive h3 {
+  margin: 0 0;
+}
+
+/* line 811, ../src/stylesheets/blog.scss */
+.search-archive {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+/* line 818, ../src/stylesheets/blog.scss */
+.archive-pagination a {
+  font-size: 12px;
+}
+/* line 820, ../src/stylesheets/blog.scss */
+.archive-pagination a:first-of-t {
+  margin-right: 15px;
+}
+
+/* line 824, ../src/stylesheets/blog.scss */
+.archive-all-dates a {
+  font-size: 12px;
+}
+
+/*********************************************************
+*  Responsiveness
+*********************************************************/
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  /* Retina-specific stuff here */
+  /* line 835, ../src/stylesheets/blog.scss */
+  #topbar .posthaven-tab {
+    background-image: url("images/posthaven-tab-4x.png");
+  }
+
+  /* line 837, ../src/stylesheets/blog.scss */
+  .feed-icon {
+    background-size: 14px 14px;
+    background-image: url("images/feed28.png");
+  }
+}
+@media handheld, only screen and (max-width: 767px) {
+  /* line 845, ../src/stylesheets/blog.scss */
+  #sidebar {
+    position: inherit;
+    width: auto;
+  }
+
+  /* line 846, ../src/stylesheets/blog.scss */
+  #menu_navigation, .subscribe-footer, #footer {
+    padding: 10px 20px;
+  }
+
+  /* line 847, ../src/stylesheets/blog.scss */
+  #header, #sidebar, #main, #topbar, .alert, section.subhead, .post-aside {
+    margin: 0px 20px 20px;
+    float: none;
+    position: inherit;
+    right: inherit;
+    top: inherit;
+  }
+
+  /* line 851, ../src/stylesheets/blog.scss */
+  .alert {
+    width: auto;
+  }
+
+  /* line 852, ../src/stylesheets/blog.scss */
+  #main_container {
+    margin-top: 30px;
+  }
+
+  /* line 854, ../src/stylesheets/blog.scss */
+  #header h1 {
+    font-size: 30px;
+  }
+  /* line 854, ../src/stylesheets/blog.scss */
+  #header h2 {
+    font-size: 20px;
+  }
+
+  /* line 856, ../src/stylesheets/blog.scss */
+  #back_to_blog {
+    display: none;
+  }
+
+  /* line 857, ../src/stylesheets/blog.scss */
+  .posthaven-archive-form input {
+    width: 90%;
+  }
+}

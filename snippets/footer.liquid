@@ -1,0 +1,55 @@
+{% if site.subscription_enabled? %}
+  <section class="subscribe-footer">
+    <div class="subscribe-wrapper">
+      {% form 'subscribe' include_prompt:false %}
+    </div>
+  </section>
+{% endif %}
+
+
+<footer id='footer'>
+    {% include 'bio' %}
+    {% include 'contributors_section' %}
+    {% include 'feed' %}
+    {% include 'nav_menu' %}
+
+
+    <section class="search-archive">
+      {% form 'archive' %}
+
+       <div class="archive-link">
+         <a href="{{ site.archive_url }}">Browse the archive</a>
+       </div>
+    </section>
+
+    {% include 'blogroll' %}
+
+    {% if site.tags.size > 0 %}
+      <section id="tag_list_menu">
+        <h3>Tags</h3>
+
+        <ul>
+          {% for t in site.tags limit:5 %}
+            <li>
+              {% if tag and tag == t.name %}
+                <strong>{{ t.name }}</strong>
+                <span class="measure tag-count">{{ t.post_count }}</span>
+              {% else %}
+                <a href="{{ t.url }}">{{ t.name }}</a>
+                <span class="measure tag-count">{{ t.post_count }}</span>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+
+        {% if site.tags.size > 5 %}
+          <div>
+            <a href="{{ site.tags_url }}">
+              See all {{ site.tags.size }} tags
+            </a>
+          </div>
+        {% endif %}
+      </section>
+    {% endif %}
+
+</footer>
