@@ -5,18 +5,8 @@
       {{ response.body }}
     </div>
     <div class="byline">
-      <span class="mdash">&mdash;</span>
-      {{ response.display_name }}
+      <span class="response-name">{{ response.display_name }}</span>
       <span class="time-ago">{{ response.created_at | relative_date }}</span>
     </div>
   </div>
-{% when "upvote" %}
-  {% unless response.anon? %}
-    <div class="response">
-      <div class="upvote">
-        <strong>{{ response.display_name }}</strong>
-        upvoted this post.
-      </div>
-    </div>
-  {% endunless %}
 {% endcase %}
