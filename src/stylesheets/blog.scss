@@ -10,12 +10,11 @@
 @import "compass/css3/transition";
 @import "compass/css3/user-interface";
 
-
 /*********************************************************
 *  Variables
 *********************************************************/
 
-$headerFont: "Roboto", Helvetica, Arial, sans-serif;
+$headerFont: 'proximanova-extrabold', sans-serif;
 
 $helveticaNeue: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $helveticaNeueLight: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica,
@@ -23,18 +22,16 @@ $helveticaNeueLight: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica N
 $helveticaNeueUltralight: "HelveticaNeue-UltraLight", "Helvetica Neue Ultra Light",
                           "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
-$bodyFont: 'Catamaran', sans-serif;
+$bodyFont: 'proximanova-medium', sans-serif;
 $bodyWeight: 300;
-$bodyColor: #555555;
-$bodyFontSize: 18px;
+$bodyColor: rgba(0,0,0,0.85);
+$bodyFontSize: 22px;
 $postWidth: 800px;
 
-$sidebarWidth: 150px;
-$sidebarGutter: 240px;
 $fullGutter: 60px;
 
 $footerSectionWidth: 250px;
-$footerColor: #ddd;
+$footerColor: rgba(210, 210, 210, 0.5);
 
 $lightAccentColor: #999;
 
@@ -51,50 +48,98 @@ body {
   font-weight: $bodyWeight; overflow-x: hidden;
 }
 
-a { color: $primaryColor; text-decoration: none; }
-a:hover { text-decoration: underline; }
-a.visited { color: $primaryDarkerColor;}
-.right { float: right; }
+a {
+  text-decoration: none;
+}
+a:hover { text-decoration: none; }
+.post-body a,
+.menu_navigation a,
+.subscribe-footer a,
+.search-archive a,
+#menu_blogroll a {
+	color: #000000;
+	font-family: "proximanova-medium";
+	font-size: 18px;
+	font-weight: bold;
+  border-bottom: 2px dashed rgba(0,0,0,0.1);
+  outline: none;
+  &:hover {
+    border-bottom-color: rgba(0,0,0,0.4);
+  }
+  &:active {
+    border-bottom-color: rgba(0,0,0,0.7);
+  }
+}
+.small {
+  font-size: 18px;
+  font-weight: 300;
+  color: rgba(0,0,0,0.6);
+}
 
-h1, h2, h3, h4, h5, h6 { font-family: $headerFont; font-weight: 500; line-height: 1.1;
-                         letter-spacing: -0.015em;}
+h1, h2, h3, h4, h5, h6 { font-family: $headerFont; font-weight: 500; line-height: 1.1;}
 h1 { font-size: 48px; }
-h2 { font-size: 22px; }
-h3 { font-size: 18px; }
-h4 { font-size: 14px; }
-h5 { font-size: 12px; }
-h6 { font-size: 12px; }
+h2 { font-size: 30px; }
+h3 { font-size: 30px; }
+h4 { font-size: 24px; }
+h5 { font-size: 22px; font-family: 'proximanova-medium'; opacity: 0.6 }
 
 textarea, input[type=text] {
-  font-size: 16px;
-  padding: 5px;
-  border: 1px solid #ddd;
+  color: #000000;
+  padding: 10px 20px;
+  width: 100%;
+	box-sizing: border-box;
+	height: 50px;
+	border: 2px solid rgba(0,0,0,0.15);
+	border-radius: 2px;
+	background-color: #FFFFFF;
+  font-size: 20px;
+  outline: none;
+  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: rgba(68, 68, 68, 0.2);
+  }
+  &::-moz-placeholder { /* Firefox 19+ */
+    color: rgba(68, 68, 68, 0.2);
+  }
+  &:-ms-input-placeholder { /* IE 10+ */
+    color: rgba(68, 68, 68, 0.2);
+  }
+  &:-moz-placeholder { /* Firefox 18- */
+    color: rgba(68, 68, 68, 0.2);
+  }
+  &:hover {
+  	border: 2px solid rgba(0,0,0,0.5);
+  }
+  &:active {
+  	border: 2px solid rgba(0,0,0,1);
+  }
 }
 input[type='submit'], .posthaven-user-subscribe a {
-  width: auto;
-  background: $primaryColor;
-  border: 1px solid #1e728c;
-  border-radius: 3px;
-  font-family: $helveticaNeue;
-  @include single-box-shadow(0, 1px, 0, 0, rgba(#fff, 0.5));
+  width: 100%;
+  font-family: "proximanova-medium";
   color: white;
   cursor: pointer;
   display: inline-block;
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 1;
-  margin: 0;
-  padding: 10px 20px 11px;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0px;
+  padding: 9px 0px;
   position: relative;
   text-align: center;
   text-decoration: none;
-  @include transition(background-color 0.15s ease-in-out);
+	box-sizing: border-box;
+	height: 50px;
+	border: 2px solid #000000;
+	border-radius: 2px;
+	background: rgba(0,0,0,0.85);
+  outline: none;
 }
-input[type='submit']:hover, .posthaven-user-subscribe a {
-  background: $primaryDarkerColor;
+input[type='submit']:hover, .posthaven-user-subscribe a:hover {
+  background: rgba(0,0,0,1);
 }
-input[type='submit']:active, .posthaven-user-subscribe a {
-  background: $primaryColor;
+input[type='submit']:active, .posthaven-user-subscribe a:active,
+input[type='submit']:focus, .posthaven-user-subscribe a:focus, {
+  background: rgba(0,0,0,1);
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 1px, rgba(0, 0, 0, 0.25) 0px 0px 0px 3px;
 }
 
 .alert {
@@ -222,11 +267,8 @@ $logoWidth: 100px;
     color: #000;
     &:hover { text-decoration: none; }
   }
-  h2 {
-    color: #000;
-    opacity: 0.6;
+  h5 {
     margin: 0px;
-    line-height: 27px;
   }
 
 }
@@ -250,33 +292,15 @@ $logoWidth: 100px;
       list-style: none;
       margin-right: 20px;
       float: left;
-      a { color: #000; font-size: 20x; font-weight: bold; }
-      a:hover { color: #333; text-decoration: none; }
+      a { color: #000; font-size: 20px; font-weight: bold; border-bottom-color: transparent; }
     }
     @include clearfix;
   }
 }
 
-
-/*********************************************************
-*  Sidebar (for Archive only)
-*********************************************************/
-
-#sidebar {
-  clear: both;
-  position: absolute;
-  top: 0px;
-  width: $sidebarWidth;
-  font-weight: 300;
-  margin-left: $fullGutter;
-}
-
-#sidebar, #footer {
+#footer {
   section {
-    font-size: 14px;
     margin-bottom: 20px;
-    p, ul li { font-size: 14px;}
-    h3 { margin: 5px 0px 5px; font-size: 14px; font-weight: normal; color: #444;}
     ul { padding-left: 0px; margin: 0px 0px; }
     ul li { list-style: none; }
     li.hidden-tag { display: none; }
@@ -285,10 +309,6 @@ $logoWidth: 100px;
   }
   section:first-child, section:first-child nav:first-child,
   section:first-child nav:first-child ul {margin-top: 0 !important;}
-
-
-
-  h3 { color: #4d423f; font-size: 22px; margin-top: 5px; margin-bottom: 5px; }
 }
 
 section.subhead {
@@ -326,9 +346,6 @@ section.subhead {
   background-color: $footerColor;
   color: #000;
 
-  a { color: #888; &:hover { color: #999; }}
-  h3 { color: #444; font-size: 12px; }
-
   #menu_blogroll {
     max-width: $postWidth;
     margin: auto;
@@ -342,8 +359,15 @@ section.subhead {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
+      width: 100%;
+      margin: 0 -2%;
       li {
-        width: 50%;
+        width: 46%;
+        margin: 0 2% 10px;
+        a {
+          width: 100%;
+          display: inline-block;
+        }
       }
     }
   }
@@ -352,6 +376,12 @@ section.subhead {
     text-align: center;
     max-width: $postWidth;
     margin: auto;
+    h4 {
+      margin-bottom: 15px;
+    }
+    .show-all-tags {
+      margin-top: 15px;
+    }
   }
 
   #bio {
@@ -362,11 +392,7 @@ section.subhead {
         border: 1px solid #666;
       }
     }
-    h3 {
-      font-size: 18px; margin-bottom: 10px; color: #444;
-      a { color: inherit; }
-    }
-    font-size: 14px;
+    h3 { margin: 0px; }
   }
 }
 
@@ -383,11 +409,28 @@ ul.tag-list {
 }
 
 .tag {
-  border: 1px solid gray;
-  border-radius: 15px;
   margin: 5px;
-  padding: 0px 5px;
-  .tag-count { color: #444444; opacity: 0.3 }
+  padding: 4px 10px;
+  font-size: 18px;
+	box-sizing: border-box;
+	border: 1px solid #DDDDDD;
+	border-radius: 15px;
+  .tag-count { color: rgba(68, 68, 68, 0.3); font-size: 16px; }
+  a {
+    color: rgba(0,0,0,0.5);
+  }
+  .clear-tag {
+    color: #fff;
+    box-sizing: border-box;
+    background: #7f7f7f;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    display: inline-block;
+    line-height: 15px;
+    margin-right: -5px;
+    margin-left: 3px;
+  }
 }
 
 .logo-spacer {
@@ -409,63 +452,41 @@ ul.tag-list {
 *********************************************************/
 
 .subscribe-footer {
-  margin: 50px 0px;
+  margin: 100px 0px;
   text-align: center;
+
+  h3 {
+    margin-bottom: 0px;
+  }
 
   .subscribe-wrapper {
     width: 500px;
     max-width: 100%;
     margin: auto;
-    span { display: block; color: #999; }
+    font-size: 18px;
+    span {
+      display: block;
+    	opacity: 0.7;
+    	color: #000000;
+    	font-size: 20px;
+    	font-weight: 500;
+     }
   }
 
   input {
-    margin-top: 8px;
-    font-size: 12px;
+    max-width: 400px;
+    margin-top: 12px;
   }
-
-  input[type=text] {
-    width: 100%;
-    max-width: 250px;
+  input[type=submit] {
+    display: none;
+    margin: 12px auto;
+    max-width: 400px;
   }
-  input[type=submit] { display: none; margin: 10px auto; }
   .posthaven-subscribe-error { color: #a00; }
-}
-
-#sidebar section.subscribe {
-  .posthaven-subscribe-prompt {
-    strong {
-      display: block;
-    }
-    span {
-      color: $bodyColor;
-    }
-  }
 }
 
 .post-responses h4 {
   text-align: center;
-}
-.post-responses .subscribe {
-  margin-top: 8px;
-  font-size: $bodyFontSize - 2;
-
-  .posthaven-subscribe-form {
-    display: inline-block;
-  }
-
-  a {
-    margin-left: 0.4em;
-  }
-
-  .posthaven-subscribe-prompt {
-    strong { font-weight: normal; }
-    span { display: none; }
-  }
-
-  .posthaven-user-subscribe, .posthaven-user-unsubscribe {
-    margin-left: 0.3em;
-  }
 }
 
 .posthaven-user-subscribed .post-responses .subscribe {
@@ -489,16 +510,17 @@ ul.tag-list {
 }
 
 #main.archive-results {
-  margin-left: $sidebarGutter;
+  max-width: $postWidth;
+  margin: auto;
+  text-align: center;
 }
 .post-aside {
   margin: 25px auto;
-  color: #aaa;
-  font-size: 12px;
-  a { color: #aaa; }
+  color: rgba(68, 68, 68, 0.3);
+  font-size: 18px;
+  a { color: rgba(68, 68, 68, 0.3); }
   .tag-count { font-size: 12px;}
   .show-tags { margin-top: 5px; font-size: 12px; }
-  .actual-date { font-size: 12px; color: #aaa; }
   h3 { margin: 20px 0px 5px; font-size: 12px; font-weight: normal; }
   ul { padding-left: 0px; margin: 0px 0px; }
   ul li { list-style: none; }
@@ -531,7 +553,7 @@ ul.tag-list {
 
   blockquote p { font-size: $bodyFontSize; }
   blockquote { padding-left: 10px; border-left: 4px solid #eee;
-               font-size: $bodyFontSize; color: #666;}
+               font-size: $bodyFontSize;}
   pre { font-size: 13px; }
   .slash-divider { color: #ddd; }
   .private-indicator {
@@ -633,24 +655,31 @@ ul.tag-list {
 }
 
 .post-responses {
+  h4 { margin-bottom: 20px; }
   .responses {
     .response {
       position: relative;
       margin: 10px 0px;
-      font-size: 13px;
+	    color: #000000;
+	    font-size: 18px;
+	    line-height: 26px;
+	    text-align: justify;
+
       p { margin: 8px 0px; }
       p:first-child { margin: 0 0 8px; }
       .byline {
         display: flex;
         justify-content: space-between;
         flex-direction: row;
-        .response-name { font-weight: bold; }
+        .response-name { font-family: "proximanova-extrabold"; }
         .time-ago {
-          font-size: 11px; color: #ccc;
+          color: #ccc;
         }
       }
-      .comment { color: #444; font-weight: 500; margin-bottom: 8px;}
     }
+  }
+  .posthaven-loader {
+    margin: 5em auto;
   }
 }
 
@@ -660,6 +689,7 @@ ul.tag-list {
   flex-direction: row;
   .posthaven-share-item {
     display: inline-block;
+    margin: 0px 5px;
   }
 }
 
@@ -674,15 +704,13 @@ ul.tag-list {
 
 
 .posthaven-comment-form {
-  margin: 0 0 40px;
+  padding: 0 0 40px;
   text-align: center;
 
   .posthaven-comment-add-url { display: none; }
 
   input[type=submit] {
     display: none;
-    width: 100%;
-    background: #000;
   }
 
   .posthaven-field {
@@ -704,6 +732,12 @@ ul.tag-list {
     &.posthaven-comment-notify-field {
       label {
         display: inline;
+      	opacity: 0.7;
+      	color: #000000;
+      	font-family: "proximanova-medium";
+      	font-size: 18px;
+      	font-weight: 500;
+      	line-height: 30px;
       }
     }
     &.posthaven-comment-body-field {
@@ -716,22 +750,6 @@ ul.tag-list {
   }
   .posthaven-comment-verification { width: 500px; margin-bottom: 10px; }
 }
-
-/*********************************************************
-*  All tags page
-*********************************************************/
-
-.all-tags {
-  @include clearfix;
-
-  margin-bottom: 40px;
-
-  ul { padding: 0; }
-  li { margin-right: 10px; list-style: none; }
-
-  .tag-count { color: #666; font-size: 0.9em; }
-}
-
 
 /*********************************************************
 *  Archive
@@ -749,7 +767,7 @@ ul.tag-list {
 .posthaven-archive-form {
   input {
     width: 100%;
-    margin-bottom: 5px;
+    margin: 10px -100px;
     font-size: 17px;
     padding: 5px 5px 5px 35px;
     background-image: url('images/search.png');
@@ -758,24 +776,6 @@ ul.tag-list {
     background-size: 18px 18px;
     border: 1px solid #ddd;
     border-radius: 5px;
-  }
-}
-
-#sidebar .posthaven-archive-form {
-  input {
-    margin-bottom: 0px;
-    font-size: 14px;
-    padding: 5px 5px 5px 25px;
-    max-width: 180px;
-    background-repeat: no-repeat;
-    background-position: 5px 7px;
-    background-size: 13px 13px;
-    border: 1px solid #ddd;
-
-    @include input-placeholder {
-      opacity: 1;
-      color: #ccc;
-    }
   }
 }
 
@@ -812,13 +812,24 @@ li.archive-entry {
 
 .archive-pagination {
   a { font-size: 12px; }
+  .posthaven-archive-pagination {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
 
-  a:first-of-t { margin-right: 15px; }
+    .posthaven-archive-disabled {
+      display: block;
+    }
+  }
 }
 
 .archive-all-dates {
   a { font-size: 12px; }
   // margin-top: 4px;
+}
+
+#archive-results-by-date {
+  display: none;
 }
 
 /*********************************************************
@@ -838,9 +849,8 @@ li.archive-entry {
 
 
 @media handheld, only screen and (max-width: 767px) {
-  #sidebar { position: inherit; width: auto; }
   .menu_navigation, .subscribe-footer, #footer { padding: 10px 20px; }
-  #header, #sidebar, #main, #topbar, .alert, section.subhead, .post-aside {
+  #header, #main, #topbar, .alert, section.subhead, .post-aside {
     margin: 0px 20px 20px; float: none;
     position: inherit; right: inherit; top: inherit;
   }

@@ -1,7 +1,7 @@
 {% capture subhead_content %}
-   <h3>
-     Posts tagged with <span class="tag">{{ tag.name }}</span>
-   </h3>
+   <div class="small">
+     Posts tagged with <span class="tag">{{ tag.name }}<span class="clear-tag">&times;</span></span>
+   </div>
 {% endcapture %}
 
 {% include 'post_list' %}

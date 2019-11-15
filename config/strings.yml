@@ -2,8 +2,8 @@
 archive:
   back_to_all_dates: Back to All Dates
   no_results: No results found.
-  previous_page: Previous Page
-  next_page: Next Page
+  previous_page: Previous
+  next_page: Next
 
 forms:
   comment:
@@ -15,11 +15,11 @@ forms:
   subscribe:
     follow_link: Subscribe
     prompt: |
-      <strong>Subscribe by email</strong>
+      <h3>Subscribe by email</h3>
       <span>Get email alerts about new posts. Unsubscribe anytime.</span>
     unfollow_link: <strong>Unsubscribe</strong>
     instructions: |
-      <strong>Subscribe by email</strong>
+      <h3>Subscribe by email</h3>
       <span>Get email alerts about new posts. Unsubscribe anytime.</span>
 
 read_more: Read more

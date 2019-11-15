@@ -7,7 +7,7 @@
       {% for response in post.responses %}
         {% include 'response' %}
       {% endfor %}
-      {% if post.responses.length %}
+      {% if post.comments.size > 0 %}
         <h4>Add a comment</h4>
       {% endif %}
       {% form 'comment' %}

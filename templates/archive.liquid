@@ -1,46 +1,51 @@
 {% capture subhead_content %}
   <h3>
-    <strong>Post Archive</strong>
+    <strong>Archive</strong>
+    <p class="archive-all-dates">{{ archive.all_dates_link }}</p>
   </h3>
 {% endcapture %}
 
-<div class="archive-container">
+<div class="archive-container toggle-tabs">
   <div id="main" class="archive-results">
     {% form 'archive' %}
 
-    <ul>
-      {% archive_results %}
-      <li class="archive-entry">
-        <a href="{{ result.url }}">
-          <span>{{ result.title }}</span>
-        </a>
-        <div class="search-highlight">
-          {{ result.snippet }}
-        </div>
-        <div class="archive-date">
-          {{ result.date }}
-        </div>
-      </li>
-      {% endarchive_results %}
-    </ul>
-
-    <div class="archive-pagination">
-      {{ archive.pagination }}
+    <div class="archive-view">
+      <a id="all-link" href="#all">All posts</a>
+      <a id="date-link" href="#date">Browse by date</a>
     </div>
-  </div>
 
-  <aside id="sidebar">
-    <section class="archive-months">
-      <h3>Browse By Date</h3>
+    <section id="archive-results-all">
+      <ul>
+        {% archive_results date_format:'%b %e, %Y' %}
+        <li class="archive-entry">
+          <div class="archive-date">
+            {{ result.date }}
+          </div>
+          <a href="{{ result.url }}">
+            <span>{{ result.title }}</span>
+          </a>
+          <div class="search-highlight">
+            {{ result.snippet }}
+          </div>
+        </li>
+        {% endarchive_results %}
+      </ul>
+
+      <div class="archive-pagination">
+        {{ archive.pagination }}
+      </div>
+    </section>
+
+    <section id="archive-results-by-date" class="archive-months">
       <ul>
         {% archive_months %}
           <li>
-            <a href={{ month.url }}>{{ month.date }}</a> ({{ month.count }})
+            <a class="month" href={{ month.url }}>{{ month.date }}</a>
+            <a class="count" href={{ month.url }}>{{ month.count }} posts</a>
           </li>
         {% endarchive_months %}
 
-        <li class="archive-all-dates">{{ archive.all_dates_link }}</li>
       </ul>
     </section>
-  </aside>
+  </div>
 </div>

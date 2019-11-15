@@ -8,12 +8,10 @@
     {{ meta_tags }}
 
     <link href="{{ 'images/favicon.ico' | asset_url }}" rel='shortcut icon' type='image/x-icon'>
-    <link href="//fonts.googleapis.com/css?family=Catamaran:300,400,600|Roboto:500&amp;subset=latin,latin-ext"
-          media="screen" rel="stylesheet" type="text/css" />
     {% comment %}
-      {{ 'blog.css' | asset_url | stylesheet_tag }}
-    {% endcomment %}
     {{ 'blog.css' | local_file | style_tag }}
+    {% endcomment %}
+    {{ 'blog.css' | asset_url | stylesheet_tag }}
 
     {{ posthaven.includes_for_head }}
 
@@ -50,7 +48,7 @@
             </h1>
 
             {% if site.description %}
-              <h2>{{ site.description | smarty_pants }}</h2>
+              <h5>{{ site.description | smarty_pants }}</h5>
             {% endif %}
 
           </header>

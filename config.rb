@@ -5,8 +5,9 @@ require 'compass/import-once/activate'
 http_path = "/"
 css_dir = "assets"
 sass_dir = "src/stylesheets"
-images_dir = "assets/images"
+images_dir = "assets"
 javascripts_dir = "javascripts"
+fonts_dir = "assets"
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed
