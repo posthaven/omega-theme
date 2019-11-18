@@ -6,9 +6,9 @@ posts_per_page:
   include_in_settings: true
   default: 1
 settings:
-- id: background_color
-  label: Background Color
+- id: header_bg_color
+  label: Header Background
   type: color
-- id: header_color
-  label: Header Color
+- id: header_font_color
+  label: Header Font Color
   type: color

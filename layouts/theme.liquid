@@ -16,11 +16,12 @@
     {{ posthaven.includes_for_head }}
 
     <style>
-      {% if settings.background_color %}
-        body { background-color: {{ settings.background_color }}; }
+      {% if settings.header_bg_color %}
+        #header_parent { background-color: {{ settings.header_bg_color }} !important; }
+        #header { padding-bottom: 130px !important; }
       {% endif %}
-      {% if settings.header_color %}
-        #header_parent { background-color: {{ settings.header_color }} !important; }
+      {% if settings.header_font_color %}
+        #header_parent { color: {{ settings.header_font_color }} !important; }
       {% endif %}
     </style>
 

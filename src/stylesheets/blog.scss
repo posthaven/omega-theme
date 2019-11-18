@@ -24,7 +24,7 @@ $helveticaNeueUltralight: "HelveticaNeue-UltraLight", "Helvetica Neue Ultra Ligh
 
 $bodyFont: 'proximanova-medium', sans-serif;
 $bodyWeight: 300;
-$bodyColor: rgba(0,0,0,0.85);
+$bodyColor: #000;
 $bodyFontSize: 22px;
 $postWidth: 800px;
 
@@ -50,6 +50,7 @@ body {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 a:hover { text-decoration: none; }
 .post-body a,
@@ -57,7 +58,6 @@ a:hover { text-decoration: none; }
 .subscribe-footer a,
 .search-archive a,
 #menu_blogroll a {
-	color: #000000;
 	font-family: "proximanova-medium";
 	font-size: 18px;
 	font-weight: bold;
@@ -73,7 +73,7 @@ a:hover { text-decoration: none; }
 .small {
   font-size: 18px;
   font-weight: 300;
-  color: rgba(0,0,0,0.6);
+  opacity: 0.6
 }
 
 h1, h2, h3, h4, h5, h6 { font-family: $headerFont; font-weight: 500; line-height: 1.1;}
@@ -84,7 +84,6 @@ h4 { font-size: 24px; }
 h5 { font-size: 22px; font-family: 'proximanova-medium'; opacity: 0.6 }
 
 textarea, input[type=text] {
-  color: #000000;
   padding: 10px 20px;
   width: 100%;
 	box-sizing: border-box;
@@ -141,7 +140,39 @@ input[type='submit']:focus, .posthaven-user-subscribe a:focus, {
   background: rgba(0,0,0,1);
   box-shadow: rgb(255, 255, 255) 0px 0px 0px 1px, rgba(0, 0, 0, 0.25) 0px 0px 0px 3px;
 }
-
+.posthaven-share-links {
+  .posthaven-upvote {
+  	border: 1px solid #DDDDDD;
+    padding: 4px 5px 4px 9px;
+    border-radius: 2px;
+    &:hover {
+      border-color: rgba(0,0,0,0.5);
+      background-color: transparent;
+      .posthaven-upvote-label, .posthaven-upvoted-label {
+        color: #509DFF;
+      }
+      .posthaven-upvote-number {
+  	    color: #000000;
+      }
+    }
+    .posthaven-upvote-label, .posthaven-upvoted-label {
+    	color: #509DFF;
+    	font-family: "proximanova-medium";
+      font-weight: bold;
+    	font-size: 15px;
+    	line-height: 18px;
+      text-transform: uppercase;
+    }
+    .posthaven-upvote-number {
+    	opacity: 0.3;
+	    color: inherit;
+      font-family: "proximanova-medium";
+    	font-size: 15px;
+    	font-weight: bold;
+    	line-height: 18px;
+    }
+  }
+}
 .alert {
   font-size: 14px;
   margin: 10px 0px 10px $fullGutter;
@@ -264,7 +295,6 @@ $logoWidth: 100px;
 
   h1 { margin: 0px; line-height: 58px; text-transform: uppercase;}
   h1 a {
-    color: #000;
     &:hover { text-decoration: none; }
   }
   h5 {
@@ -292,7 +322,7 @@ $logoWidth: 100px;
       list-style: none;
       margin-right: 20px;
       float: left;
-      a { color: #000; font-size: 20px; font-weight: bold; border-bottom-color: transparent; }
+      a { font-size: 20px; font-weight: bold; border-bottom-color: transparent; }
     }
     @include clearfix;
   }
@@ -318,11 +348,6 @@ section.subhead {
     margin: 0;
   }
 }
-.back-to-blog {
-  margin-bottom: 10px;
-  font-size: 12px;
-  a { color: #999; }
-}
 
 #footer {
   .menu_navigation {
@@ -344,7 +369,6 @@ section.subhead {
 
   padding: 50px 80px;
   background-color: $footerColor;
-  color: #000;
 
   #menu_blogroll {
     max-width: $postWidth;
@@ -408,16 +432,17 @@ ul.tag-list {
   }
 }
 
-.tag {
+.tag, .posthaven-archive-all-dates {
   margin: 5px;
-  padding: 4px 10px;
+  padding: 0px 10px;
   font-size: 18px;
 	box-sizing: border-box;
 	border: 1px solid #DDDDDD;
 	border-radius: 15px;
+  line-height: 22px;
   .tag-count { color: rgba(68, 68, 68, 0.3); font-size: 16px; }
   a {
-    color: rgba(0,0,0,0.5);
+    opacity: 0.5;
   }
   .clear-tag {
     color: #fff;
@@ -430,6 +455,7 @@ ul.tag-list {
     line-height: 15px;
     margin-right: -5px;
     margin-left: 3px;
+    cursor: pointer;
   }
 }
 
@@ -467,7 +493,6 @@ ul.tag-list {
     span {
       display: block;
     	opacity: 0.7;
-    	color: #000000;
     	font-size: 20px;
     	font-weight: 500;
      }
@@ -535,7 +560,7 @@ ul.tag-list {
 
   .post-body {
     margin-top: 25px;
-    h1, h2, h3 { color: #333; margin-top: 30px;  }
+    h1, h2, h3 { margin-top: 30px;  }
     h1 { font-size: 22px; }
     h2 { font-size: 20px; }
     h3 { font-size: 22px; font-style: italic; }
@@ -573,7 +598,7 @@ ul.tag-list {
     text-align: center;
     h2 {
       font-size: 30px; margin-top: 0; margin-bottom: 5px;
-      a { color: #000; }
+      a { color: inherit; }
     }
     .author {
       font-size: 13px;
@@ -630,18 +655,18 @@ ul.tag-list {
       list-style: none;
       float: none;
       text-align: center;
-      font-size: 12px;
-      height: 40px;
     }
   }
-  ul li a { padding: 5px 10px; background-color: #eee; margin-right: 5px; }
-  ul li.gap a { padding: 5px 10px; border: none; margin-right: 5px; }
+  ul li a {
+  	opacity: 0.2;
+  	font-family: "proximanova-medium";
+  	font-size: 18px;
+  	font-weight: 500;
+  	line-height: 22px;
+  }
   ul li.number, ul li.gap, ul li.first, ul li.last { display: none; }
   ul li.number.active { display: block; flex: 1;}
-  ul li.active a { color: #222; font-weight: bold; }
-  ul li a:hover { background-color: #aaa; text-decoration: none; }
-  font-family: $helveticaNeue;
-  @include clearfix;
+  ul li.next a, ul li.previous a { opacity: 1; }
 }
 
 
@@ -660,7 +685,6 @@ ul.tag-list {
     .response {
       position: relative;
       margin: 10px 0px;
-	    color: #000000;
 	    font-size: 18px;
 	    line-height: 26px;
 	    text-align: justify;
@@ -733,7 +757,6 @@ ul.tag-list {
       label {
         display: inline;
       	opacity: 0.7;
-      	color: #000000;
       	font-family: "proximanova-medium";
       	font-size: 18px;
       	font-weight: 500;
@@ -754,8 +777,37 @@ ul.tag-list {
 /*********************************************************
 *  Archive
 *********************************************************/
-
-.archive-container { position: relative; }
+.archive-title { margin-bottom: 10px;}
+.archive-container {
+  position: relative;
+  .posthaven-loader {
+    margin: 5em auto;
+  }
+}
+.archive-view {
+  margin-bottom: 60px;
+  a {
+  	color: inherit;
+  	font-family: "proximanova-medium";
+  	font-size: 18px;
+  	font-weight: bold;
+  	line-height: 22px;
+    outline: none;
+    border-bottom: 2px dashed rgba(0,0,0,0);
+    &:first-child {
+      margin-right: 40px;
+    }
+    &.active {
+      border-bottom-color: rgba(0,0,0,0.1);
+    }
+    &:hover {
+      border-bottom-color: rgba(0,0,0,0.4);
+    }
+    &:active {
+      border-bottom-color: rgba(0,0,0,0.7);
+    }
+  }
+}
 .archive-results {
   margin-bottom: 40px;
 
@@ -763,19 +815,19 @@ ul.tag-list {
     padding: 0px;
   }
 }
-
+.posthaven-archive-all-dates {
+  display: inline-block;
+  margin-bottom: 40px;
+}
 .posthaven-archive-form {
+  margin: 20px -100px 40px;
   input {
     width: 100%;
-    margin: 10px -100px;
-    font-size: 17px;
     padding: 5px 5px 5px 35px;
     background-image: url('images/search.png');
     background-repeat: no-repeat;
     background-position: 7px 10px;
     background-size: 18px 18px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
   }
 }
 
@@ -787,16 +839,61 @@ input.archive-search.archive-tooltip {
   color: #aaa;
 }
 
+.archive-months {
+  li {
+    list-style: none;
+    margin-bottom: 30px;
+    text-align: center;
+    .month {
+      display: block;
+    	font-family: "proximanova-medium";
+    	font-size: 24px;
+    	font-weight: bold;
+    	line-height: 29px;
+      color: inherit;
+    }
+    .count {
+      display: block;
+    	opacity: 0.3;
+    	color: inherit;
+    	font-family: "proximanova-medium";
+    	font-size: 18px;
+    	font-weight: 500;
+    	line-height: 22px;
+    }
+  }
+}
+
 li.archive-entry {
   list-style: none;
-  a { display: block; font-size: 16px; line-height: 20px; margin-bottom: 3px; }
-  margin-bottom: 20px;
+  a {
+  	color: inherit;
+  	font-family: "proximanova-medium";
+    font-weight: bold;
+  	font-size: 24px;
+  	line-height: 29px;
+  	text-align: center;
+  }
+  margin-bottom: 40px;
   em { background-color: #eee; font-style: normal; }
   .archive-date {
-    font-family: $helveticaNeue;
-    font-size: 11px; color: #999; font-weight: bold; text-transform: uppercase;
+  	opacity: 0.3;
+  	color: inherit;
+  	font-family: "proximanova-medium";
+  	font-size: 18px;
+  	font-weight: 500;
+  	line-height: 22px;
+  	text-align: center;
   }
-  .search-highlight { font-size: 12px; margin-bottom: 3px;  }
+  .search-highlight {
+  	color: #333333;
+  	font-family: "proximanova-medium";
+  	font-size: 22px;
+  	font-weight: 500;
+  	line-height: 34px;
+  	text-align: justify;
+    margin: 18px 0px;
+  }
 }
 .archive-container { margin-bottom: 100px; }
 .archive {
@@ -811,7 +908,13 @@ li.archive-entry {
 }
 
 .archive-pagination {
-  a { font-size: 12px; }
+  a {
+  	color: inherit;
+  	font-family: "proximanova-medium";
+  	font-size: 18px;
+  	font-weight: 500;
+  	line-height: 22px;
+   }
   .posthaven-archive-pagination {
     display: flex;
     justify-content: space-between;
@@ -821,11 +924,6 @@ li.archive-entry {
       display: block;
     }
   }
-}
-
-.archive-all-dates {
-  a { font-size: 12px; }
-  // margin-top: 4px;
 }
 
 #archive-results-by-date {
