@@ -7,12 +7,15 @@
 {% endif %}
 
 
-<footer>
+<footer class="footer">
     {% include 'bio' %}
     {% include 'contributors_section' %}
-    {% include 'feed' %}
-    {% include 'nav_menu' %}
-
+    {% include 'social' %}
+    
+    {% if site.navigation_menu and site.navigation_menu.items != empty %}
+        {% include 'nav_menu' %}
+      </section>
+    {% endif %}
 
     <section class="search-archive">
       {% form 'archive' %}
