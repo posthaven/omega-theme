@@ -7,7 +7,7 @@
 {% endif %}
 
 
-<footer id='footer'>
+<footer>
     {% include 'bio' %}
     {% include 'contributors_section' %}
     {% include 'feed' %}
@@ -28,19 +28,17 @@
       <section id="tag_list_menu">
         <h4>Tags</h4>
 
-        <ul class="tag-list">
+        <ul class="tags">
           {% for t in site.tags %}
             {% if forloop.index > 5 %}
-              <li class='tag hide'>
+              <li class='hide'>
             {% else %}
-              <li class='tag'>
+              <li>
             {% endif %}
               {% if tag and tag == t.name %}
-                <strong>{{ t.name }}</strong>
-                <span class="measure tag-count">{{ t.post_count }}</span>
+                <strong>{{ t.name }} <span>{{ t.post_count }}</span></strong>
               {% else %}
-                <a href="{{ t.url }}">{{ t.name }}</a>
-                <span class="measure tag-count">{{ t.post_count }}</span>
+                <a href="{{ t.url }}">{{ t.name }} <span>{{ t.post_count }}</span></a>
               {% endif %}
             </li>
           {% endfor %}

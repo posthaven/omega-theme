@@ -7,8 +7,7 @@
     <ul>
       {% for t in site.tags %}
         <li>
-          <a href="{{ t.url }}">{{ t.name }}</a>
-          <span class="measure tag-count">{{ t.post_count }}</span>
+          <a href="{{ t.url }}">{{ t.name }} <span>{{ t.post_count }}</span></a>
         </li>
       {% endfor %}
     </ul>

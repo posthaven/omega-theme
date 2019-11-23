@@ -10,7 +10,7 @@
       <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
 
       {% if show_aside %}
-        <div class="post-aside">
+        <aside>
           <section>
             <div class="display-date">
               Posted
@@ -27,16 +27,16 @@
 
           {% if post.tags.size > 0 %}
             <section>
-              <ul class="tag-list">
+              <ul class="tags">
                 {% for post_tag in post.tags %}
-                  <li class='tag'>
+                  <li>
                     <a href="{{ post_tag.url }}">{{ post_tag.name }}</a>
                   </li>
                 {% endfor %}
               </ul>
             </section>
           {% endif %}
-        </div>
+        </aside>
       {% endif %}
 
       {% if request.template == 'post' and post.show_byline? %}

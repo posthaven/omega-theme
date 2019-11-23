@@ -1,3 +1,5 @@
+@import 'variables';
+
 /*********************************************************
 *  Navigation
 *********************************************************/
@@ -17,21 +19,42 @@ nav.menu {
 
     li {
       list-style: none;
-      margin-right: 20px;
+      margin-right: 25px;
 
       a {
+        border-bottom: none;
+        color: rgba($primary, .8);
         font-size: 20px;
-        border-bottom: dashed 2px transparent;
+        position: relative;
+        transition: background .25s ease, color .4s ease, width .25s ease;
+
+        &:after {
+          background: transparent;
+          bottom: -3px;
+          content: "";
+          display: block;
+          height: 3px;
+          left: 50%;
+          position: absolute;
+          transition: all .25s ease;
+          width: 0%;
+
+        }
 
         &:hover {
-          border-bottom: dashed rgba(0,0,0,.1);
+          color: rgba($primary, 1);
+          transition: background .25s ease, color 0s ease, width .25s ease;
+
+          &:after {
+            background: $primary;
+            left: 0%;
+            width: 100%;
+          }
         }
       }
     }
   }
 }
-
-
 
 .posthaven-user-menu {
   flex: 0 auto;
@@ -54,6 +77,7 @@ nav.menu {
 
     a {
       background: #3F3F3F;
+      border: none;
       border-radius: 32px;
       display: inline-block;
       height: 32px;
