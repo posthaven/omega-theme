@@ -1,5 +1,6 @@
 @import 'normalize';
 @import 'hint';
+@import 'structure';
 
 @import "compass/css3/opacity";
 @import "compass/css3/images";
@@ -22,7 +23,7 @@ $helveticaNeueLight: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica N
 $helveticaNeueUltralight: "HelveticaNeue-UltraLight", "Helvetica Neue Ultra Light",
                           "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
-$bodyFont: 'proximanova-medium', sans-serif;
+$bodyFont: 'Proxima Nova', sans-serif;
 $bodyWeight: 300;
 $bodyColor: #000;
 $bodyFontSize: 22px;
@@ -44,8 +45,12 @@ $errorColor: #a00;
 *********************************************************/
 
 body {
-  line-height: 1.5; color: $bodyColor; margin: 0 0; font-family: $bodyFont;
-  font-weight: $bodyWeight; overflow-x: hidden;
+  line-height: 1.5; 
+  color: $bodyColor; 
+  margin: 0 0; 
+  font-family: $bodyFont;
+  font-weight: $bodyWeight;
+  overflow-x: hidden;
 }
 
 a {
@@ -54,11 +59,9 @@ a {
 }
 a:hover { text-decoration: none; }
 .post-body a,
-.menu_navigation a,
 .subscribe-footer a,
 .search-archive a,
 #menu_blogroll a {
-	font-family: "proximanova-medium";
 	font-size: 18px;
 	font-weight: bold;
   border-bottom: 2px dashed rgba(0,0,0,0.1);
@@ -76,12 +79,12 @@ a:hover { text-decoration: none; }
   opacity: 0.6
 }
 
-h1, h2, h3, h4, h5, h6 { font-family: $headerFont; font-weight: 500; line-height: 1.1;}
+h1, h2, h3, h4, h5, h6 { font-weight: 800; line-height: 1.1;}
 h1 { font-size: 48px; }
 h2 { font-size: 30px; }
 h3 { font-size: 30px; }
 h4 { font-size: 24px; }
-h5 { font-size: 22px; font-family: 'proximanova-medium'; opacity: 0.6 }
+h5 { font-size: 22px; font-weight: normal; opacity: 0.6 }
 
 textarea, input[type=text] {
   padding: 10px 20px;
@@ -220,8 +223,10 @@ input[type='submit']:focus, .posthaven-user-subscribe a:focus, {
 }
 
 #container {
-  width: 1260px;
+  box-sizing: border-box;
   margin: auto;
+  max-width: 1400px;
+  padding: 0 20px;
   position: relative;
 }
 
@@ -229,63 +234,6 @@ input[type='submit']:focus, .posthaven-user-subscribe a:focus, {
 *  Topbar and Header
 *********************************************************/
 
-$logoHeight: 32px;
-$logoWidth: 100px;
-.posthaven-user-menu {
-  position: absolute;
-  top: 5px;
-  right: 0px;
-
-  .posthaven-anon {
-    font-size: 0px;
-    width: 32px;
-    height: 32px;
-    display: block;
-    border-radius: 50%;
-    background: linear-gradient(180deg, #656565 0%, #444444 100%);
-    overflow: hidden;
-    a {
-      display: inline-block;
-      width: 32px;
-      height: 32px;
-      text-align: right;
-      &:before{
-        content: '';
-        width: 10px;
-        height: 32px;
-        background: linear-gradient(180deg, #8BCDFF 0%, #539EFF 100%);
-        display: inline-block;
-      }
-    }
-    a:hover {
-      text-decoration: none;
-    }
-  }
-}
-
-#topbar {
-  margin-left: $fullGutter;
-  max-width: $postWidth;
-
-  @include clearfix;
-
-  .posthaven-tab {
-    float:left;
-    background-image: url("images/posthaven-tab-1x.png");
-    background-size: $logoWidth $logoHeight;
-    width: $logoWidth;
-    height: $logoHeight;
-  }
-
-  .account {
-    float: left;
-    font-family: $helveticaNeue;
-    font-size: 14px;
-    line-height: $logoHeight - 1;
-
-    a {  margin-left: 10px; }
-  }
-}
 
 #header {
   text-align: center;
@@ -310,36 +258,7 @@ $logoWidth: 100px;
   min-height: 300px;
 }
 
-/*********************************************************
-*  Navigation
-*********************************************************/
 
-.menu_navigation {
-  padding: 12px 30px 5px 5px;
-  ul {
-    padding: 0 0; margin: 0 0;
-    li {
-      list-style: none;
-      margin-right: 20px;
-      float: left;
-      a { font-size: 20px; font-weight: bold; border-bottom-color: transparent; }
-    }
-    @include clearfix;
-  }
-}
-
-#footer {
-  section {
-    margin-bottom: 20px;
-    ul { padding-left: 0px; margin: 0px 0px; }
-    ul li { list-style: none; }
-    li.hidden-tag { display: none; }
-
-    .menu { margin-top: 30px; margin-bottom: 50px; }
-  }
-  section:first-child, section:first-child nav:first-child,
-  section:first-child nav:first-child ul {margin-top: 0 !important;}
-}
 
 section.subhead {
   margin: auto;

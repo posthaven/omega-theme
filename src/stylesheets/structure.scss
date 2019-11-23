@@ -1,0 +1,89 @@
+/*********************************************************
+*  Navigation
+*********************************************************/
+.navigation {
+  align-items: center;
+  display: flex;
+  padding: 10px 0;
+}
+
+nav.menu {
+  flex: 1;
+
+  ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+      margin-right: 20px;
+
+      a {
+        font-size: 20px;
+        border-bottom: dashed 2px transparent;
+
+        &:hover {
+          border-bottom: dashed rgba(0,0,0,.1);
+        }
+      }
+    }
+  }
+}
+
+
+
+.posthaven-user-menu {
+  flex: 0 auto;
+
+  .posthaven-anon {
+    background: white;
+    border-radius: 40px;
+    border: solid 2px rgba(128,128,128,.3);
+    box-sizing: border-box;
+    display: block;
+    font-size: 0px;
+    height: 40px;
+    padding: 2px;
+    position: relative;
+    width: 40px;
+
+    &:hover {
+      border: solid 2px rgba(128,128,128,.5);
+    }
+
+    a {
+      background: #3F3F3F;
+      border-radius: 32px;
+      display: inline-block;
+      height: 32px;
+      overflow: hidden;
+      position: relative;
+      width: 32px;
+
+      &:before {
+        background: #1285F9;
+        content: '';
+        display: block;
+        height: 32px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 10px;
+      }
+    }
+  }
+}
+
+#footer {
+  section {
+    margin-bottom: 20px;
+    ul { padding-left: 0px; margin: 0px 0px; }
+    ul li { list-style: none; }
+    li.hidden-tag { display: none; }
+
+    .menu { margin-top: 30px; margin-bottom: 50px; }
+  }
+  section:first-child, section:first-child nav:first-child,
+  section:first-child nav:first-child ul {margin-top: 0 !important;}
+}

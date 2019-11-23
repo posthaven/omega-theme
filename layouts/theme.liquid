@@ -30,9 +30,10 @@
   <body id='site_{{ site.id }}'>
     <div id='container'>
       <div id='header_parent'>
-        {{ posthaven.user_menu }}
-
-        {% include 'nav_menu' %}
+        <div class="navigation">
+          {% include 'nav_menu' %}
+          {{ posthaven.user_menu }}
+        </div>
 
         <div id='flash'>
           {% for alert in posthaven.alerts %}
