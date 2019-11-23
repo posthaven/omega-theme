@@ -34,8 +34,10 @@ section.menu {
 
 .posthaven-user-menu {
   flex: 0 auto;
+  position: relative;
 
-  .posthaven-anon {
+  // icon/trigger (using .ph-trigger in js)
+  figure {
     background: white;
     border-radius: 40px;
     border: solid 2px rgba(128,128,128,.3);
@@ -47,11 +49,29 @@ section.menu {
     position: relative;
     width: 40px;
 
-    &:hover {
-      border: solid 2px rgba(128,128,128,.5);
+    &.active {
+      span:after {
+        border: none;
+        color: #fff;
+        content: "X";
+        font-size: 14px;
+        top: calc(50% - 8px);
+        transform: none;
+      }
     }
 
-    a {
+    &:hover {
+      border: solid 2px rgba(128,128,128,.5);
+
+      span {
+
+        &:after {
+          top: calc(50% - 8px);
+        }
+      }
+    }
+
+    span {
       background: #3F3F3F;
       border: none;
       border-radius: 32px;
@@ -71,7 +91,29 @@ section.menu {
         top: 0;
         width: 10px;
       }
+
+      &:after {
+        background: transparent;
+        border-bottom: solid 3px white;
+        border-right: solid 3px white;
+        content: "";
+        height: 9px;
+        left: calc(50% - 5px);
+        position: absolute;
+        top: -15px;
+        transition: top .25s ease;
+        transform: rotate(45deg);
+        width: 9px;
+      }
     }
+  }
+
+  .ph-menu {
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    position: absolute;
+    top: 40px;
   }
 }
 
