@@ -328,6 +328,7 @@ section.tags {
       margin: 2px;
       padding: 0 10px 1px;
       transition: all .25s ease;
+      user-select: none;
 
       span {
         // count
@@ -398,11 +399,6 @@ section.tags {
       }
     }
   }
-}
-
-
-
-section.tags {
 }
 
 // FOOTER ICON
