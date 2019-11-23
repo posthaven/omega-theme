@@ -11,7 +11,7 @@
     {% include 'bio' %}
     {% include 'contributors_section' %}
     {% include 'social' %}
-    
+
     {% if site.navigation_menu and site.navigation_menu.items != empty %}
         {% include 'nav_menu' %}
       </section>
@@ -28,10 +28,10 @@
     {% include 'blogroll' %}
 
     {% if site.tags.size > 0 %}
-      <section id="tag_list_menu">
+      <section id="tag_list_menu" class="tags">
         <h4>Tags</h4>
 
-        <ul class="tags">
+        <ul>
           {% for t in site.tags %}
             {% if forloop.index > 5 %}
               <li class='hide'>
@@ -48,12 +48,22 @@
         </ul>
 
         {% if site.tags.size > 5 %}
-          <div class="show-all-tags">
-            See all {{ site.tags.size }} tags
+          <div class="all-tags">
+            <span class="show-all-tags">
+              See all {{ site.tags.size }} tags
+            </span>
           </div>
         {% endif %}
       </section>
     {% endif %}
 
 </footer>
-<div class="logo-spacer"></div>
+
+<div class="posthaven">
+  <a href="https://posthaven.com">
+    <figure></figure>
+    <svg class="posthaven-wordmark">
+      <use xlink:href="#posthaven-wordmark"></use>
+    </svg>
+  </a>
+</div>

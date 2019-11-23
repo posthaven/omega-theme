@@ -39,19 +39,6 @@ footer.footer {
     }
   }
 
-  #tag_list_menu {
-    text-align: center;
-    max-width: $postWidth;
-    margin: auto;
-    h4 {
-      margin-bottom: 15px;
-    }
-    .show-all-tags {
-      font-weight: 800;
-      margin-top: 15px;
-    }
-  }
-
   section.bio {
     text-align: center;
     .profile-pic {
@@ -65,7 +52,7 @@ footer.footer {
 }
 
 .posthaven-archive-all-dates {
-@extend ul.tags;
+// @extend ul.tags;
 }
 
 section.blogroll {
@@ -77,21 +64,19 @@ section.blogroll {
   }
 
   ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
+    margin: 0;
+    padding: 0;
     width: 100%;
 
     li {
       box-sizing: border-box;
       flex: 0 50%;
       font-size: 18px;
+      list-style: none;
       margin-bottom: 3px;
 
       &:nth-child(odd) {

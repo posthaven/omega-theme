@@ -39,11 +39,24 @@
     }
   }
 
+  .posthaven-post-body {
+    .posthaven-gallery { 
+      margin-left: -100px;
+      margin-right: -100px;
+      text-align: center;
+
+      .posthaven-gallery-chrome {
+        margin-bottom: 10px;
+
+        .posthaven-gallery-info {
+          float: none;
+        }
+      }
+    }
+  }
+
   p { margin: 24px auto; }
   .post-body .posthaven-gallery {
-    margin-left: -100px;
-    margin-right: -100px;
-    text-align: center;
   }
 
   img, object, embed, iframe { max-width: 100%; }  /* responsive resize */
