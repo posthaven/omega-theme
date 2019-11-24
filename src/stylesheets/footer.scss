@@ -1,6 +1,7 @@
 @import 'variables';
 
 #footer {
+
   section {
     margin-bottom: 20px;
     ul { padding-left: 0px; margin: 0px 0px; }
@@ -15,8 +16,17 @@
 
 footer.footer {
   background-color: rgba($primary, .05);
-  border: solid 1px rgba($primary, .25);
+  border-top: solid 1px rgba($primary, .15);
+  border-bottom: solid 1px rgba($primary, .15);
   padding: 50px 80px;
+
+  @media (min-width: 1200px) {
+    border: solid 1px rgba($primary, .15);
+  }
+
+  h4 {
+    text-align: center;
+  }
 
   section {
     margin-bottom: 50px;
@@ -32,7 +42,6 @@ footer.footer {
       flex-wrap: wrap;
       justify-content: space-evenly;
       li {
-        float: none;
         margin-right: 0px;
         text-align: center;
       }
@@ -55,13 +64,15 @@ footer.footer {
 // @extend ul.tags;
 }
 
+section.search-archive {
+  h4 a {
+    @include animate-links;
+  }
+}
+
 section.blogroll {
   max-width: $postWidth;
   margin: auto;
-
-  h4 {
-    text-align: center;
-  }
 
   ul {
     display: flex;

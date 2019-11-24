@@ -18,18 +18,15 @@
     {% endif %}
 
     <section class="search-archive">
+      <h4><a href="{{ site.archive_url }}">Browse the archive</a></h4>
       {% form 'archive' %}
-
-       <div class="archive-link">
-         <a href="{{ site.archive_url }}">Browse the archive</a>
-       </div>
     </section>
 
     {% include 'blogroll' %}
 
     {% if site.tags.size > 0 %}
       <section id="tag_list_menu" class="tags">
-        <h4>Tags</h4>
+        <h3>Tags</h3>
 
         <ul>
           {% for t in site.tags %}

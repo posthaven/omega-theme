@@ -93,7 +93,7 @@ section.blogroll a {
 h1, h2, h3, h4, h5, h6 { font-weight: 800; line-height: 1.1;}
 h1 { font-size: 48px; }
 h2 { font-size: 30px; }
-h3 { font-size: 30px; }
+h3 { font-size: 36px; }
 h4 { font-size: 24px; }
 h5 { font-size: 22px; font-weight: normal; opacity: 0.6 }
 
@@ -236,9 +236,12 @@ input[type='submit']:focus, .posthaven-user-subscribe a:focus, {
 #container {
   box-sizing: border-box;
   margin: auto;
-  max-width: 1400px;
-  padding: 0 20px;
+  max-width: 1600px;
   position: relative;
+
+  @media (min-width: 1200px) {
+    padding: 0 130px;
+  }
 }
 
 /*********************************************************
@@ -522,23 +525,6 @@ section.tags {
   margin: auto;
   text-align: center;
 }
-aside {
-
-  section {
-    margin-bottom: 10px;
-  }
-
-  margin: 25px auto;
-  color: rgba($primary, .25);
-  font-size: 18px;
-  a { color: rgba(68, 68, 68, 0.3); }
-  .tag-count { font-size: 12px;}
-  .show-tags { margin-top: 5px; font-size: 12px; }
-  h3 { margin: 20px 0px 5px; font-size: 12px; font-weight: normal; }
-  ul { padding-left: 0px; margin: 0px 0px; }
-  ul li { list-style: none; }
-}
-
 
 /*********************************************************
 *  Pagination

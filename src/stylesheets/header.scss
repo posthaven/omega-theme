@@ -50,6 +50,7 @@ section.menu {
     position: relative;
     transition: all .25s ease;
     width: 40px;
+    z-index: 10;
 
     // when menu has been clicked and "active" is on figure.ph-trigger
     &.active {
@@ -146,12 +147,40 @@ section.menu {
   }
 
   .ph-menu {
-    border: solid 1px #ccc;
+    border: solid 1px rgba($primary, .05);
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(0,0,0,.15);
     display: flex;
     flex-direction: column;
-    right: 0;
+    right: 17px;
     position: absolute;
-    top: 40px;
+    top: 22px;
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        list-style: none;
+
+        &:not(:first-child) {
+          border-top: solid 1px rgba($primary, .05);
+        }
+
+        a {
+          display: flex;
+          left: 0;
+          padding: 10px 20px;
+          position: relative;
+          transition: left .15s ease;
+          white-space: nowrap;
+
+          &:hover {
+            left: 5px;
+          }
+        }
+      }
+    }
   }
 }
 
