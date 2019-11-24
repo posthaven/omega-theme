@@ -106,13 +106,22 @@
     </svg>
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
     <script type="text/javascript">
       $(document).ready(function () {
         $(".ph-trigger").click(function(){
-          $(".ph-menu").toggle();
+          $(".ph-menu").toggle(500,"easeOutQuint");
           $(".ph-trigger").toggleClass("active");
+          $(".ph-canvas").toggleClass("active");
         });
+        $(".ph-canvas").click(function(){
+          $(".ph-menu").toggle(500,"easeOutQuint");
+          $(".ph-trigger").toggleClass("active");
+          $(".ph-canvas").toggleClass("active");
+        });
+        
       });
     </script>
+    <div class="ph-canvas"></div>
   </body>
 </html>

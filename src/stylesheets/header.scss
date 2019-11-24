@@ -155,12 +155,14 @@ section.menu {
     right: 17px;
     position: absolute;
     top: 22px;
+    z-index: 9;
 
     ul {
       margin: 0;
       padding: 0;
 
       li {
+        background: #fff;
         list-style: none;
 
         &:not(:first-child) {
@@ -173,6 +175,7 @@ section.menu {
           padding: 10px 20px;
           position: relative;
           transition: left .15s ease;
+          user-select: none;
           white-space: nowrap;
 
           &:hover {
@@ -181,6 +184,22 @@ section.menu {
         }
       }
     }
+  }
+}
+
+.ph-canvas {
+  background: rgba(255,255,255,0);
+  display: none;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: background .25s ease;
+  width: 100%;
+
+  &.active {
+    background: rgba(255,255,255,.5);
+    display: block;
   }
 }
 
