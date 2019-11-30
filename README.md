@@ -1,4 +1,4 @@
-# The Posthaven Fresh Theme
+# The Posthaven Omega Theme
 
 ## Sceenshot
 
