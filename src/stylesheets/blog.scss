@@ -19,32 +19,32 @@
 
 @font-face {
   font-family: 'proximanova-extrabold';
-  src: url('fonts/proximanova-extrabold-webfont.woff2') format('woff2'),
-       url('fonts/proximanova-extrabold-webfont.woff') format('woff');
+  src: url('../fonts/proximanova-extrabold-webfont.woff2') format('woff2'),
+       url('../fonts/proximanova-extrabold-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'proximanova-extraboldit';
-  src: url('fonts/proximanova-extraboldit-webfont.woff2') format('woff2'),
-       url('fonts/proximanova-extraboldit-webfont.woff') format('woff');
+  src: url('../fonts/proximanova-extraboldit-webfont.woff2') format('woff2'),
+       url('../fonts/proximanova-extraboldit-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'proximanova-medium';
-  src: url('fonts/proximanova-medium-webfont.woff2') format('woff2'),
-       url('fonts/proximanova-medium-webfont.woff') format('woff');
+  src: url('../fonts/proximanova-medium-webfont.woff2') format('woff2'),
+       url('../fonts/proximanova-medium-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'proximanova-mediumit';
-  src: url('fonts/proximanova-mediumit-webfont.woff2') format('woff2'),
-       url('fonts/proximanova-mediumit-webfont.woff') format('woff');
+  src: url('../fonts/proximanova-mediumit-webfont.woff2') format('woff2'),
+       url('../fonts/proximanova-mediumit-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -80,9 +80,9 @@ $errorColor: #a00;
 *********************************************************/
 
 body {
-  line-height: 1.5; 
-  color: rgba($primary, .8); 
-  margin: 0 0; 
+  line-height: 1.5;
+  color: rgba($primary, .8);
+  margin: 0 0;
   font-family: $bodyFont;
   font-weight: $bodyWeight;
   overflow-x: hidden;
@@ -431,7 +431,7 @@ section.tags {
       &:active {
         span {
           background: rgba($primary, .9);
-          color: choose-contrast-color($primary); 
+          color: choose-contrast-color($primary);
         }
       }
     }
@@ -441,7 +441,7 @@ section.tags {
 // FOOTER ICON
 // the logomark is in the <figure>.
 // the wordmark comes from the svg sprite.
-// wordmark is referenced in #id, then the .class sits 
+// wordmark is referenced in #id, then the .class sits
 // on the <svg> in the html to use css color variables
 // so we can colorize from css
 .posthaven {
