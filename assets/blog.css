@@ -404,6 +404,30 @@ table {
   border-spacing: 0;
 }
 
+@font-face {
+  font-family: 'proximanova-extrabold';
+  src: url("fonts/proximanova-extrabold-webfont.woff2") format("woff2"), url("fonts/proximanova-extrabold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'proximanova-extraboldit';
+  src: url("fonts/proximanova-extraboldit-webfont.woff2") format("woff2"), url("fonts/proximanova-extraboldit-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'proximanova-medium';
+  src: url("fonts/proximanova-medium-webfont.woff2") format("woff2"), url("fonts/proximanova-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'proximanova-mediumit';
+  src: url("fonts/proximanova-mediumit-webfont.woff2") format("woff2"), url("fonts/proximanova-mediumit-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 /*! Hint.css - v1.2.1 - 2013-03-24
 * http://kushagragour.in/lab/hint/
 * Copyright (c) 2013 Kushagra Gour; Licensed MIT */
@@ -807,104 +831,800 @@ table {
   border-radius: 4px;
 }
 
+/* line 338, ../src/stylesheets/mixins.scss */
+theme-color-bg {
+  background-color: #3f51b5;
+}
+
+/* line 342, ../src/stylesheets/mixins.scss */
+theme-color-bg-contrast {
+  color: white;
+}
+
+/*********************************************************
+*  Navigation
+*********************************************************/
+/* line 7, ../src/stylesheets/header.scss */
+.navigation {
+  align-items: center;
+  display: flex;
+  padding: 10px 0;
+}
+
+/* line 13, ../src/stylesheets/header.scss */
+section.menu {
+  flex: 1;
+}
+/* line 16, ../src/stylesheets/header.scss */
+section.menu ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+/* line 21, ../src/stylesheets/header.scss */
+section.menu ul li {
+  list-style: none;
+  margin-right: 25px;
+}
+/* line 25, ../src/stylesheets/header.scss */
+section.menu ul li a {
+  border-bottom: none;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 20px;
+  position: relative;
+  transition: background .25s ease, color .4s ease, width .25s ease;
+}
+/* line 5, ../src/stylesheets/mixins.scss */
+section.menu ul li a:after {
+  background: transparent;
+  bottom: -3px;
+  content: "";
+  display: block;
+  height: 3px;
+  left: 50%;
+  position: absolute;
+  transition: all .25s ease;
+  width: 0%;
+}
+/* line 17, ../src/stylesheets/mixins.scss */
+section.menu ul li a:hover {
+  color: black;
+  transition: background .25s ease, color 0s ease, width .25s ease;
+}
+/* line 21, ../src/stylesheets/mixins.scss */
+section.menu ul li a:hover:after {
+  background: #000;
+  left: 0%;
+  width: 100%;
+}
+
+/* line 35, ../src/stylesheets/header.scss */
+.posthaven-user-menu {
+  flex: 0 auto;
+  position: relative;
+}
+/* line 40, ../src/stylesheets/header.scss */
+.posthaven-user-menu figure {
+  background: white;
+  border-radius: 40px;
+  border: solid 2px rgba(128, 128, 128, 0.3);
+  box-sizing: border-box;
+  cursor: pointer;
+  display: block;
+  font-size: 0px;
+  height: 40px;
+  padding: 2px;
+  position: relative;
+  transition: all .25s ease;
+  width: 40px;
+  z-index: 10;
+}
+/* line 56, ../src/stylesheets/header.scss */
+.posthaven-user-menu figure.active {
+  border: solid 2px rgba(128, 128, 128, 0.5);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+/* line 63, ../src/stylesheets/header.scss */
+.posthaven-user-menu figure.active span i {
+  opacity: 1;
+}
+/* line 66, ../src/stylesheets/header.scss */
+.posthaven-user-menu figure.active span i:before {
+  top: 2px;
+  transform: rotate(-45deg);
+}
+/* line 70, ../src/stylesheets/header.scss */
+.posthaven-user-menu figure.active span i:after {
+  bottom: 1px;
+  transform: rotate(45deg);
+}
+/* line 78, ../src/stylesheets/header.scss */
+.posthaven-user-menu figure:hover {
+  border: solid 2px rgba(128, 128, 128, 0.5);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+/* line 83, ../src/stylesheets/header.scss */
+.posthaven-user-menu figure:hover span i {
+  opacity: 1;
+}
+/* line 87, ../src/stylesheets/header.scss */
+.posthaven-user-menu figure:hover span:after {
+  top: calc(50% - 8px);
+}
+/* line 93, ../src/stylesheets/header.scss */
+.posthaven-user-menu figure span {
+  align-items: center;
+  background: #3F3F3F;
+  border: none;
+  border-radius: 32px;
+  display: flex;
+  height: 32px;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  width: 32px;
+}
+/* line 106, ../src/stylesheets/header.scss */
+.posthaven-user-menu figure span i {
+  display: inline-block;
+  height: 6px;
+  left: 1px;
+  opacity: 0;
+  position: relative;
+  transition: opacity .25s ease;
+  width: 16px;
+}
+/* line 115, ../src/stylesheets/header.scss */
+.posthaven-user-menu figure span i:before, .posthaven-user-menu figure span i:after {
+  background: #fff;
+  border-radius: 3px;
+  content: "";
+  height: 3px;
+  position: absolute;
+  transition: all .25s ease;
+  width: 16px;
+}
+/* line 126, ../src/stylesheets/header.scss */
+.posthaven-user-menu figure span i:before {
+  top: -2px;
+}
+/* line 130, ../src/stylesheets/header.scss */
+.posthaven-user-menu figure span i:after {
+  bottom: -2px;
+}
+/* line 136, ../src/stylesheets/header.scss */
+.posthaven-user-menu figure span:before {
+  background: #1285F9;
+  content: '';
+  display: block;
+  height: 32px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 10px;
+}
+/* line 149, ../src/stylesheets/header.scss */
+.posthaven-user-menu .ph-menu {
+  border: solid 1px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  right: 17px;
+  position: absolute;
+  top: 22px;
+  z-index: 9;
+}
+/* line 160, ../src/stylesheets/header.scss */
+.posthaven-user-menu .ph-menu ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 164, ../src/stylesheets/header.scss */
+.posthaven-user-menu .ph-menu ul li {
+  background: #fff;
+  list-style: none;
+}
+/* line 168, ../src/stylesheets/header.scss */
+.posthaven-user-menu .ph-menu ul li:not(:first-child) {
+  border-top: solid 1px rgba(0, 0, 0, 0.05);
+}
+/* line 172, ../src/stylesheets/header.scss */
+.posthaven-user-menu .ph-menu ul li a {
+  display: flex;
+  left: 0;
+  padding: 10px 20px;
+  position: relative;
+  transition: left .15s ease;
+  user-select: none;
+  white-space: nowrap;
+}
+/* line 181, ../src/stylesheets/header.scss */
+.posthaven-user-menu .ph-menu ul li a:hover {
+  left: 5px;
+}
+
+/* line 190, ../src/stylesheets/header.scss */
+.ph-canvas {
+  background: rgba(255, 255, 255, 0);
+  display: none;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: background .25s ease;
+  width: 100%;
+}
+/* line 200, ../src/stylesheets/header.scss */
+.ph-canvas.active {
+  background: rgba(255, 255, 255, 0.5);
+  display: block;
+}
+
+/* line 4, ../src/stylesheets/post.scss */
+aside {
+  margin: 0 auto 25px;
+  color: rgba(0, 0, 0, 0.25);
+  font-size: 18px;
+}
+/* line 6, ../src/stylesheets/post.scss */
+aside section {
+  margin-bottom: 10px;
+}
+/* line 14, ../src/stylesheets/post.scss */
+aside a {
+  color: rgba(68, 68, 68, 0.3);
+}
+/* line 17, ../src/stylesheets/post.scss */
+aside .tag-count {
+  font-size: 12px;
+}
+/* line 20, ../src/stylesheets/post.scss */
+aside .show-tags {
+  font-size: 12px;
+  margin-top: 5px;
+}
+/* line 24, ../src/stylesheets/post.scss */
+aside h3 {
+  margin: 20px 0px 5px;
+  font-size: 12px;
+  font-weight: normal;
+}
+/* line 29, ../src/stylesheets/post.scss */
+aside ul {
+  padding-left: 0px;
+  margin: 0px 0px;
+}
+/* line 33, ../src/stylesheets/post.scss */
+aside ul li {
+  list-style: none;
+}
+
+/* line 39, ../src/stylesheets/post.scss */
+.post {
+  margin: auto;
+  max-width: 100%;
+  width: 800px;
+  font-size: 22px;
+  /* responsive resize */
+  /* IE8 css bug */
+}
+/* line 45, ../src/stylesheets/post.scss */
+.post .post-body {
+  line-height: 38px;
+  margin-top: 25px;
+}
+/* line 49, ../src/stylesheets/post.scss */
+.post .post-body *::-moz-selection {
+  background: #000;
+  color: white;
+}
+/* line 54, ../src/stylesheets/post.scss */
+.post .post-body *::selection {
+  background: #000;
+  color: white;
+}
+/* line 59, ../src/stylesheets/post.scss */
+.post .post-body h1, .post .post-body h2, .post .post-body h3 {
+  margin-top: 30px;
+}
+/* line 60, ../src/stylesheets/post.scss */
+.post .post-body h1 {
+  font-size: 22px;
+}
+/* line 61, ../src/stylesheets/post.scss */
+.post .post-body h2 {
+  font-size: 20px;
+}
+/* line 62, ../src/stylesheets/post.scss */
+.post .post-body h3 {
+  font-size: 22px;
+  font-style: italic;
+}
+/* line 64, ../src/stylesheets/post.scss */
+.post .post-body a {
+  border-bottom: dashed 2px rgba(0, 0, 0, 0.1);
+}
+/* line 67, ../src/stylesheets/post.scss */
+.post .post-body a:hover {
+  border-bottom: solid 2px rgba(0, 0, 0, 0.4);
+}
+/* line 71, ../src/stylesheets/post.scss */
+.post .post-body a:active {
+  border-bottom: solid 2px rgba(0, 0, 0, 0.7);
+}
+/* line 78, ../src/stylesheets/post.scss */
+.post .posthaven-post-body .posthaven-gallery {
+  margin-left: -100px;
+  margin-right: -100px;
+  text-align: center;
+}
+/* line 83, ../src/stylesheets/post.scss */
+.post .posthaven-post-body .posthaven-gallery .posthaven-gallery-chrome {
+  margin-bottom: 10px;
+}
+/* line 86, ../src/stylesheets/post.scss */
+.post .posthaven-post-body .posthaven-gallery .posthaven-gallery-chrome .posthaven-gallery-info {
+  float: none;
+}
+/* line 92, ../src/stylesheets/post.scss */
+.post .posthaven-post-body .posthaven-gallery .posthaven-file img {
+  max-height: 90vh;
+}
+/* line 99, ../src/stylesheets/post.scss */
+.post p {
+  margin: 24px auto;
+}
+/* line 103, ../src/stylesheets/post.scss */
+.post img, .post object, .post embed, .post iframe {
+  max-width: 100%;
+}
+/* line 104, ../src/stylesheets/post.scss */
+.post img {
+  height: auto;
+}
+/* line 105, ../src/stylesheets/post.scss */
+.post iframe {
+  max-width: inherit\9;
+}
+/* line 107, ../src/stylesheets/post.scss */
+.post blockquote p {
+  font-size: 22px;
+}
+/* line 110, ../src/stylesheets/post.scss */
+.post blockquote {
+  padding-left: 30px;
+  font-size: 22px;
+  position: relative;
+}
+/* line 115, ../src/stylesheets/post.scss */
+.post blockquote:before {
+  background: rgba(0, 0, 0, 0.15);
+  bottom: 0;
+  border-radius: 8px;
+  content: "";
+  left: 0;
+  position: absolute;
+  width: 8px;
+  top: 0;
+}
+/* line 126, ../src/stylesheets/post.scss */
+.post pre {
+  font-size: 13px;
+}
+/* line 127, ../src/stylesheets/post.scss */
+.post .slash-divider {
+  color: #ddd;
+}
+/* line 128, ../src/stylesheets/post.scss */
+.post .private-indicator {
+  margin-top: 10px;
+}
+/* line 131, ../src/stylesheets/post.scss */
+.post .private-indicator .lock-icon {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-image: url("images/lock-icon.png");
+  position: relative;
+  top: -3px;
+}
+/* line 140, ../src/stylesheets/post.scss */
+.post .post-title {
+  margin: 75px auto 20px;
+  text-align: center;
+}
+/* line 144, ../src/stylesheets/post.scss */
+.post .post-title h2 {
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+/* line 149, ../src/stylesheets/post.scss */
+.post .post-title h2 a {
+  color: #000;
+}
+/* line 153, ../src/stylesheets/post.scss */
+.post .post-title .author {
+  font-size: 13px;
+  color: #999;
+}
+/* line 157, ../src/stylesheets/post.scss */
+.post .post-title .author a {
+  color: #999;
+}
+/* line 164, ../src/stylesheets/post.scss */
+.post .homepage-post-footer {
+  margin: 30px 0;
+  font-size: 14px;
+  text-align: center;
+}
+/* line 168, ../src/stylesheets/post.scss */
+.post .homepage-post-footer .tags {
+  margin: 10px 0;
+  font-size: 12px;
+}
+/* line 171, ../src/stylesheets/post.scss */
+.post .homepage-post-footer .tags h6 {
+  font-weight: normal;
+  color: #999;
+  font-size: 12px;
+  display: inline;
+}
+/* line 172, ../src/stylesheets/post.scss */
+.post .homepage-post-footer .tags ul {
+  padding-left: 10px;
+  margin-left: 0;
+  display: inline;
+}
+/* line 173, ../src/stylesheets/post.scss */
+.post .homepage-post-footer .tags ul li {
+  display: inline;
+  margin-right: 10px;
+}
+/* line 174, ../src/stylesheets/post.scss */
+.post .homepage-post-footer .tags ul li a {
+  white-space: nowrap;
+}
+/* line 178, ../src/stylesheets/post.scss */
+.post table {
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  border-collapse: collapse;
+}
+/* line 179, ../src/stylesheets/post.scss */
+.post table, .post th, .post td {
+  border-top: 1px solid #ddd;
+}
+/* line 180, ../src/stylesheets/post.scss */
+.post table th, .post table td {
+  padding: 4px 5px;
+}
+/* line 181, ../src/stylesheets/post.scss */
+.post table p:first-child {
+  margin-top: 0px;
+}
+/* line 182, ../src/stylesheets/post.scss */
+.post table p:last-child {
+  margin-bottom: 0px;
+}
+
+/* line 184, ../src/stylesheets/post.scss */
+.gist {
+  font-size: 13px;
+}
+
+/* line 188, ../src/stylesheets/post.scss */
+.post:first-child {
+  margin-top: 0px;
+}
+
+/* line 5, ../src/stylesheets/footer.scss */
+#footer section {
+  margin-bottom: 20px;
+}
+/* line 7, ../src/stylesheets/footer.scss */
+#footer section ul {
+  padding-left: 0px;
+  margin: 0px 0px;
+}
+/* line 8, ../src/stylesheets/footer.scss */
+#footer section ul li {
+  list-style: none;
+}
+/* line 9, ../src/stylesheets/footer.scss */
+#footer section li.hidden-tag {
+  display: none;
+}
+/* line 11, ../src/stylesheets/footer.scss */
+#footer section .menu {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+/* line 13, ../src/stylesheets/footer.scss */
+#footer section:first-child, #footer section:first-child nav:first-child,
+#footer section:first-child nav:first-child ul {
+  margin-top: 0 !important;
+}
+
+/* line 17, ../src/stylesheets/footer.scss */
+footer.footer {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-top: solid 1px rgba(0, 0, 0, 0.15);
+  border-bottom: solid 1px rgba(0, 0, 0, 0.15);
+  padding: 50px 80px;
+}
+@media (min-width: 1200px) {
+  /* line 17, ../src/stylesheets/footer.scss */
+  footer.footer {
+    border: solid 1px rgba(0, 0, 0, 0.15);
+  }
+}
+/* line 27, ../src/stylesheets/footer.scss */
+footer.footer h4 {
+  text-align: center;
+}
+/* line 31, ../src/stylesheets/footer.scss */
+footer.footer section {
+  margin-bottom: 50px;
+}
+/* line 35, ../src/stylesheets/footer.scss */
+footer.footer nav.menu {
+  max-width: 800px;
+  margin: auto;
+  padding: 0;
+}
+/* line 39, ../src/stylesheets/footer.scss */
+footer.footer nav.menu ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+/* line 44, ../src/stylesheets/footer.scss */
+footer.footer nav.menu ul li {
+  margin-right: 0px;
+  text-align: center;
+}
+/* line 51, ../src/stylesheets/footer.scss */
+footer.footer section.bio {
+  text-align: center;
+}
+/* line 54, ../src/stylesheets/footer.scss */
+footer.footer section.bio .profile-pic img {
+  border-radius: 5px;
+  border: 1px solid #666;
+}
+/* line 59, ../src/stylesheets/footer.scss */
+footer.footer section.bio h3 {
+  margin: 0px;
+}
+
+/* line 68, ../src/stylesheets/footer.scss */
+section.search-archive h4 a {
+  position: relative;
+  transition: background .25s ease, color .4s ease, width .25s ease;
+}
+/* line 5, ../src/stylesheets/mixins.scss */
+section.search-archive h4 a:after {
+  background: transparent;
+  bottom: -3px;
+  content: "";
+  display: block;
+  height: 3px;
+  left: 50%;
+  position: absolute;
+  transition: all .25s ease;
+  width: 0%;
+}
+/* line 17, ../src/stylesheets/mixins.scss */
+section.search-archive h4 a:hover {
+  color: black;
+  transition: background .25s ease, color 0s ease, width .25s ease;
+}
+/* line 21, ../src/stylesheets/mixins.scss */
+section.search-archive h4 a:hover:after {
+  background: #000;
+  left: 0%;
+  width: 100%;
+}
+
+/* line 73, ../src/stylesheets/footer.scss */
+section.blogroll {
+  max-width: 800px;
+  margin: auto;
+}
+/* line 77, ../src/stylesheets/footer.scss */
+section.blogroll ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+/* line 86, ../src/stylesheets/footer.scss */
+section.blogroll ul li {
+  box-sizing: border-box;
+  flex: 0 50%;
+  font-size: 18px;
+  list-style: none;
+  margin-bottom: 3px;
+}
+/* line 93, ../src/stylesheets/footer.scss */
+section.blogroll ul li:nth-child(odd) {
+  padding-right: 25px;
+}
+/* line 97, ../src/stylesheets/footer.scss */
+section.blogroll ul li:nth-child(even) {
+  padding-left: 25px;
+}
+/* line 101, ../src/stylesheets/footer.scss */
+section.blogroll ul li a {
+  display: flex;
+  justify-content: center;
+  padding: 7px 7px 9px;
+  width: 100%;
+  position: relative;
+  transition: background .25s ease, color .4s ease, width .25s ease;
+}
+/* line 5, ../src/stylesheets/mixins.scss */
+section.blogroll ul li a:after {
+  background: transparent;
+  bottom: -3px;
+  content: "";
+  display: block;
+  height: 3px;
+  left: 50%;
+  position: absolute;
+  transition: all .25s ease;
+  width: 0%;
+}
+/* line 17, ../src/stylesheets/mixins.scss */
+section.blogroll ul li a:hover {
+  color: black;
+  transition: background .25s ease, color 0s ease, width .25s ease;
+}
+/* line 21, ../src/stylesheets/mixins.scss */
+section.blogroll ul li a:hover:after {
+  background: #000;
+  left: 0%;
+  width: 100%;
+}
+
+/* line 2, ../src/stylesheets/social.scss */
+section.social ul {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+/* line 8, ../src/stylesheets/social.scss */
+section.social ul li {
+  list-style: none;
+  margin: 0 5px 5px;
+}
+/* line 12, ../src/stylesheets/social.scss */
+section.social ul li a {
+  opacity: .2;
+  transition: opacity .25s ease;
+}
+/* line 16, ../src/stylesheets/social.scss */
+section.social ul li a svg {
+  fill: currentColor;
+  height: 24px;
+  width: 24px;
+}
+/* line 22, ../src/stylesheets/social.scss */
+section.social ul li a:hover {
+  opacity: .4;
+  transition: opacity 0s ease;
+}
+/* line 27, ../src/stylesheets/social.scss */
+section.social ul li a:active {
+  opacity: .6;
+  transition: opacity 0s ease;
+}
+
 /*********************************************************
 *  Variables
 *********************************************************/
 /*********************************************************
 *  General
 *********************************************************/
-/* line 46, ../src/stylesheets/blog.scss */
+/* line 49, ../src/stylesheets/blog.scss */
 body {
   line-height: 1.5;
-  color: #000;
+  color: rgba(0, 0, 0, 0.8);
   margin: 0 0;
-  font-family: "proximanova-medium", sans-serif;
-  font-weight: 300;
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: normal;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 51, ../src/stylesheets/blog.scss */
+/* line 60, ../src/stylesheets/blog.scss */
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
-/* line 55, ../src/stylesheets/blog.scss */
+/* line 65, ../src/stylesheets/blog.scss */
 a:hover {
   text-decoration: none;
 }
 
-/* line 56, ../src/stylesheets/blog.scss */
+/* line 66, ../src/stylesheets/blog.scss */
 .post-body a,
-.menu_navigation a,
 .subscribe-footer a,
 .search-archive a,
-#menu_blogroll a {
-  font-family: "proximanova-medium";
-  font-size: 18px;
-  font-weight: bold;
+section.blogroll a {
   border-bottom: 2px dashed rgba(0, 0, 0, 0.1);
   outline: none;
 }
-/* line 66, ../src/stylesheets/blog.scss */
+/* line 72, ../src/stylesheets/blog.scss */
 .post-body a:hover,
-.menu_navigation a:hover,
 .subscribe-footer a:hover,
 .search-archive a:hover,
-#menu_blogroll a:hover {
+section.blogroll a:hover {
   border-bottom-color: rgba(0, 0, 0, 0.4);
 }
-/* line 69, ../src/stylesheets/blog.scss */
+/* line 75, ../src/stylesheets/blog.scss */
 .post-body a:active,
-.menu_navigation a:active,
 .subscribe-footer a:active,
 .search-archive a:active,
-#menu_blogroll a:active {
+section.blogroll a:active {
   border-bottom-color: rgba(0, 0, 0, 0.7);
 }
 
-/* line 73, ../src/stylesheets/blog.scss */
+/* line 84, ../src/stylesheets/blog.scss */
+section.blogroll a:hover {
+  border-bottom: solid 2px transparent;
+}
+
+/* line 88, ../src/stylesheets/blog.scss */
 .small {
   font-size: 18px;
   font-weight: 300;
   opacity: 0.6;
 }
 
-/* line 79, ../src/stylesheets/blog.scss */
+/* line 94, ../src/stylesheets/blog.scss */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "proximanova-extrabold", sans-serif;
-  font-weight: 500;
+  font-weight: 800;
   line-height: 1.1;
 }
 
-/* line 80, ../src/stylesheets/blog.scss */
+/* line 95, ../src/stylesheets/blog.scss */
 h1 {
   font-size: 48px;
 }
 
-/* line 81, ../src/stylesheets/blog.scss */
+/* line 96, ../src/stylesheets/blog.scss */
 h2 {
   font-size: 30px;
 }
 
-/* line 82, ../src/stylesheets/blog.scss */
+/* line 97, ../src/stylesheets/blog.scss */
 h3 {
-  font-size: 30px;
+  font-size: 36px;
 }
 
-/* line 83, ../src/stylesheets/blog.scss */
+/* line 98, ../src/stylesheets/blog.scss */
 h4 {
   font-size: 24px;
 }
 
-/* line 84, ../src/stylesheets/blog.scss */
+/* line 99, ../src/stylesheets/blog.scss */
 h5 {
   font-size: 22px;
-  font-family: 'proximanova-medium';
+  font-weight: normal;
   opacity: 0.6;
 }
 
-/* line 86, ../src/stylesheets/blog.scss */
+/* line 101, ../src/stylesheets/blog.scss */
 textarea, input[type=text] {
   padding: 10px 20px;
   width: 100%;
@@ -916,36 +1636,36 @@ textarea, input[type=text] {
   font-size: 20px;
   outline: none;
 }
-/* line 96, ../src/stylesheets/blog.scss */
+/* line 111, ../src/stylesheets/blog.scss */
 textarea::-webkit-input-placeholder, input[type=text]::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   color: rgba(68, 68, 68, 0.2);
 }
-/* line 99, ../src/stylesheets/blog.scss */
+/* line 114, ../src/stylesheets/blog.scss */
 textarea::-moz-placeholder, input[type=text]::-moz-placeholder {
   /* Firefox 19+ */
   color: rgba(68, 68, 68, 0.2);
 }
-/* line 102, ../src/stylesheets/blog.scss */
+/* line 117, ../src/stylesheets/blog.scss */
 textarea:-ms-input-placeholder, input[type=text]:-ms-input-placeholder {
   /* IE 10+ */
   color: rgba(68, 68, 68, 0.2);
 }
-/* line 105, ../src/stylesheets/blog.scss */
+/* line 120, ../src/stylesheets/blog.scss */
 textarea:-moz-placeholder, input[type=text]:-moz-placeholder {
   /* Firefox 18- */
   color: rgba(68, 68, 68, 0.2);
 }
-/* line 108, ../src/stylesheets/blog.scss */
+/* line 123, ../src/stylesheets/blog.scss */
 textarea:hover, input[type=text]:hover {
   border: 2px solid rgba(0, 0, 0, 0.5);
 }
-/* line 111, ../src/stylesheets/blog.scss */
+/* line 126, ../src/stylesheets/blog.scss */
 textarea:active, input[type=text]:active {
   border: 2px solid black;
 }
 
-/* line 115, ../src/stylesheets/blog.scss */
+/* line 130, ../src/stylesheets/blog.scss */
 input[type='submit'], .posthaven-user-subscribe a {
   width: 100%;
   font-family: "proximanova-medium";
@@ -967,38 +1687,38 @@ input[type='submit'], .posthaven-user-subscribe a {
   outline: none;
 }
 
-/* line 135, ../src/stylesheets/blog.scss */
+/* line 150, ../src/stylesheets/blog.scss */
 input[type='submit']:hover, .posthaven-user-subscribe a:hover {
   background: black;
 }
 
-/* line 138, ../src/stylesheets/blog.scss */
+/* line 153, ../src/stylesheets/blog.scss */
 input[type='submit']:active, .posthaven-user-subscribe a:active,
 input[type='submit']:focus, .posthaven-user-subscribe a:focus {
   background: black;
   box-shadow: white 0px 0px 0px 1px, rgba(0, 0, 0, 0.25) 0px 0px 0px 3px;
 }
 
-/* line 144, ../src/stylesheets/blog.scss */
+/* line 159, ../src/stylesheets/blog.scss */
 .posthaven-share-links .posthaven-upvote {
-  border: 1px solid #DDDDDD;
-  padding: 4px 5px 4px 9px;
-  border-radius: 2px;
+  border: 2px solid #DDDDDD;
+  padding: 3px 5px 3px 9px;
+  border-radius: 4px;
 }
-/* line 148, ../src/stylesheets/blog.scss */
+/* line 163, ../src/stylesheets/blog.scss */
 .posthaven-share-links .posthaven-upvote:hover {
   border-color: rgba(0, 0, 0, 0.5);
   background-color: transparent;
 }
-/* line 151, ../src/stylesheets/blog.scss */
+/* line 166, ../src/stylesheets/blog.scss */
 .posthaven-share-links .posthaven-upvote:hover .posthaven-upvote-label, .posthaven-share-links .posthaven-upvote:hover .posthaven-upvoted-label {
   color: #509DFF;
 }
-/* line 154, ../src/stylesheets/blog.scss */
+/* line 169, ../src/stylesheets/blog.scss */
 .posthaven-share-links .posthaven-upvote:hover .posthaven-upvote-number {
   color: #000000;
 }
-/* line 158, ../src/stylesheets/blog.scss */
+/* line 173, ../src/stylesheets/blog.scss */
 .posthaven-share-links .posthaven-upvote .posthaven-upvote-label, .posthaven-share-links .posthaven-upvote .posthaven-upvoted-label {
   color: #509DFF;
   font-family: "proximanova-medium";
@@ -1007,7 +1727,7 @@ input[type='submit']:focus, .posthaven-user-subscribe a:focus {
   line-height: 18px;
   text-transform: uppercase;
 }
-/* line 166, ../src/stylesheets/blog.scss */
+/* line 181, ../src/stylesheets/blog.scss */
 .posthaven-share-links .posthaven-upvote .posthaven-upvote-number {
   opacity: 0.3;
   color: inherit;
@@ -1017,7 +1737,7 @@ input[type='submit']:focus, .posthaven-user-subscribe a:focus {
   line-height: 18px;
 }
 
-/* line 176, ../src/stylesheets/blog.scss */
+/* line 191, ../src/stylesheets/blog.scss */
 .alert {
   font-size: 14px;
   margin: 10px 0px 10px 60px;
@@ -1033,7 +1753,7 @@ input[type='submit']:focus, .posthaven-user-subscribe a:focus {
   border-radius: 5px;
   /* creates the smaller  triangle */
 }
-/* line 188, ../src/stylesheets/blog.scss */
+/* line 203, ../src/stylesheets/blog.scss */
 .alert:before {
   content: "";
   position: absolute;
@@ -1051,7 +1771,7 @@ input[type='submit']:focus, .posthaven-user-subscribe a:focus {
   display: block;
   width: 0;
 }
-/* line 205, ../src/stylesheets/blog.scss */
+/* line 220, ../src/stylesheets/blog.scss */
 .alert:after {
   content: "";
   position: absolute;
@@ -1070,369 +1790,299 @@ input[type='submit']:focus, .posthaven-user-subscribe a:focus {
   width: 0;
 }
 
-/* line 222, ../src/stylesheets/blog.scss */
+/* line 237, ../src/stylesheets/blog.scss */
 #container {
-  width: 1260px;
+  box-sizing: border-box;
   margin: auto;
+  max-width: 1600px;
   position: relative;
+}
+@media (min-width: 1200px) {
+  /* line 237, ../src/stylesheets/blog.scss */
+  #container {
+    padding: 0 130px;
+  }
 }
 
 /*********************************************************
 *  Topbar and Header
 *********************************************************/
-/* line 234, ../src/stylesheets/blog.scss */
-.posthaven-user-menu {
-  position: absolute;
-  top: 5px;
-  right: 0px;
-}
-/* line 239, ../src/stylesheets/blog.scss */
-.posthaven-user-menu .posthaven-anon {
-  font-size: 0px;
-  width: 32px;
-  height: 32px;
-  display: block;
-  border-radius: 50%;
-  background: linear-gradient(180deg, #656565 0%, #444444 100%);
-  overflow: hidden;
-}
-/* line 247, ../src/stylesheets/blog.scss */
-.posthaven-user-menu .posthaven-anon a {
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-  text-align: right;
-}
-/* line 252, ../src/stylesheets/blog.scss */
-.posthaven-user-menu .posthaven-anon a:before {
-  content: '';
-  width: 10px;
-  height: 32px;
-  background: linear-gradient(180deg, #8bcdff 0%, #539eff 100%);
-  display: inline-block;
-}
-/* line 260, ../src/stylesheets/blog.scss */
-.posthaven-user-menu .posthaven-anon a:hover {
-  text-decoration: none;
-}
-
-/* line 266, ../src/stylesheets/blog.scss */
-#topbar {
-  margin-left: 60px;
-  max-width: 800px;
-  overflow: hidden;
-  *zoom: 1;
-}
-/* line 272, ../src/stylesheets/blog.scss */
-#topbar .posthaven-tab {
-  float: left;
-  background-image: url("images/posthaven-tab-1x.png");
-  background-size: 100px 32px;
-  width: 100px;
-  height: 32px;
-}
-/* line 280, ../src/stylesheets/blog.scss */
-#topbar .account {
-  float: left;
-  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 14px;
-  line-height: 31px;
-}
-/* line 286, ../src/stylesheets/blog.scss */
-#topbar .account a {
-  margin-left: 10px;
-}
-
-/* line 290, ../src/stylesheets/blog.scss */
-#header {
+/* line 253, ../src/stylesheets/blog.scss */
+.header {
   text-align: center;
   max-width: 800px;
   padding: 100px 0 75px;
   margin: auto;
 }
-/* line 296, ../src/stylesheets/blog.scss */
-#header h1 {
+/* line 259, ../src/stylesheets/blog.scss */
+.header h1 {
   margin: 0px;
   line-height: 58px;
   text-transform: uppercase;
 }
-/* line 298, ../src/stylesheets/blog.scss */
-#header h1 a:hover {
+/* line 261, ../src/stylesheets/blog.scss */
+.header h1 a:hover {
   text-decoration: none;
 }
-/* line 300, ../src/stylesheets/blog.scss */
-#header h5 {
+/* line 263, ../src/stylesheets/blog.scss */
+.header h5 {
   margin: 0px;
 }
 
-/* line 305, ../src/stylesheets/blog.scss */
+/* line 268, ../src/stylesheets/blog.scss */
 #main_container {
   position: relative;
 }
 
-/* line 309, ../src/stylesheets/blog.scss */
+/* line 272, ../src/stylesheets/blog.scss */
 .main-content {
   min-height: 300px;
 }
 
-/*********************************************************
-*  Navigation
-*********************************************************/
-/* line 317, ../src/stylesheets/blog.scss */
-.menu_navigation {
-  padding: 12px 30px 5px 5px;
-}
-/* line 319, ../src/stylesheets/blog.scss */
-.menu_navigation ul {
-  padding: 0 0;
-  margin: 0 0;
-  overflow: hidden;
-  *zoom: 1;
-}
-/* line 321, ../src/stylesheets/blog.scss */
-.menu_navigation ul li {
-  list-style: none;
-  margin-right: 20px;
-  float: left;
-}
-/* line 325, ../src/stylesheets/blog.scss */
-.menu_navigation ul li a {
-  font-size: 20px;
-  font-weight: bold;
-  border-bottom-color: transparent;
-}
-
-/* line 332, ../src/stylesheets/blog.scss */
-#footer section {
-  margin-bottom: 20px;
-}
-/* line 334, ../src/stylesheets/blog.scss */
-#footer section ul {
-  padding-left: 0px;
-  margin: 0px 0px;
-}
-/* line 335, ../src/stylesheets/blog.scss */
-#footer section ul li {
-  list-style: none;
-}
-/* line 336, ../src/stylesheets/blog.scss */
-#footer section li.hidden-tag {
-  display: none;
-}
-/* line 338, ../src/stylesheets/blog.scss */
-#footer section .menu {
-  margin-top: 30px;
-  margin-bottom: 50px;
-}
-/* line 340, ../src/stylesheets/blog.scss */
-#footer section:first-child, #footer section:first-child nav:first-child,
-#footer section:first-child nav:first-child ul {
-  margin-top: 0 !important;
-}
-
-/* line 344, ../src/stylesheets/blog.scss */
+/* line 278, ../src/stylesheets/blog.scss */
 section.subhead {
   margin: auto;
   text-align: center;
 }
-/* line 347, ../src/stylesheets/blog.scss */
+/* line 281, ../src/stylesheets/blog.scss */
 section.subhead h3 {
   margin: 0;
 }
 
-/* line 352, ../src/stylesheets/blog.scss */
-#footer {
-  padding: 50px 80px;
-  background-color: rgba(210, 210, 210, 0.5);
-}
-/* line 353, ../src/stylesheets/blog.scss */
-#footer .menu_navigation {
-  max-width: 800px;
-  margin: auto;
-  padding: 0;
-}
-/* line 357, ../src/stylesheets/blog.scss */
-#footer .menu_navigation ul {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-/* line 362, ../src/stylesheets/blog.scss */
-#footer .menu_navigation ul li {
-  float: none;
-  margin-right: 0px;
-  text-align: center;
-}
-/* line 373, ../src/stylesheets/blog.scss */
-#footer #menu_blogroll {
-  max-width: 800px;
-  margin: auto;
-}
-/* line 378, ../src/stylesheets/blog.scss */
-#footer .blogroll-menu {
-  text-align: center;
-  margin: 50px 0px;
-}
-/* line 381, ../src/stylesheets/blog.scss */
-#footer .blogroll-menu ul {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
-  margin: 0 -2%;
-}
-/* line 388, ../src/stylesheets/blog.scss */
-#footer .blogroll-menu ul li {
-  width: 46%;
-  margin: 0 2% 10px;
-}
-/* line 391, ../src/stylesheets/blog.scss */
-#footer .blogroll-menu ul li a {
-  width: 100%;
-  display: inline-block;
-}
-/* line 399, ../src/stylesheets/blog.scss */
-#footer #tag_list_menu {
+/* line 286, ../src/stylesheets/blog.scss */
+section.tags {
   text-align: center;
   max-width: 800px;
   margin: auto;
 }
-/* line 403, ../src/stylesheets/blog.scss */
-#footer #tag_list_menu h4 {
+/* line 291, ../src/stylesheets/blog.scss */
+section.tags h4 {
   margin-bottom: 15px;
 }
-/* line 406, ../src/stylesheets/blog.scss */
-#footer #tag_list_menu .show-all-tags {
-  margin-top: 15px;
-}
-/* line 411, ../src/stylesheets/blog.scss */
-#footer #bio {
-  text-align: center;
-}
-/* line 414, ../src/stylesheets/blog.scss */
-#footer #bio .profile-pic img {
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  border: 1px solid #666;
-}
-/* line 419, ../src/stylesheets/blog.scss */
-#footer #bio h3 {
-  margin: 0px;
-}
-
-/* line 423, ../src/stylesheets/blog.scss */
-ul.tag-list {
+/* line 295, ../src/stylesheets/blog.scss */
+section.tags .all-tags {
   display: flex;
+  margin-top: 10px;
+  justify-content: center;
+}
+/* line 300, ../src/stylesheets/blog.scss */
+section.tags .all-tags .show-all-tags {
+  cursor: pointer;
+  font-weight: 800;
+  position: relative;
+  transition: background .25s ease, color .4s ease, width .25s ease;
+}
+/* line 5, ../src/stylesheets/mixins.scss */
+section.tags .all-tags .show-all-tags:after {
+  background: transparent;
+  bottom: -3px;
+  content: "";
+  display: block;
+  height: 3px;
+  left: 50%;
+  position: absolute;
+  transition: all .25s ease;
+  width: 0%;
+}
+/* line 17, ../src/stylesheets/mixins.scss */
+section.tags .all-tags .show-all-tags:hover {
+  color: black;
+  transition: background .25s ease, color 0s ease, width .25s ease;
+}
+/* line 21, ../src/stylesheets/mixins.scss */
+section.tags .all-tags .show-all-tags:hover:after {
+  background: #000;
+  left: 0%;
+  width: 100%;
+}
+/* line 307, ../src/stylesheets/blog.scss */
+section.tags ul {
+  display: inline-flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 0;
+  margin: 0;
 }
-/* line 429, ../src/stylesheets/blog.scss */
-ul.tag-list li.hide {
+/* line 315, ../src/stylesheets/blog.scss */
+section.tags ul li {
+  list-style: none;
+  margin: 2px;
+}
+/* line 319, ../src/stylesheets/blog.scss */
+section.tags ul li.hide {
   display: none;
 }
-
-/* line 435, ../src/stylesheets/blog.scss */
-.tag, .posthaven-archive-all-dates {
-  margin: 5px;
-  padding: 0px 10px;
-  font-size: 18px;
+/* line 324, ../src/stylesheets/blog.scss */
+section.tags ul a {
+  align-items: baseline;
+  border-radius: 100px;
+  border: 2px solid rgba(0, 0, 0, 0.13);
   box-sizing: border-box;
-  border: 1px solid #DDDDDD;
-  border-radius: 15px;
-  line-height: 22px;
+  color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  font-size: 18px;
+  margin: 2px;
+  padding: 0 10px 1px;
+  transition: all .25s ease;
+  user-select: none;
 }
-/* line 443, ../src/stylesheets/blog.scss */
-.tag .tag-count, .posthaven-archive-all-dates .tag-count {
-  color: rgba(68, 68, 68, 0.3);
+/* line 337, ../src/stylesheets/blog.scss */
+section.tags ul a span {
+  color: rgba(0, 0, 0, 0.3);
   font-size: 16px;
+  margin-left: 5px;
+  transition: all .25s ease;
 }
-/* line 444, ../src/stylesheets/blog.scss */
-.tag a, .posthaven-archive-all-dates a {
-  opacity: 0.5;
+/* line 345, ../src/stylesheets/blog.scss */
+section.tags ul a:hover {
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.7);
+  transition: all 0s ease;
+}
+/* line 350, ../src/stylesheets/blog.scss */
+section.tags ul a:hover span {
+  color: rgba(0, 0, 0, 0.5);
+  transition: all 0s ease;
+}
+/* line 356, ../src/stylesheets/blog.scss */
+section.tags ul a:active {
+  border: 2px solid rgba(0, 0, 0, 0.7);
+  color: rgba(0, 0, 0, 0.9);
+  transition: all 0s ease;
+}
+/* line 361, ../src/stylesheets/blog.scss */
+section.tags ul a:active span {
+  color: rgba(0, 0, 0, 0.7);
+  transition: all 0s ease;
+}
+/* line 369, ../src/stylesheets/blog.scss */
+section.tags ul .clear-tag span {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  height: 18px;
+  justify-content: center;
+  margin-left: 4px;
+  margin-right: -4px;
+  padding: 4px;
+  width: 18px;
+}
+/* line 386, ../src/stylesheets/blog.scss */
+section.tags ul .clear-tag span svg {
+  fill: currentColor;
+}
+/* line 392, ../src/stylesheets/blog.scss */
+section.tags ul .clear-tag:hover span {
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+}
+/* line 399, ../src/stylesheets/blog.scss */
+section.tags ul .clear-tag:active span {
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+}
+
+/* line 414, ../src/stylesheets/blog.scss */
+.posthaven {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+/* line 419, ../src/stylesheets/blog.scss */
+.posthaven a {
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+}
+/* line 425, ../src/stylesheets/blog.scss */
+.posthaven figure {
+  border-radius: 4px;
+  height: 32px;
+  margin-right: 12px;
+  overflow: hidden;
+  position: relative;
+  width: 32px;
+}
+/* line 433, ../src/stylesheets/blog.scss */
+.posthaven figure:before, .posthaven figure:after {
+  bottom: 0;
+  content: "";
+  position: absolute;
+  top: 0;
+}
+/* line 441, ../src/stylesheets/blog.scss */
+.posthaven figure:before {
+  background: rgba(0, 0, 0, 0.5);
+  left: 0;
+  width: 22px;
 }
 /* line 447, ../src/stylesheets/blog.scss */
-.tag .clear-tag, .posthaven-archive-all-dates .clear-tag {
-  color: #fff;
-  box-sizing: border-box;
-  background: #7f7f7f;
-  border-radius: 50%;
-  height: 15px;
-  width: 15px;
-  display: inline-block;
-  line-height: 15px;
-  margin-right: -5px;
-  margin-left: 3px;
-  cursor: pointer;
+.posthaven figure:after {
+  background: rgba(0, 0, 0, 0.35);
+  right: 0;
+  width: 10px;
 }
-
-/* line 462, ../src/stylesheets/blog.scss */
-.logo-spacer {
-  background-image: url("images/gray-logo.png");
-  margin: 20px auto;
-  max-width: 100%;
-  height: 32px;
-}
-
-/* line 469, ../src/stylesheets/blog.scss */
-.feed-icon {
-  width: 14px;
-  height: 14px;
-  display: block;
-  background-image: url("images/feed14.png");
+/* line 454, ../src/stylesheets/blog.scss */
+.posthaven .posthaven-wordmark {
+  --color-1: rgba(0, 0, 0, 0.5);
+  --color-2: rgba(0, 0, 0, 0.35);
+  height: 13px;
+  width: 120px;
 }
 
 /*********************************************************
 *  Subscribe Form
 *********************************************************/
-/* line 480, ../src/stylesheets/blog.scss */
+/* line 467, ../src/stylesheets/blog.scss */
 .subscribe-footer {
   margin: 100px 0px;
   text-align: center;
 }
-/* line 484, ../src/stylesheets/blog.scss */
+/* line 471, ../src/stylesheets/blog.scss */
 .subscribe-footer h3 {
   margin-bottom: 0px;
 }
-/* line 488, ../src/stylesheets/blog.scss */
+/* line 475, ../src/stylesheets/blog.scss */
 .subscribe-footer .subscribe-wrapper {
   width: 500px;
   max-width: 100%;
   margin: auto;
   font-size: 18px;
 }
-/* line 493, ../src/stylesheets/blog.scss */
+/* line 480, ../src/stylesheets/blog.scss */
 .subscribe-footer .subscribe-wrapper span {
   display: block;
   opacity: 0.7;
   font-size: 20px;
   font-weight: 500;
 }
-/* line 501, ../src/stylesheets/blog.scss */
+/* line 488, ../src/stylesheets/blog.scss */
 .subscribe-footer input {
   max-width: 400px;
   margin-top: 12px;
 }
-/* line 505, ../src/stylesheets/blog.scss */
+/* line 492, ../src/stylesheets/blog.scss */
 .subscribe-footer input[type=submit] {
   display: none;
   margin: 12px auto;
   max-width: 400px;
 }
-/* line 510, ../src/stylesheets/blog.scss */
+/* line 497, ../src/stylesheets/blog.scss */
 .subscribe-footer .posthaven-subscribe-error {
   color: #a00;
 }
 
-/* line 513, ../src/stylesheets/blog.scss */
+/* line 500, ../src/stylesheets/blog.scss */
 .post-responses h4 {
   text-align: center;
 }
 
-/* line 517, ../src/stylesheets/blog.scss */
+/* line 504, ../src/stylesheets/blog.scss */
 .posthaven-user-subscribed .post-responses .subscribe {
   display: none;
 }
@@ -1440,7 +2090,7 @@ ul.tag-list li.hide {
 /*********************************************************
 *  Private Page
 *********************************************************/
-/* line 525, ../src/stylesheets/blog.scss */
+/* line 512, ../src/stylesheets/blog.scss */
 .posthaven-password-field {
   display: inline-block;
 }
@@ -1448,287 +2098,113 @@ ul.tag-list li.hide {
 /*********************************************************
 *  Posts
 *********************************************************/
-/* line 533, ../src/stylesheets/blog.scss */
+/* line 520, ../src/stylesheets/blog.scss */
 #main {
   margin: auto;
 }
 
-/* line 537, ../src/stylesheets/blog.scss */
+/* line 524, ../src/stylesheets/blog.scss */
 #main.archive-results {
   max-width: 800px;
   margin: auto;
   text-align: center;
 }
 
-/* line 542, ../src/stylesheets/blog.scss */
-.post-aside {
-  margin: 25px auto;
-  color: rgba(68, 68, 68, 0.3);
-  font-size: 18px;
-}
-/* line 546, ../src/stylesheets/blog.scss */
-.post-aside a {
-  color: rgba(68, 68, 68, 0.3);
-}
-/* line 547, ../src/stylesheets/blog.scss */
-.post-aside .tag-count {
-  font-size: 12px;
-}
-/* line 548, ../src/stylesheets/blog.scss */
-.post-aside .show-tags {
-  margin-top: 5px;
-  font-size: 12px;
-}
-/* line 549, ../src/stylesheets/blog.scss */
-.post-aside h3 {
-  margin: 20px 0px 5px;
-  font-size: 12px;
-  font-weight: normal;
-}
-/* line 550, ../src/stylesheets/blog.scss */
-.post-aside ul {
-  padding-left: 0px;
-  margin: 0px 0px;
-}
-/* line 551, ../src/stylesheets/blog.scss */
-.post-aside ul li {
-  list-style: none;
-}
-
-/* line 553, ../src/stylesheets/blog.scss */
-.post {
-  width: 800px;
-  max-width: 100%;
-  margin: auto;
-  font-size: 22px;
-  color: #000;
-  /* responsive resize */
-  /* IE8 css bug */
-}
-/* line 561, ../src/stylesheets/blog.scss */
-.post .post-body {
-  margin-top: 25px;
-}
-/* line 563, ../src/stylesheets/blog.scss */
-.post .post-body h1, .post .post-body h2, .post .post-body h3 {
-  margin-top: 30px;
-}
-/* line 564, ../src/stylesheets/blog.scss */
-.post .post-body h1 {
-  font-size: 22px;
-}
-/* line 565, ../src/stylesheets/blog.scss */
-.post .post-body h2 {
-  font-size: 20px;
-}
-/* line 566, ../src/stylesheets/blog.scss */
-.post .post-body h3 {
-  font-size: 22px;
-  font-style: italic;
-}
-/* line 568, ../src/stylesheets/blog.scss */
-.post p {
-  margin: 24px auto;
-}
-/* line 569, ../src/stylesheets/blog.scss */
-.post .post-body .posthaven-gallery {
-  margin-left: -100px;
-  margin-right: -100px;
-  text-align: center;
-}
-/* line 575, ../src/stylesheets/blog.scss */
-.post img, .post object, .post embed, .post iframe {
-  max-width: 100%;
-}
-/* line 576, ../src/stylesheets/blog.scss */
-.post img {
-  height: auto;
-}
-/* line 577, ../src/stylesheets/blog.scss */
-.post iframe {
-  max-width: inherit\9;
-}
-/* line 579, ../src/stylesheets/blog.scss */
-.post blockquote p {
-  font-size: 22px;
-}
-/* line 580, ../src/stylesheets/blog.scss */
-.post blockquote {
-  padding-left: 10px;
-  border-left: 4px solid #eee;
-  font-size: 22px;
-}
-/* line 582, ../src/stylesheets/blog.scss */
-.post pre {
-  font-size: 13px;
-}
-/* line 583, ../src/stylesheets/blog.scss */
-.post .slash-divider {
-  color: #ddd;
-}
-/* line 584, ../src/stylesheets/blog.scss */
-.post .private-indicator {
-  margin-top: 10px;
-}
-/* line 587, ../src/stylesheets/blog.scss */
-.post .private-indicator .lock-icon {
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  background-image: url("images/lock-icon.png");
-  position: relative;
-  top: -3px;
-}
-/* line 596, ../src/stylesheets/blog.scss */
-.post .post-title {
-  margin: 75px auto 20px;
-  text-align: center;
-}
-/* line 599, ../src/stylesheets/blog.scss */
-.post .post-title h2 {
-  font-size: 30px;
-  margin-top: 0;
-  margin-bottom: 5px;
-}
-/* line 601, ../src/stylesheets/blog.scss */
-.post .post-title h2 a {
-  color: inherit;
-}
-/* line 603, ../src/stylesheets/blog.scss */
-.post .post-title .author {
-  font-size: 13px;
-  color: #999;
-}
-/* line 606, ../src/stylesheets/blog.scss */
-.post .post-title .author a {
-  color: #999;
-}
-/* line 611, ../src/stylesheets/blog.scss */
-.post .homepage-post-footer {
-  margin: 30px 0;
-  font-size: 14px;
-  text-align: center;
-}
-/* line 615, ../src/stylesheets/blog.scss */
-.post .homepage-post-footer .tags {
-  margin: 10px 0;
-  font-size: 12px;
-}
-/* line 618, ../src/stylesheets/blog.scss */
-.post .homepage-post-footer .tags h6 {
-  font-weight: normal;
-  color: #999;
-  font-size: 12px;
-  display: inline;
-}
-/* line 619, ../src/stylesheets/blog.scss */
-.post .homepage-post-footer .tags ul {
-  padding-left: 10px;
-  margin-left: 0;
-  display: inline;
-}
-/* line 620, ../src/stylesheets/blog.scss */
-.post .homepage-post-footer .tags ul li {
-  display: inline;
-  margin-right: 10px;
-}
-/* line 621, ../src/stylesheets/blog.scss */
-.post .homepage-post-footer .tags ul li a {
-  white-space: nowrap;
-}
-/* line 625, ../src/stylesheets/blog.scss */
-.post table {
-  border-bottom: 1px solid #ddd;
-  width: 100%;
-  border-collapse: collapse;
-}
-/* line 626, ../src/stylesheets/blog.scss */
-.post table, .post th, .post td {
-  border-top: 1px solid #ddd;
-}
-/* line 627, ../src/stylesheets/blog.scss */
-.post table th, .post table td {
-  padding: 4px 5px;
-}
-/* line 628, ../src/stylesheets/blog.scss */
-.post table p:first-child {
-  margin-top: 0px;
-}
-/* line 629, ../src/stylesheets/blog.scss */
-.post table p:last-child {
-  margin-bottom: 0px;
-}
-
-/* line 631, ../src/stylesheets/blog.scss */
-.gist {
-  font-size: 13px;
-}
-
-/* line 635, ../src/stylesheets/blog.scss */
-.post:first-child {
-  margin-top: 0px;
-}
-
 /*********************************************************
 *  Pagination
 *********************************************************/
-/* line 643, ../src/stylesheets/blog.scss */
+/* line 534, ../src/stylesheets/blog.scss */
 .pagination {
   text-align: center;
   max-width: 800px;
   margin: auto;
 }
-/* line 647, ../src/stylesheets/blog.scss */
+/* line 539, ../src/stylesheets/blog.scss */
 .pagination ul {
-  margin: 10px 0 40px 0;
-  padding: 0 0;
+  align-items: baseline;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
 }
-/* line 654, ../src/stylesheets/blog.scss */
+/* line 548, ../src/stylesheets/blog.scss */
 .pagination ul li {
   list-style: none;
-  float: none;
-  text-align: center;
 }
-/* line 660, ../src/stylesheets/blog.scss */
-.pagination ul li a {
-  opacity: 0.2;
-  font-family: "proximanova-medium";
+/* line 551, ../src/stylesheets/blog.scss */
+.pagination ul li.previous, .pagination ul li.next {
+  font-weight: 800;
+}
+/* line 555, ../src/stylesheets/blog.scss */
+.pagination ul li.previous a, .pagination ul li.next a {
+  color: black;
+  font-size: 20px;
+  position: relative;
+  transition: background .25s ease, color .4s ease, width .25s ease;
+}
+/* line 5, ../src/stylesheets/mixins.scss */
+.pagination ul li.previous a:after, .pagination ul li.next a:after {
+  background: transparent;
+  bottom: -3px;
+  content: "";
+  display: block;
+  height: 3px;
+  left: 50%;
+  position: absolute;
+  transition: all .25s ease;
+  width: 0%;
+}
+/* line 17, ../src/stylesheets/mixins.scss */
+.pagination ul li.previous a:hover, .pagination ul li.next a:hover {
+  color: black;
+  transition: background .25s ease, color 0s ease, width .25s ease;
+}
+/* line 21, ../src/stylesheets/mixins.scss */
+.pagination ul li.previous a:hover:after, .pagination ul li.next a:hover:after {
+  background: #000;
+  left: 0%;
+  width: 100%;
+}
+/* line 565, ../src/stylesheets/blog.scss */
+.pagination ul li.number.active a {
+  color: rgba(0, 0, 0, 0.3);
+  cursor: default;
   font-size: 18px;
-  font-weight: 500;
-  line-height: 22px;
 }
-/* line 667, ../src/stylesheets/blog.scss */
+/* line 570, ../src/stylesheets/blog.scss */
+.pagination ul li.number.active a:hover, .pagination ul li.number.active a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+/* line 574, ../src/stylesheets/blog.scss */
+.pagination ul li.number.active a:hover:after, .pagination ul li.number.active a:active:after {
+  display: none;
+}
+/* line 583, ../src/stylesheets/blog.scss */
 .pagination ul li.number, .pagination ul li.gap, .pagination ul li.first, .pagination ul li.last {
   display: none;
 }
-/* line 668, ../src/stylesheets/blog.scss */
+/* line 584, ../src/stylesheets/blog.scss */
 .pagination ul li.number.active {
   display: block;
   flex: 1;
-}
-/* line 669, ../src/stylesheets/blog.scss */
-.pagination ul li.next a, .pagination ul li.previous a {
-  opacity: 1;
 }
 
 /*********************************************************
 *  Responses
 *********************************************************/
-/* line 677, ../src/stylesheets/blog.scss */
+/* line 592, ../src/stylesheets/blog.scss */
 #post_responses {
   margin: 40px auto;
   max-width: 600px;
 }
 
-/* line 683, ../src/stylesheets/blog.scss */
+/* line 598, ../src/stylesheets/blog.scss */
 .post-responses h4 {
   margin-bottom: 20px;
 }
-/* line 685, ../src/stylesheets/blog.scss */
+/* line 600, ../src/stylesheets/blog.scss */
 .post-responses .responses .response {
   position: relative;
   margin: 10px 0px;
@@ -1736,83 +2212,83 @@ ul.tag-list li.hide {
   line-height: 26px;
   text-align: justify;
 }
-/* line 692, ../src/stylesheets/blog.scss */
+/* line 607, ../src/stylesheets/blog.scss */
 .post-responses .responses .response p {
   margin: 8px 0px;
 }
-/* line 693, ../src/stylesheets/blog.scss */
+/* line 608, ../src/stylesheets/blog.scss */
 .post-responses .responses .response p:first-child {
   margin: 0 0 8px;
 }
-/* line 694, ../src/stylesheets/blog.scss */
+/* line 609, ../src/stylesheets/blog.scss */
 .post-responses .responses .response .byline {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
 }
-/* line 698, ../src/stylesheets/blog.scss */
+/* line 613, ../src/stylesheets/blog.scss */
 .post-responses .responses .response .byline .response-name {
   font-family: "proximanova-extrabold";
 }
-/* line 699, ../src/stylesheets/blog.scss */
+/* line 614, ../src/stylesheets/blog.scss */
 .post-responses .responses .response .byline .time-ago {
   color: #ccc;
 }
-/* line 705, ../src/stylesheets/blog.scss */
+/* line 620, ../src/stylesheets/blog.scss */
 .post-responses .posthaven-loader {
   margin: 5em auto;
 }
 
-/* line 710, ../src/stylesheets/blog.scss */
+/* line 625, ../src/stylesheets/blog.scss */
 .posthaven-share-links {
   display: flex;
   justify-content: center;
   flex-direction: row;
 }
-/* line 714, ../src/stylesheets/blog.scss */
+/* line 629, ../src/stylesheets/blog.scss */
 .posthaven-share-links .posthaven-share-item {
   display: inline-block;
   margin: 0px 5px;
 }
 
 @media handheld, only screen and (max-width: 414px) {
-  /* line 721, ../src/stylesheets/blog.scss */
+  /* line 636, ../src/stylesheets/blog.scss */
   .posthaven-share-links > .posthaven-share-item {
     display: block;
     margin: 5px 0;
   }
 }
-/* line 730, ../src/stylesheets/blog.scss */
+/* line 645, ../src/stylesheets/blog.scss */
 .posthaven-comment-form {
   padding: 0 0 40px;
   text-align: center;
 }
-/* line 734, ../src/stylesheets/blog.scss */
+/* line 649, ../src/stylesheets/blog.scss */
 .posthaven-comment-form .posthaven-comment-add-url {
   display: none;
 }
-/* line 736, ../src/stylesheets/blog.scss */
+/* line 651, ../src/stylesheets/blog.scss */
 .posthaven-comment-form input[type=submit] {
   display: none;
 }
-/* line 740, ../src/stylesheets/blog.scss */
+/* line 655, ../src/stylesheets/blog.scss */
 .posthaven-comment-form .posthaven-field {
   margin: 10px 0px;
   display: block !important;
 }
-/* line 744, ../src/stylesheets/blog.scss */
+/* line 659, ../src/stylesheets/blog.scss */
 .posthaven-comment-form .posthaven-field label {
   display: none;
 }
-/* line 748, ../src/stylesheets/blog.scss */
+/* line 663, ../src/stylesheets/blog.scss */
 .posthaven-comment-form .posthaven-field textarea, .posthaven-comment-form .posthaven-field input[type=text] {
   width: 100%;
 }
-/* line 752, ../src/stylesheets/blog.scss */
+/* line 667, ../src/stylesheets/blog.scss */
 .posthaven-comment-form .posthaven-field input[type=checkbox] {
   margin-right: 3px;
 }
-/* line 757, ../src/stylesheets/blog.scss */
+/* line 672, ../src/stylesheets/blog.scss */
 .posthaven-comment-form .posthaven-field.posthaven-comment-notify-field label {
   display: inline;
   opacity: 0.7;
@@ -1821,13 +2297,13 @@ ul.tag-list li.hide {
   font-weight: 500;
   line-height: 30px;
 }
-/* line 767, ../src/stylesheets/blog.scss */
+/* line 682, ../src/stylesheets/blog.scss */
 .posthaven-comment-form .posthaven-field.posthaven-comment-body-field label {
   font-weight: bold;
   text-align: center;
   width: 100%;
 }
-/* line 774, ../src/stylesheets/blog.scss */
+/* line 689, ../src/stylesheets/blog.scss */
 .posthaven-comment-form .posthaven-comment-verification {
   width: 500px;
   margin-bottom: 10px;
@@ -1836,25 +2312,25 @@ ul.tag-list li.hide {
 /*********************************************************
 *  Archive
 *********************************************************/
-/* line 780, ../src/stylesheets/blog.scss */
+/* line 695, ../src/stylesheets/blog.scss */
 .archive-title {
   margin-bottom: 10px;
 }
 
-/* line 781, ../src/stylesheets/blog.scss */
+/* line 696, ../src/stylesheets/blog.scss */
 .archive-container {
   position: relative;
 }
-/* line 783, ../src/stylesheets/blog.scss */
+/* line 698, ../src/stylesheets/blog.scss */
 .archive-container .posthaven-loader {
   margin: 5em auto;
 }
 
-/* line 787, ../src/stylesheets/blog.scss */
+/* line 702, ../src/stylesheets/blog.scss */
 .archive-view {
   margin-bottom: 60px;
 }
-/* line 789, ../src/stylesheets/blog.scss */
+/* line 704, ../src/stylesheets/blog.scss */
 .archive-view a {
   color: inherit;
   font-family: "proximanova-medium";
@@ -1864,43 +2340,39 @@ ul.tag-list li.hide {
   outline: none;
   border-bottom: 2px dashed transparent;
 }
-/* line 797, ../src/stylesheets/blog.scss */
+/* line 712, ../src/stylesheets/blog.scss */
 .archive-view a:first-child {
   margin-right: 40px;
 }
-/* line 800, ../src/stylesheets/blog.scss */
+/* line 715, ../src/stylesheets/blog.scss */
 .archive-view a.active {
   border-bottom-color: rgba(0, 0, 0, 0.1);
 }
-/* line 803, ../src/stylesheets/blog.scss */
+/* line 718, ../src/stylesheets/blog.scss */
 .archive-view a:hover {
   border-bottom-color: rgba(0, 0, 0, 0.4);
 }
-/* line 806, ../src/stylesheets/blog.scss */
+/* line 721, ../src/stylesheets/blog.scss */
 .archive-view a:active {
   border-bottom-color: rgba(0, 0, 0, 0.7);
 }
 
-/* line 811, ../src/stylesheets/blog.scss */
+/* line 726, ../src/stylesheets/blog.scss */
 .archive-results {
   margin-bottom: 40px;
 }
-/* line 814, ../src/stylesheets/blog.scss */
+/* line 729, ../src/stylesheets/blog.scss */
 .archive-results ul {
   padding: 0px;
 }
 
-/* line 818, ../src/stylesheets/blog.scss */
+/* line 733, ../src/stylesheets/blog.scss */
 .posthaven-archive-all-dates {
   display: inline-block;
   margin-bottom: 40px;
 }
 
-/* line 822, ../src/stylesheets/blog.scss */
-.posthaven-archive-form {
-  margin: 20px -100px 40px;
-}
-/* line 824, ../src/stylesheets/blog.scss */
+/* line 738, ../src/stylesheets/blog.scss */
 .posthaven-archive-form input {
   width: 100%;
   padding: 5px 5px 5px 35px;
@@ -1910,23 +2382,23 @@ ul.tag-list li.hide {
   background-size: 18px 18px;
 }
 
-/* line 834, ../src/stylesheets/blog.scss */
+/* line 748, ../src/stylesheets/blog.scss */
 .archive-link {
   font-size: 13px;
 }
 
-/* line 838, ../src/stylesheets/blog.scss */
+/* line 752, ../src/stylesheets/blog.scss */
 input.archive-search.archive-tooltip {
   color: #aaa;
 }
 
-/* line 843, ../src/stylesheets/blog.scss */
+/* line 757, ../src/stylesheets/blog.scss */
 .archive-months li {
   list-style: none;
   margin-bottom: 30px;
   text-align: center;
 }
-/* line 847, ../src/stylesheets/blog.scss */
+/* line 761, ../src/stylesheets/blog.scss */
 .archive-months li .month {
   display: block;
   font-family: "proximanova-medium";
@@ -1935,7 +2407,7 @@ input.archive-search.archive-tooltip {
   line-height: 29px;
   color: inherit;
 }
-/* line 855, ../src/stylesheets/blog.scss */
+/* line 769, ../src/stylesheets/blog.scss */
 .archive-months li .count {
   display: block;
   opacity: 0.3;
@@ -1946,12 +2418,12 @@ input.archive-search.archive-tooltip {
   line-height: 22px;
 }
 
-/* line 867, ../src/stylesheets/blog.scss */
+/* line 781, ../src/stylesheets/blog.scss */
 li.archive-entry {
   list-style: none;
   margin-bottom: 40px;
 }
-/* line 869, ../src/stylesheets/blog.scss */
+/* line 783, ../src/stylesheets/blog.scss */
 li.archive-entry a {
   color: inherit;
   font-family: "proximanova-medium";
@@ -1960,12 +2432,12 @@ li.archive-entry a {
   line-height: 29px;
   text-align: center;
 }
-/* line 878, ../src/stylesheets/blog.scss */
+/* line 792, ../src/stylesheets/blog.scss */
 li.archive-entry em {
   background-color: #eee;
   font-style: normal;
 }
-/* line 879, ../src/stylesheets/blog.scss */
+/* line 793, ../src/stylesheets/blog.scss */
 li.archive-entry .archive-date {
   opacity: 0.3;
   color: inherit;
@@ -1975,7 +2447,7 @@ li.archive-entry .archive-date {
   line-height: 22px;
   text-align: center;
 }
-/* line 888, ../src/stylesheets/blog.scss */
+/* line 802, ../src/stylesheets/blog.scss */
 li.archive-entry .search-highlight {
   color: #333333;
   font-family: "proximanova-medium";
@@ -1986,29 +2458,29 @@ li.archive-entry .search-highlight {
   margin: 18px 0px;
 }
 
-/* line 898, ../src/stylesheets/blog.scss */
+/* line 812, ../src/stylesheets/blog.scss */
 .archive-container {
   margin-bottom: 100px;
 }
 
-/* line 899, ../src/stylesheets/blog.scss */
+/* line 813, ../src/stylesheets/blog.scss */
 .archive {
   margin: 0;
   font-size: 12px;
 }
-/* line 902, ../src/stylesheets/blog.scss */
+/* line 816, ../src/stylesheets/blog.scss */
 .archive h3 {
   margin: 0 0;
 }
 
-/* line 904, ../src/stylesheets/blog.scss */
+/* line 818, ../src/stylesheets/blog.scss */
 .search-archive {
   max-width: 800px;
   margin: auto;
   text-align: center;
 }
 
-/* line 911, ../src/stylesheets/blog.scss */
+/* line 825, ../src/stylesheets/blog.scss */
 .archive-pagination a {
   color: inherit;
   font-family: "proximanova-medium";
@@ -2016,18 +2488,18 @@ li.archive-entry .search-highlight {
   font-weight: 500;
   line-height: 22px;
 }
-/* line 918, ../src/stylesheets/blog.scss */
+/* line 832, ../src/stylesheets/blog.scss */
 .archive-pagination .posthaven-archive-pagination {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
 }
-/* line 923, ../src/stylesheets/blog.scss */
+/* line 837, ../src/stylesheets/blog.scss */
 .archive-pagination .posthaven-archive-pagination .posthaven-archive-disabled {
   display: block;
 }
 
-/* line 929, ../src/stylesheets/blog.scss */
+/* line 843, ../src/stylesheets/blog.scss */
 #archive-results-by-date {
   display: none;
 }
@@ -2037,24 +2509,24 @@ li.archive-entry .search-highlight {
 *********************************************************/
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   /* Retina-specific stuff here */
-  /* line 940, ../src/stylesheets/blog.scss */
+  /* line 854, ../src/stylesheets/blog.scss */
   #topbar .posthaven-tab {
     background-image: url("images/posthaven-tab-4x.png");
   }
 
-  /* line 942, ../src/stylesheets/blog.scss */
+  /* line 856, ../src/stylesheets/blog.scss */
   .feed-icon {
     background-size: 14px 14px;
     background-image: url("images/feed28.png");
   }
 }
 @media handheld, only screen and (max-width: 767px) {
-  /* line 950, ../src/stylesheets/blog.scss */
-  .menu_navigation, .subscribe-footer, #footer {
+  /* line 864, ../src/stylesheets/blog.scss */
+  .menu_navigation, .subscribe-footer, footer {
     padding: 10px 20px;
   }
 
-  /* line 951, ../src/stylesheets/blog.scss */
+  /* line 865, ../src/stylesheets/blog.scss */
   #header, #main, #topbar, .alert, section.subhead, .post-aside {
     margin: 0px 20px 20px;
     float: none;
@@ -2063,31 +2535,31 @@ li.archive-entry .search-highlight {
     top: inherit;
   }
 
-  /* line 955, ../src/stylesheets/blog.scss */
+  /* line 869, ../src/stylesheets/blog.scss */
   .alert {
     width: auto;
   }
 
-  /* line 956, ../src/stylesheets/blog.scss */
+  /* line 870, ../src/stylesheets/blog.scss */
   #main_container {
     margin-top: 30px;
   }
 
-  /* line 958, ../src/stylesheets/blog.scss */
+  /* line 872, ../src/stylesheets/blog.scss */
   #header h1 {
     font-size: 30px;
   }
-  /* line 958, ../src/stylesheets/blog.scss */
+  /* line 872, ../src/stylesheets/blog.scss */
   #header h2 {
     font-size: 20px;
   }
 
-  /* line 960, ../src/stylesheets/blog.scss */
+  /* line 874, ../src/stylesheets/blog.scss */
   #back_to_blog {
     display: none;
   }
 
-  /* line 961, ../src/stylesheets/blog.scss */
+  /* line 875, ../src/stylesheets/blog.scss */
   .posthaven-archive-form input {
     width: 90%;
   }
