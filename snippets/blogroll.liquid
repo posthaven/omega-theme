@@ -1,26 +1,18 @@
 {% unless site.blogroll == empty %}
-  <section>
-    <nav id="menu_blogroll">
-      <ul>
-        {% for menu in site.blogroll %}
-          {% unless menu.items == empty %}
-            <li class="blogroll-menu">
-              <section>
-                <nav>
-                  <h4>{{ menu.title }}</h4>
-                  <ul>
-                    {% for menu_item in menu.items %}
-                      <li class="menu-item {{ menu_item.url | text_if_current}}">
-                        <a href="{{ menu_item.url }}">{{ menu_item.title }}</a>
-                      </li>
-                    {% endfor %}
-                  </ul>
-                </nav>
-              </section>
-            </li>
-          {% endunless %}
-        {% endfor %}
-      </ul>
-    </nav>
-  </section>
+  {% for menu in site.blogroll %}
+    <section class="blogroll">
+      <nav>
+        <h4>{{ menu.title }}</h4>
+        {% unless menu.items == empty %}
+          <ul>
+            {% for menu_item in menu.items %}
+              <li class="{{ menu_item.url | text_if_current}}">
+                <a href="{{ menu_item.url }}">{{ menu_item.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endunless %}
+      </nav>
+    </section>
+  {% endfor %}
 {% endunless %}

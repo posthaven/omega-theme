@@ -1,5 +1,11 @@
 @import 'normalize';
 @import 'hint';
+@import 'mixins';
+@import 'variables';
+@import 'header';
+@import 'post';
+@import 'footer';
+@import 'social';
 
 @import "compass/css3/opacity";
 @import "compass/css3/images";
@@ -56,18 +62,14 @@ $helveticaNeueLight: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica N
 $helveticaNeueUltralight: "HelveticaNeue-UltraLight", "Helvetica Neue Ultra Light",
                           "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
-$bodyFont: 'proximanova-medium', sans-serif;
-$bodyWeight: 300;
-$bodyColor: #000;
-$bodyFontSize: 22px;
-$postWidth: 800px;
+$bodyColor: rgba($primary,.8);
+$bodyFont: 'Proxima Nova', sans-serif;
+$bodyWeight: normal;
 
 $fullGutter: 60px;
 
 $footerSectionWidth: 250px;
-$footerColor: rgba(210, 210, 210, 0.5);
 
-$lightAccentColor: #999;
 
 $primaryColor: #2b6cc2;
 $primaryDarkerColor: #285188;
@@ -78,23 +80,26 @@ $errorColor: #a00;
 *********************************************************/
 
 body {
-  line-height: 1.5; color: $bodyColor; margin: 0 0; font-family: $bodyFont;
-  font-weight: $bodyWeight; overflow-x: hidden;
+  line-height: 1.5; 
+  color: rgba($primary, .8); 
+  margin: 0 0; 
+  font-family: $bodyFont;
+  font-weight: $bodyWeight;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
+
 a:hover { text-decoration: none; }
 .post-body a,
-.menu_navigation a,
 .subscribe-footer a,
 .search-archive a,
-#menu_blogroll a {
-	font-family: "proximanova-medium";
-	font-size: 18px;
-	font-weight: bold;
+section.blogroll a {
   border-bottom: 2px dashed rgba(0,0,0,0.1);
   outline: none;
   &:hover {
@@ -104,18 +109,27 @@ a:hover { text-decoration: none; }
     border-bottom-color: rgba(0,0,0,0.7);
   }
 }
+
+// for links that show a dashed underline but also include
+// the link animation, make the dashed underline transparent
+// on hover for a cleaner animation
+section.blogroll a {
+  &:hover {
+    border-bottom: solid 2px transparent;
+  }
+}
 .small {
   font-size: 18px;
   font-weight: 300;
   opacity: 0.6
 }
 
-h1, h2, h3, h4, h5, h6 { font-family: $headerFont; font-weight: 500; line-height: 1.1;}
+h1, h2, h3, h4, h5, h6 { font-weight: 800; line-height: 1.1;}
 h1 { font-size: 48px; }
 h2 { font-size: 30px; }
-h3 { font-size: 30px; }
+h3 { font-size: 36px; }
 h4 { font-size: 24px; }
-h5 { font-size: 22px; font-family: 'proximanova-medium'; opacity: 0.6 }
+h5 { font-size: 22px; font-weight: normal; opacity: 0.6 }
 
 textarea, input[type=text] {
   padding: 10px 20px;
@@ -176,9 +190,9 @@ input[type='submit']:focus, .posthaven-user-subscribe a:focus, {
 }
 .posthaven-share-links {
   .posthaven-upvote {
-  	border: 1px solid #DDDDDD;
-    padding: 4px 5px 4px 9px;
-    border-radius: 2px;
+  	border: 2px solid #DDDDDD;
+    padding: 3px 5px 3px 9px;
+    border-radius: 4px;
     &:hover {
       border-color: rgba(0,0,0,0.5);
       background-color: transparent;
@@ -254,74 +268,22 @@ input[type='submit']:focus, .posthaven-user-subscribe a:focus, {
 }
 
 #container {
-  width: 1260px;
+  box-sizing: border-box;
   margin: auto;
+  max-width: 1600px;
   position: relative;
+
+  @media (min-width: 1200px) {
+    padding: 0 130px;
+  }
 }
 
 /*********************************************************
 *  Topbar and Header
 *********************************************************/
 
-$logoHeight: 32px;
-$logoWidth: 100px;
-.posthaven-user-menu {
-  position: absolute;
-  top: 5px;
-  right: 0px;
 
-  .posthaven-anon {
-    font-size: 0px;
-    width: 32px;
-    height: 32px;
-    display: block;
-    border-radius: 50%;
-    background: linear-gradient(180deg, #656565 0%, #444444 100%);
-    overflow: hidden;
-    a {
-      display: inline-block;
-      width: 32px;
-      height: 32px;
-      text-align: right;
-      &:before{
-        content: '';
-        width: 10px;
-        height: 32px;
-        background: linear-gradient(180deg, #8BCDFF 0%, #539EFF 100%);
-        display: inline-block;
-      }
-    }
-    a:hover {
-      text-decoration: none;
-    }
-  }
-}
-
-#topbar {
-  margin-left: $fullGutter;
-  max-width: $postWidth;
-
-  @include clearfix;
-
-  .posthaven-tab {
-    float:left;
-    background-image: url("images/posthaven-tab-1x.png");
-    background-size: $logoWidth $logoHeight;
-    width: $logoWidth;
-    height: $logoHeight;
-  }
-
-  .account {
-    float: left;
-    font-family: $helveticaNeue;
-    font-size: 14px;
-    line-height: $logoHeight - 1;
-
-    a {  margin-left: 10px; }
-  }
-}
-
-#header {
+.header {
   text-align: center;
   max-width: $postWidth;
   padding: 100px 0 75px;
@@ -344,36 +306,7 @@ $logoWidth: 100px;
   min-height: 300px;
 }
 
-/*********************************************************
-*  Navigation
-*********************************************************/
 
-.menu_navigation {
-  padding: 12px 30px 5px 5px;
-  ul {
-    padding: 0 0; margin: 0 0;
-    li {
-      list-style: none;
-      margin-right: 20px;
-      float: left;
-      a { font-size: 20px; font-weight: bold; border-bottom-color: transparent; }
-    }
-    @include clearfix;
-  }
-}
-
-#footer {
-  section {
-    margin-bottom: 20px;
-    ul { padding-left: 0px; margin: 0px 0px; }
-    ul li { list-style: none; }
-    li.hidden-tag { display: none; }
-
-    .menu { margin-top: 30px; margin-bottom: 50px; }
-  }
-  section:first-child, section:first-child nav:first-child,
-  section:first-child nav:first-child ul {margin-top: 0 !important;}
-}
 
 section.subhead {
   margin: auto;
@@ -383,127 +316,180 @@ section.subhead {
   }
 }
 
-#footer {
-  .menu_navigation {
-    max-width: $postWidth;
-    margin: auto;
-    padding: 0;
-    ul {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-evenly;
-      li {
-        float: none;
-        margin-right: 0px;
-        text-align: center;
-      }
+section.tags {
+  text-align: center;
+  max-width: $postWidth;
+  margin: auto;
+
+  h4 {
+    margin-bottom: 15px;
+  }
+
+  .all-tags {
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+
+    .show-all-tags {
+      cursor: pointer;
+      font-weight: 800;
+      @include animate-links;
     }
   }
 
-  padding: 50px 80px;
-  background-color: $footerColor;
+  ul {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
 
-  #menu_blogroll {
-    max-width: $postWidth;
-    margin: auto;
-  }
+    li {
+      list-style: none;
+      margin: 2px;
 
-  .blogroll-menu {
-    text-align: center;
-    margin: 50px 0px;
-    ul {
+      &.hide {
+        display: none;
+      }
+    }
+
+    a {
+      align-items: baseline;
+      border-radius: 100px;
+      border: 2px solid rgba($primary, .13);
+      box-sizing: border-box;
+      color: rgba($primary, .5);
       display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      width: 100%;
-      margin: 0 -2%;
-      li {
-        width: 46%;
-        margin: 0 2% 10px;
-        a {
-          width: 100%;
-          display: inline-block;
+      font-size: 18px;
+      margin: 2px;
+      padding: 0 10px 1px;
+      transition: all .25s ease;
+      user-select: none;
+
+      span {
+        // count
+        color: rgba($primary, .3);
+        font-size: 16px;
+        margin-left: 5px;
+        transition: all .25s ease;
+      }
+
+      &:hover {
+        border: 2px solid rgba($primary, .4);
+        color: rgba($primary, .7);
+        transition: all 0s ease;
+
+        span {
+          color: rgba($primary, .5);
+          transition: all 0s ease;
+        }
+      }
+
+      &:active {
+        border: 2px solid rgba($primary, .7);
+        color: rgba($primary, .9);
+        transition: all 0s ease;
+
+        span {
+          color: rgba($primary, .7);
+          transition: all 0s ease;
+        }
+      }
+    }
+
+    .clear-tag {
+      span {
+        // x replaces count
+        align-items: center;
+        background: rgba($primary, .5);
+        //background: url("data:image/svg+xml;charset=utf-8,<svg width='10' height='10' xmlns='http://www.w3.org/2000/svg'><path d='M10 1.814L8.185 0 5 3.184 1.815 0 0 1.814 3.185 5 0 8.183l1.815 1.815L5 6.814 8.185 10 10 8.184 6.815 4.998z' fill='#000' fill-rule='nonzero'/></svg>");
+        border-radius: 10px;
+        box-sizing: border-box;
+        color: choose-contrast-color($primary);
+        cursor: pointer;
+        display: flex;
+        height: 18px;
+        justify-content: center;
+        margin-left: 4px;
+        margin-right: -4px;
+        padding: 4px;
+        width: 18px;
+
+        svg {
+          fill: currentColor;
+        }
+      }
+
+      &:hover {
+        span {
+          background: rgba($primary, .75);
+          color: choose-contrast-color($primary);
+        }
+      }
+
+      &:active {
+        span {
+          background: rgba($primary, .9);
+          color: choose-contrast-color($primary); 
         }
       }
     }
   }
-
-  #tag_list_menu {
-    text-align: center;
-    max-width: $postWidth;
-    margin: auto;
-    h4 {
-      margin-bottom: 15px;
-    }
-    .show-all-tags {
-      margin-top: 15px;
-    }
-  }
-
-  #bio {
-    text-align: center;
-    .profile-pic {
-      img {
-        @include border-radius(5px);
-        border: 1px solid #666;
-      }
-    }
-    h3 { margin: 0px; }
-  }
 }
 
-ul.tag-list {
+// FOOTER ICON
+// the logomark is in the <figure>.
+// the wordmark comes from the svg sprite.
+// wordmark is referenced in #id, then the .class sits 
+// on the <svg> in the html to use css color variables
+// so we can colorize from css
+.posthaven {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: center;
-  li {
-    &.hide {
-      display: none;
+  margin: 50px;
+
+  a {
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+  }
+
+  figure {
+    border-radius: 4px;
+    height: 32px;
+    margin-right: 12px;
+    overflow: hidden;
+    position: relative;
+    width: 32px;
+
+    &:before,
+    &:after {
+      bottom: 0;
+      content: "";
+      position: absolute;
+      top: 0;
+    }
+
+    &:before {
+      background: rgba($primary, .5);
+      left: 0;
+      width: 22px;
+    }
+
+    &:after {
+      background: rgba(0,0,0,.35);
+      right: 0;
+      width: 10px;
     }
   }
-}
 
-.tag, .posthaven-archive-all-dates {
-  margin: 5px;
-  padding: 0px 10px;
-  font-size: 18px;
-	box-sizing: border-box;
-	border: 1px solid #DDDDDD;
-	border-radius: 15px;
-  line-height: 22px;
-  .tag-count { color: rgba(68, 68, 68, 0.3); font-size: 16px; }
-  a {
-    opacity: 0.5;
+  .posthaven-wordmark {
+    --color-1: rgba($primary, .5);
+    --color-2: rgba($primary, .35);
+    height: 13px;
+    width: 120px;
   }
-  .clear-tag {
-    color: #fff;
-    box-sizing: border-box;
-    background: #7f7f7f;
-    border-radius: 50%;
-    height: 15px;
-    width: 15px;
-    display: inline-block;
-    line-height: 15px;
-    margin-right: -5px;
-    margin-left: 3px;
-    cursor: pointer;
-  }
-}
-
-.logo-spacer {
-  background-image: url("images/gray-logo.png");
-  margin: 20px auto;
-  max-width: 100%;
-  height: 32px;
-}
-
-.feed-icon {
-  width: 14px; height: 14px;
-  display: block;
-  background-image: url("images/feed14.png");
 }
 
 
@@ -573,102 +559,6 @@ ul.tag-list {
   margin: auto;
   text-align: center;
 }
-.post-aside {
-  margin: 25px auto;
-  color: rgba(68, 68, 68, 0.3);
-  font-size: 18px;
-  a { color: rgba(68, 68, 68, 0.3); }
-  .tag-count { font-size: 12px;}
-  .show-tags { margin-top: 5px; font-size: 12px; }
-  h3 { margin: 20px 0px 5px; font-size: 12px; font-weight: normal; }
-  ul { padding-left: 0px; margin: 0px 0px; }
-  ul li { list-style: none; }
-}
-.post {
-  width: $postWidth;
-  max-width: 100%;
-  margin: auto;
-
-  font-size: $bodyFontSize;
-  color: $bodyColor;
-
-  .post-body {
-    margin-top: 25px;
-    h1, h2, h3 { margin-top: 30px;  }
-    h1 { font-size: 22px; }
-    h2 { font-size: 20px; }
-    h3 { font-size: 22px; font-style: italic; }
-  }
-  p { margin: 24px auto; }
-  .post-body .posthaven-gallery {
-    margin-left: -100px;
-    margin-right: -100px;
-    text-align: center;
-  }
-
-  img, object, embed, iframe { max-width: 100%; }  /* responsive resize */
-  img { height: auto; } // Don't allow max-width on imgs to distort
-  iframe { max-width: inherit\9; } /* IE8 css bug */
-
-  blockquote p { font-size: $bodyFontSize; }
-  blockquote { padding-left: 10px; border-left: 4px solid #eee;
-               font-size: $bodyFontSize;}
-  pre { font-size: 13px; }
-  .slash-divider { color: #ddd; }
-  .private-indicator {
-    margin-top: 10px;
-
-    .lock-icon {
-      display: inline-block;
-      width: 14px;
-      height: 14px;
-      background-image: url('images/lock-icon.png');
-      position: relative;
-      top: -3px;
-    }
-  }
-  .post-title {
-    margin: 75px auto 20px;
-    text-align: center;
-    h2 {
-      font-size: 30px; margin-top: 0; margin-bottom: 5px;
-      a { color: inherit; }
-    }
-    .author {
-      font-size: 13px;
-      color: $lightAccentColor;
-      a { color: $lightAccentColor; }
-    }
-
-  }
-
-  .homepage-post-footer {
-    margin: 30px 0;
-    font-size: 14px;
-    text-align: center;
-    .tags {
-      margin: 10px 0;
-      font-size: 12px;
-      h6 { font-weight: normal; color: $lightAccentColor; font-size: 12px; display: inline; }
-      ul { padding-left: 10px; margin-left: 0; display: inline; }
-      ul li { display: inline; margin-right: 10px; }
-      ul li a { white-space: nowrap; }
-    }
-
-  }
-  table { border-bottom: 1px solid #ddd; width: 100%; border-collapse:collapse; }
-  table, th, td { border-top: 1px solid #ddd; }
-  table th, table td { padding: 4px 5px; }
-  table p:first-child { margin-top: 0px;}
-  table p:last-child { margin-bottom: 0px;}
-}
-.gist {
-  font-size: 13px;
-}
-
-.post:first-child {
-  margin-top: 0px;
-}
 
 /*********************************************************
 *  Pagination
@@ -678,29 +568,53 @@ ul.tag-list {
   text-align: center;
   max-width: $postWidth;
   margin: auto;
+
   ul {
-    margin: 10px 0 40px 0;
-    padding: 0 0;
+    align-items: baseline;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+
     li {
       list-style: none;
-      float: none;
-      text-align: center;
+
+      &.previous,
+      &.next {
+        font-weight: 800;
+
+        a {
+          color: rgba($primary, 1);
+          font-size: 20px;
+          @include animate-links;
+        }
+      }
+
+      // page numbers
+      &.number {
+        &.active {
+          a {
+            color: rgba($primary, .3);
+            cursor: default;
+            font-size: 18px;
+
+            &:hover,
+            &:active {
+              color: rgba($primary, .3);
+
+              &:after {
+                display: none;
+              }
+            }
+          }
+        }
+      }
     }
-  }
-  ul li a {
-  	opacity: 0.2;
-  	font-family: "proximanova-medium";
-  	font-size: 18px;
-  	font-weight: 500;
-  	line-height: 22px;
   }
   ul li.number, ul li.gap, ul li.first, ul li.last { display: none; }
   ul li.number.active { display: block; flex: 1;}
-  ul li.next a, ul li.previous a { opacity: 1; }
 }
 
 
@@ -854,7 +768,6 @@ ul.tag-list {
   margin-bottom: 40px;
 }
 .posthaven-archive-form {
-  margin: 20px -100px 40px;
   input {
     width: 100%;
     padding: 5px 5px 5px 35px;
@@ -981,7 +894,7 @@ li.archive-entry {
 
 
 @media handheld, only screen and (max-width: 767px) {
-  .menu_navigation, .subscribe-footer, #footer { padding: 10px 20px; }
+  .menu_navigation, .subscribe-footer, footer { padding: 10px 20px; }
   #header, #main, #topbar, .alert, section.subhead, .post-aside {
     margin: 0px 20px 20px; float: none;
     position: inherit; right: inherit; top: inherit;

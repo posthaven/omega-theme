@@ -1,6 +1,6 @@
-{% if site.navigation_menu and site.navigation_menu.items != empty %}
-  <section>
-    <nav class="menu_navigation">
+<section class="menu">
+  <nav class="menu">
+    {% if site.navigation_menu and site.navigation_menu.items != empty %}
       <ul>
       {% for menu_item in site.navigation_menu.items %}
         <li id="menu_item_{{ menu_item.id }}" class="menu-item {{ menu_item.url | text_if_current}}">
@@ -8,6 +8,6 @@
         </li>
       {% endfor %}
       </ul>
-    </nav>
-  </section>
-{% endif %}
+    {% endif %}
+  </nav>
+</section>
