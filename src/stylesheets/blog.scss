@@ -110,6 +110,8 @@ section.blogroll a {
   }
 }
 
+
+
 // for links that show a dashed underline but also include
 // the link animation, make the dashed underline transparent
 // on hover for a cleaner animation
@@ -316,7 +318,7 @@ section.subhead {
   }
 }
 
-section.tags {
+.tags {
   text-align: center;
   max-width: $postWidth;
   margin: auto;
@@ -336,7 +338,6 @@ section.tags {
       @include animate-links;
     }
   }
-
   ul {
     display: inline-flex;
     flex-direction: row;
@@ -348,91 +349,10 @@ section.tags {
     li {
       list-style: none;
       margin: 2px;
+      @extend .chips;
 
       &.hide {
         display: none;
-      }
-    }
-
-    a {
-      align-items: baseline;
-      border-radius: 100px;
-      border: 2px solid rgba($primary, .13);
-      box-sizing: border-box;
-      color: rgba($primary, .5);
-      display: flex;
-      font-size: 18px;
-      margin: 2px;
-      padding: 0 10px 1px;
-      transition: all .25s ease;
-      user-select: none;
-
-      span {
-        // count
-        color: rgba($primary, .3);
-        font-size: 16px;
-        margin-left: 5px;
-        transition: all .25s ease;
-      }
-
-      &:hover {
-        border: 2px solid rgba($primary, .4);
-        color: rgba($primary, .7);
-        transition: all 0s ease;
-
-        span {
-          color: rgba($primary, .5);
-          transition: all 0s ease;
-        }
-      }
-
-      &:active {
-        border: 2px solid rgba($primary, .7);
-        color: rgba($primary, .9);
-        transition: all 0s ease;
-
-        span {
-          color: rgba($primary, .7);
-          transition: all 0s ease;
-        }
-      }
-    }
-
-    .clear-tag {
-      span {
-        // x replaces count
-        align-items: center;
-        background: rgba($primary, .5);
-        //background: url("data:image/svg+xml;charset=utf-8,<svg width='10' height='10' xmlns='http://www.w3.org/2000/svg'><path d='M10 1.814L8.185 0 5 3.184 1.815 0 0 1.814 3.185 5 0 8.183l1.815 1.815L5 6.814 8.185 10 10 8.184 6.815 4.998z' fill='#000' fill-rule='nonzero'/></svg>");
-        border-radius: 10px;
-        box-sizing: border-box;
-        color: choose-contrast-color($primary);
-        cursor: pointer;
-        display: flex;
-        height: 18px;
-        justify-content: center;
-        margin-left: 4px;
-        margin-right: -4px;
-        padding: 4px;
-        width: 18px;
-
-        svg {
-          fill: currentColor;
-        }
-      }
-
-      &:hover {
-        span {
-          background: rgba($primary, .75);
-          color: choose-contrast-color($primary);
-        }
-      }
-
-      &:active {
-        span {
-          background: rgba($primary, .9);
-          color: choose-contrast-color($primary);
-        }
       }
     }
   }
@@ -736,7 +656,6 @@ section.tags {
   margin-bottom: 60px;
   a {
   	color: inherit;
-  	font-family: "proximanova-medium";
   	font-size: 18px;
   	font-weight: bold;
   	line-height: 22px;
@@ -766,7 +685,24 @@ section.tags {
 .posthaven-archive-all-dates {
   display: inline-block;
   margin-bottom: 40px;
+
 }
+
+.archive-all-dates {
+  @extend .chips;
+  margin-bottom: 2em;
+
+  .clear-tag {
+    span, span:hover {
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTAnIGhlaWdodD0nMTAnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTEwIDEuODE0TDguMTg1IDAgNSAzLjE4NCAxLjgxNSAwIDAgMS44MTQgMy4xODUgNSAwIDguMTgzbDEuODE1IDEuODE1TDUgNi44MTQgOC4xODUgMTAgMTAgOC4xODQgNi44MTUgNC45OTh6JyBmaWxsPScjZmZmJyAvPjwvc3ZnPg==);
+      //background-image: url("images/x.svg");
+      text-indent: -5000em;
+    }
+  }
+}
+
 .posthaven-archive-form {
   input {
     width: 100%;
@@ -786,52 +722,57 @@ input.archive-search.archive-tooltip {
   color: #aaa;
 }
 
-.archive-months {
-  li {
-    list-style: none;
-    margin-bottom: 30px;
-    text-align: center;
-    .month {
-      display: block;
-    	font-family: "proximanova-medium";
-    	font-size: 24px;
-    	font-weight: bold;
-    	line-height: 29px;
-      color: inherit;
+time {
+  color: rgba($primary,.3);
+  font-size: 18px;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+}
+
+.archive-results {
+  // for both .archive-list and .archive-by-date
+  ul {
+    li {
+      list-style: none;
+      padding-bottom: 2em;
     }
-    .count {
-      display: block;
-    	opacity: 0.3;
-    	color: inherit;
-    	font-family: "proximanova-medium";
-    	font-size: 18px;
-    	font-weight: 500;
-    	line-height: 22px;
+  }
+
+   a {
+    border-bottom: transparent 2px solid;
+    display: inline-flex;
+    flex-direction: column;
+
+    h4 {
+      span {
+        border-bottom: 2px none rgba(0,0,0,0.1);
+      }
     }
+
+    &:hover {
+      h4 {
+        span {
+          border-bottom: 2px dashed rgba(0,0,0,0.1);
+        }
+      }
+    }
+   }
+
+  h4 {
+    margin: 5px;
+  }
+
+  .count {
+    opacity: .3;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
   }
 }
 
 li.archive-entry {
-  list-style: none;
-  a {
-  	color: inherit;
-  	font-family: "proximanova-medium";
-    font-weight: bold;
-  	font-size: 24px;
-  	line-height: 29px;
-  	text-align: center;
-  }
   margin-bottom: 40px;
   em { background-color: #eee; font-style: normal; }
-  .archive-date {
-  	opacity: 0.3;
-  	color: inherit;
-  	font-family: "proximanova-medium";
-  	font-size: 18px;
-  	font-weight: 500;
-  	line-height: 22px;
-  	text-align: center;
-  }
+
   .search-highlight {
   	color: #333333;
   	font-family: "proximanova-medium";
@@ -850,8 +791,17 @@ li.archive-entry {
 }
 .search-archive {
   max-width: $postWidth;
-  margin: auto;
+  margin: 0 auto 50px;
   text-align: center;
+}
+
+.search-highlight em {
+  background: $primary;
+  color: choose-contrast-color($primary);
+  display: inline-block;
+  font-style: normal;
+  font-weight: bold;
+  padding: 0 1px;
 }
 
 .archive-pagination {
