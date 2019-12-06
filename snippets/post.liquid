@@ -14,8 +14,10 @@
           <section>
             <div class="display-date">
               Posted
-              <a href="{{ post.url }}">{{ post.published_at | relative_date }}</a>
-              on {{ post.published_at | local_date: "%B %e, %Y" }} at {{ post.published_at | local_date: "%l:%M %p" }}
+              <time>
+                <a href="{{ post.url }}">{{ post.published_at | relative_date }}</a>
+                on {{ post.published_at | local_date: "%B %e, %Y" }} at {{ post.published_at | local_date: "%l:%M %p" }}
+              </time>
               <span class="stat">
                 &bullet; {{ post | view_count }}
               </span>

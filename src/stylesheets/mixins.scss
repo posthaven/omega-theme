@@ -1,3 +1,106 @@
+@import 'variables';
+
+// tags ui, used in footer, top of tag page, and date in archive view
+.chips {
+  a {
+    align-items: baseline;
+    border-radius: 100px;
+    border: 2px solid rgba($primary, .13);
+    box-sizing: border-box;
+    color: rgba($primary, .5);
+    display: inline-flex;
+    font-size: 18px;
+    margin: 2px;
+    padding: 0 10px 1px;
+    transition: all .25s ease;
+    user-select: none;
+
+    span {
+      // count
+      color: rgba($primary, .3);
+      font-size: 16px;
+      margin-left: 5px;
+      transition: all .25s ease;
+    }
+
+    .x {
+      color: #fff; // needed for svg's fill: currentColor;
+    }
+
+    &:hover {
+      border: 2px solid rgba($primary, .4);
+      color: rgba($primary, .7);
+      transition: all 0s ease;
+
+      span {
+        color: rgba($primary, .5);
+        transition: all 0s ease;
+      }
+    }
+
+    &:active {
+      border: 2px solid rgba($primary, .7);
+      color: rgba($primary, .9);
+      transition: all 0s ease;
+
+      span {
+        color: rgba($primary, .7);
+        transition: all 0s ease;
+      }
+    }
+  }
+
+  .clear-tag {
+    span {
+      // x replaces count
+      align-items: center;
+      background: rgba($primary, .5);
+      //background: url("data:image/svg+xml;charset=utf-8,<svg width='10' height='10' xmlns='http://www.w3.org/2000/svg'><path d='M10 1.814L8.185 0 5 3.184 1.815 0 0 1.814 3.185 5 0 8.183l1.815 1.815L5 6.814 8.185 10 10 8.184 6.815 4.998z' fill='#000' fill-rule='nonzero'/></svg>");
+      border-radius: 10px;
+      box-sizing: border-box;
+      color: #fff;
+      cursor: pointer;
+      display: flex;
+      height: 18px;
+      justify-content: center;
+      margin-left: 4px;
+      margin-right: -4px;
+      padding: 4px;
+      width: 18px;
+
+      svg {
+        fill: currentColor;
+      }
+    }
+
+    &:hover {
+      span {
+        background: rgba($primary, .75);
+        color: choose-contrast-color($primary);
+      }
+    }
+
+    &:active {
+      span {
+        background: rgba($primary, .9);
+        color: choose-contrast-color($primary);
+      }
+    }
+  }
+}
+
+@mixin selection($color) {
+  *::-moz-selection {
+    background: $color;
+    color: choose-contrast-color($color);
+  }
+
+  *::selection {
+    background: $color;
+    color: choose-contrast-color($color);      
+  }
+}
+
 @mixin animate-links {
   position: relative;
   transition: background .25s ease, color .4s ease, width .25s ease;
@@ -23,6 +126,18 @@
       left: 0%;
       width: 100%;
     }
+  }
+}
+
+@mixin link-decoration($type) {
+  border-bottom: 2px $type rgba(0,0,0,0.1);
+  outline: none;
+
+  &:hover {
+    border-bottom-color: rgba(0,0,0,0.4);
+  }
+  &:active {
+    border-bottom-color: rgba(0,0,0,0.7);
   }
 }
 
