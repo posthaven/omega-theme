@@ -79,7 +79,24 @@
     <div id="svg-icons" style="display:none;"></div>
 
     <script type="text/javascript">
+      // Posthaven.$(window).resize(){
+      //   resize();
+      // };
+
       Posthaven.$(document).ready(function () {
+          resize();
+      });
+
+      function resize(){
+        Posthaven.$(".navigation nav.menu").insertAfter("#container");
+      };
+
+      Posthaven.$(document).ready(function () {
+        Posthaven.$(".menu-trigger").click(function(){
+          Posthaven.$("body").toggleClass("menu-active");
+          Posthaven.$("#container").toggleClass("menu-open");
+        });
+
         Posthaven.$(".ph-trigger").click(function(){
           Posthaven.$(".ph-menu").toggle(500,"easeOutQuint");
           Posthaven.$(".ph-trigger").toggleClass("active");

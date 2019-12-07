@@ -1,22 +1,128 @@
 @import 'mixins';
 @import 'variables';
 
+body.menu-active {
+  overflow: hidden;
+}
+
+#container {
+  background: #fff;
+  left: 0%;
+  height: 100vh;
+  position: relative;
+  overflow: auto;
+  transition: all .5s ease;
+  transform: scale(1);
+  transform-origin: top left;
+  top: 0px;
+  width: 100%;
+}
+
+#container.menu-open {
+  box-shadow: 0 5px 20px rgba(0,0,0,.15);
+  height: calc(100vh - 20px);
+  left: 90%;
+  overflow: hidden;
+
+  top: 40px;
+  transform: scale(.9);
+  width: 100%;
+}
+
 /*********************************************************
 *  Navigation
 *********************************************************/
 .navigation {
   align-items: center;
   display: flex;
-  padding: 10px 0;
+
+  @media (min-width: 769px) {
+    padding: 10px 0;
+  }
+
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
+
+  // scope inside header so we don't affect footer nav
+  nav.menu {
+    @media (max-width: 768px) {
+      background: rgba(0,0,0,.1);
+      display: none;
+      height: 100vh;
+      left: 0;
+      margin-left: -100%;
+      overflow: auto;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 100;
+    }
+  }
+
+  .menu-trigger {
+    font-size: 24px;
+  }
+
+  @media (min-width: 769px) {
+    .menu-trigger {
+      display: none;
+    }
+  }
 }
 
-section.menu {
+body > nav.menu {
+  display: flex;
+  height: 100vh;
+  left: 0;
+  overflow: auto;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  transition: opacity 2s ease;
+  width: calc(100vw - 50px);
+  z-index: -1;
+
+  ul {
+    justify-content: center;
+    padding-left: 30px !important;
+  }
+}
+
+body.menu-active > nav.menu {
+  opacity: 1;
+  transition: opacity 0s ease;
+
+
+  animation-delay: .5s;
+  animation-duration: 0s;   
+  animation-fill-mode: forwards;       
+  animation-name: activateMenu;
+  animation-timing-function: ease-in-out; 
+}
+
+@keyframes activateMenu {
+    0% {
+      z-index: -1;
+    }
+
+    100% {
+      z-index: 1;
+    }   
+}
+
+section.menu,
+body > nav.menu {
   flex: 1;
 
   ul {
     display: flex;
     margin: 0;
     padding: 0;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
 
     li {
       list-style: none;
@@ -30,6 +136,39 @@ section.menu {
       }
     }
   }
+}
+
+/*********************************************************
+*  Topbar and Header
+*********************************************************/
+
+
+.header {
+  text-align: center;
+  max-width: $postWidth;
+  @media (min-width: 769px) {
+    padding: 100px 0 75px;
+  }
+  @media (max-width: 768px) {
+    padding: 100px 10px 75px;
+  }
+  margin: auto;
+
+  h1 { margin: 0px; line-height: 58px; text-transform: uppercase;}
+  h1 a {
+    &:hover { text-decoration: none; }
+  }
+  h5 {
+    margin: 0px;
+  }
+
+}
+#main_container {
+  position: relative;
+}
+
+.main-content {
+  min-height: 300px;
 }
 
 .posthaven-user-menu {
