@@ -10,12 +10,12 @@ body.menu-active {
   left: 0%;
   height: 100vh;
   position: relative;
-  overflow: auto;
   transition: all .5s ease;
   transform: scale(1);
   transform-origin: top left;
   top: 0px;
   width: 100%;
+  
 }
 
 #container.menu-open {

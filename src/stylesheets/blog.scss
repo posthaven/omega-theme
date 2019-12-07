@@ -18,35 +18,35 @@
 
 
 @font-face {
-  font-family: 'proximanova-extrabold';
-  src: url('../fonts/proximanova-extrabold-webfont.woff2') format('woff2'),
-       url('../fonts/proximanova-extrabold-webfont.woff') format('woff');
+  font-family: 'Proxima Nova';
+  src: url('fonts/proximanova-extrabold-webfont.woff2') format('woff2'),
+       url('fonts/proximanova-extrabold-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('fonts/proximanova-extraboldit-webfont.woff2') format('woff2'),
+       url('fonts/proximanova-extraboldit-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('fonts/proximanova-medium-webfont.woff2') format('woff2'),
+       url('fonts/proximanova-medium-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'proximanova-extraboldit';
-  src: url('../fonts/proximanova-extraboldit-webfont.woff2') format('woff2'),
-       url('../fonts/proximanova-extraboldit-webfont.woff') format('woff');
+  font-family: 'Proxima Nova';
+  src: url('fonts/proximanova-mediumit-webfont.woff2') format('woff2'),
+       url('fonts/proximanova-mediumit-webfont.woff') format('woff');
   font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'proximanova-medium';
-  src: url('../fonts/proximanova-medium-webfont.woff2') format('woff2'),
-       url('../fonts/proximanova-medium-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'proximanova-mediumit';
-  src: url('../fonts/proximanova-mediumit-webfont.woff2') format('woff2'),
-       url('../fonts/proximanova-mediumit-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+  font-style: italic;
 }
 
 
