@@ -8,10 +8,10 @@
     {{ meta_tags }}
 
     <link href="{{ 'images/favicon.ico' | asset_url }}" rel='shortcut icon' type='image/x-icon'>
-    {% comment %}
     {{ 'blog.css' | local_file | style_tag }}
-    {% endcomment %}
+    {% comment %}
     {{ 'blog.css' | asset_url | stylesheet_tag }}
+    {% endcomment %}
 
     {{ posthaven.includes_for_head }}
 
@@ -79,16 +79,20 @@
     <div id="svg-icons" style="display:none;"></div>
 
     <script type="text/javascript">
-      // Posthaven.$(window).resize(){
-      //   resize();
-      // };
 
-      Posthaven.$(document).ready(function () {
+      if(Posthaven.$(window).width() < 769) {
+
+        Posthaven.$(window).resize(function () {
           resize();
-      });
+        });
+          
+        Posthaven.$(document).ready(function () {
+            resize();
+        });
 
-      function resize(){
-        Posthaven.$(".navigation nav.menu").insertAfter("#container");
+        function resize(){
+          Posthaven.$(".navigation nav.menu").insertAfter("#container");
+        };
       };
 
       Posthaven.$(document).ready(function () {
