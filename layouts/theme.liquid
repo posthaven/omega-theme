@@ -8,10 +8,10 @@
     {{ meta_tags }}
 
     <link href="{{ 'images/favicon.ico' | asset_url }}" rel='shortcut icon' type='image/x-icon'>
-    {{ 'blog.css' | local_file | style_tag }}
     {% comment %}
-    {{ 'blog.css' | asset_url | stylesheet_tag }}
+    {{ 'blog.css' | local_file | style_tag }}
     {% endcomment %}
+    {{ 'blog.css' | asset_url | stylesheet_tag }}
 
     {{ posthaven.includes_for_head }}
 
