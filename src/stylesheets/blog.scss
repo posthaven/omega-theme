@@ -49,32 +49,6 @@
   font-style: italic;
 }
 
-
-/*********************************************************
-*  Variables
-*********************************************************/
-
-$headerFont: 'proximanova-extrabold', sans-serif;
-
-$helveticaNeue: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-$helveticaNeueLight: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica,
-                     Arial, "Lucida Grande", sans-serif;
-$helveticaNeueUltralight: "HelveticaNeue-UltraLight", "Helvetica Neue Ultra Light",
-                          "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-
-$bodyColor: rgba($primary,.8);
-$bodyFont: 'Proxima Nova', sans-serif;
-$bodyWeight: normal;
-
-$fullGutter: 60px;
-
-$footerSectionWidth: 250px;
-
-
-$primaryColor: #2b6cc2;
-$primaryDarkerColor: #285188;
-$errorColor: #a00;
-
 /*********************************************************
 *  General
 *********************************************************/
@@ -84,7 +58,6 @@ body {
   color: rgba($primary, .8);
   margin: 0 0;
   font-family: $bodyFont;
-  font-weight: $bodyWeight;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -110,8 +83,6 @@ section.blogroll a {
   }
 }
 
-
-
 // for links that show a dashed underline but also include
 // the link animation, make the dashed underline transparent
 // on hover for a cleaner animation
@@ -126,7 +97,7 @@ section.blogroll a {
   opacity: 0.6
 }
 
-h1, h2, h3, h4, h5, h6 { font-weight: 800; line-height: 1.1;}
+h1, h2, h3, h4, h5, h6 { font-weight: 800; line-height: 1em;}
 h1 { font-size: 48px; }
 h2 { font-size: 30px; }
 h3 { font-size: 36px; }
@@ -162,33 +133,39 @@ textarea, input[type=text] {
   	border: 2px solid rgba(0,0,0,1);
   }
 }
-input[type='submit'], .posthaven-user-subscribe a {
-  width: 100%;
-  font-family: "proximanova-medium";
+input[type='submit'],
+.posthaven-user-subscribe a {
+  background: rgba(0,0,0,0.85);
+  border-radius: 2px;
+  border: 2px solid #000000;
+  box-sizing: border-box;
+  height: 50px;
   color: white;
   cursor: pointer;
   display: inline-block;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: bold;
   margin: 0px;
+  outline: none;
   padding: 9px 0px;
   position: relative;
   text-align: center;
   text-decoration: none;
-	box-sizing: border-box;
-	height: 50px;
-	border: 2px solid #000000;
-	border-radius: 2px;
-	background: rgba(0,0,0,0.85);
-  outline: none;
-}
-input[type='submit']:hover, .posthaven-user-subscribe a:hover {
-  background: rgba(0,0,0,1);
-}
-input[type='submit']:active, .posthaven-user-subscribe a:active,
-input[type='submit']:focus, .posthaven-user-subscribe a:focus, {
+  width: 100%;
+
+  &:hover {
+    background: rgba(0,0,0,1);
+  }
+
+  &:active {
+
+  }
+
+  &:focus {
   background: rgba(0,0,0,1);
   box-shadow: rgb(255, 255, 255) 0px 0px 0px 1px, rgba(0, 0, 0, 0.25) 0px 0px 0px 3px;
+  }
+}
 }
 .posthaven-share-links {
   .posthaven-upvote {
@@ -198,46 +175,46 @@ input[type='submit']:focus, .posthaven-user-subscribe a:focus, {
     &:hover {
       border-color: rgba(0,0,0,0.5);
       background-color: transparent;
-      .posthaven-upvote-label, .posthaven-upvoted-label {
+
+      .posthaven-upvote-label,
+      .posthaven-upvoted-label {
         color: #509DFF;
       }
       .posthaven-upvote-number {
   	    color: #000000;
       }
     }
-    .posthaven-upvote-label, .posthaven-upvoted-label {
-    	color: #509DFF;
-    	font-family: "proximanova-medium";
+    .posthaven-upvote-label,
+    .posthaven-upvoted-label {
+      color: #509DFF;
+      font-size: 15px;
+      line-height: 18px;
       font-weight: bold;
-    	font-size: 15px;
-    	line-height: 18px;
       text-transform: uppercase;
     }
     .posthaven-upvote-number {
-    	opacity: 0.3;
-	    color: inherit;
-      font-family: "proximanova-medium";
-    	font-size: 15px;
-    	font-weight: bold;
-    	line-height: 18px;
+      color: inherit;
+      font-size: 15px;
+      font-weight: bold;
+      line-height: 18px;
+      opacity: 0.3;
     }
   }
 }
 .alert {
   font-size: 14px;
-  margin: 10px 0px 10px $fullGutter;
+  margin: 10px 0px 10px 60px;
   width: $postWidth;
   max-width: 100%;
   position:relative;
   padding:8px;
   border:1px solid #ddd;
-  color: $primaryColor;
   background:#fff;
   @include border-radius(5px);
 
   &:before {
     content:"";
-    position:absolute;
+    position: absolute;
     /* FIXME - This is computed from the border below? Why isn't it using scss variables? */
     top:-10px; /* value = - border-top-width - border-bottom-width */
     bottom:auto;
@@ -254,7 +231,7 @@ input[type='submit']:focus, .posthaven-user-subscribe a:focus, {
   /* creates the smaller  triangle */
   &:after {
     content:"";
-    position:absolute;
+    position: absolute;
     /* FIXME - Computed? What adds up to -9??? */
     top:-9px; /* value = - border-top-width - border-bottom-width */
     bottom:auto;

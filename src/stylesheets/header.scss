@@ -12,14 +12,14 @@ body.menu-active {
   height: 100vh;
   position: relative;
   transition: all .5s ease;
-  // transform: scale(1);
   transform-origin: top left;
   top: 0px;
   width: 100%;
   
 }
 
-#container.menu-open {
+body.menu-active #container {
+  border-radius: 15px;
   box-shadow: 0 5px 20px rgba(0,0,0,.15);
   border-radius: 15px;
   height: calc(100vh - 20px);
@@ -88,6 +88,12 @@ body > nav.menu {
   ul {
     justify-content: center;
     padding-left: 30px !important;
+
+    li {
+      &:not(:first-child) {
+        padding-top: 5px;
+      }
+    }
   }
 }
 
@@ -156,9 +162,13 @@ body > nav.menu {
   }
   margin: auto;
 
-  h1 { margin: 0px; line-height: 58px; text-transform: uppercase;}
-  h1 a {
-    &:hover { text-decoration: none; }
+  h1 {
+    margin: 0px;
+    text-transform: uppercase;
+
+    &:hover {
+      text-decoration: none;
+    }
   }
   h5 {
     margin: 0px;
