@@ -1,4 +1,4 @@
-<div id="main">
+<div id="main" class="{% if request.template != 'post' %}post-list{% endif %}">
   {% if posts == empty and request.template != 'homepage' %}
     <h2>No posts found.</h2>
   {% endif %}

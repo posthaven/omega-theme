@@ -28,7 +28,7 @@ aside {
     font-size: 12px;
     font-weight: normal;
   }
-  
+
   ul {
     padding-left: 0px;
     margin: 0px 0px;
@@ -39,8 +39,14 @@ aside {
   }
 }
 
+.post-list {
+  .post {
+    margin: 0 auto 125px;
+  }
+}
+
 .post {
-  margin: auto;
+  margin: 0 auto;
   max-width: 100%;
   width: $postWidth;
   font-size: $bodyFontSize;
@@ -48,8 +54,6 @@ aside {
   .post-body {
     margin-top: 25px;
     @include selection($primary);
-
-
 
   p {
     line-height: 1.75em;
@@ -66,9 +70,15 @@ aside {
   .post-body .posthaven-gallery {
   }
 
-  img, object, embed, iframe { max-width: 100%; }  /* responsive resize */
   img { height: auto; } // Don't allow max-width on imgs to distort
-  iframe { max-width: inherit\9; } /* IE8 css bug */
+  iframe,
+  object,
+  embed {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-width: inherit\9;
+  } /* IE8 css bug */
 
   blockquote {
     padding-left: 30px;
@@ -100,15 +110,6 @@ aside {
     }
   }
 
-
-
-
-
-
-    p {
-      line-height: 1.75em;
-    }
-
     h1, h2, h3 { margin-top: 30px;  }
     h1 { font-size: 22px; }
     h2 { font-size: 20px; }
@@ -116,6 +117,7 @@ aside {
 
     a {
       border-bottom: dashed 2px rgba(0,0,0,.1);
+      word-break: break-all;
 
       &:hover {
         border-bottom: solid 2px rgba(0,0,0,.4);
@@ -161,6 +163,7 @@ aside {
       }
     }
   }
+
   .post-title {
     margin: 75px auto 20px;
     text-align: center;
@@ -220,4 +223,8 @@ aside {
 
 .posthaven-file-download {
   display: inline-flex !important;
+}
+
+.posthaven-gallery-modal-glasspane {
+  z-index: 15 !important; // sit on top of ph-menu
 }

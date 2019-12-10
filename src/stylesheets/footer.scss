@@ -56,13 +56,21 @@ footer.footer {
 
   section.bio {
     text-align: center;
-    .profile-pic {
+
+    figure {
       img {
-        border-radius: 5px;
-        border: 1px solid #666;
+        border-radius: 2px;
+        margin-bottom: 10px;
       }
     }
-    h3 { margin: 0px; }
+
+    h3 {
+      margin: 0px;
+    }
+
+    p {
+      margin: 5px 0;
+    }
   }
 }
 
