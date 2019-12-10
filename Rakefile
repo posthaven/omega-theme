@@ -1,6 +1,6 @@
 
-SCSS_OPTS = 'compass', 'compile', 'src/stylesheets/blog.scss', '--no-sourcemap'
-WATCH_OPTS = 'compass', 'watch', 'src/stylesheets/blog.scss', '--no-sourcemap'
+SCSS_OPTS = 'compass', 'compile', 'src/stylesheets/blog.scss', '--no-sourcemap', '--no-line-comments'
+WATCH_OPTS = 'compass', 'watch', 'src/stylesheets/blog.scss', '--no-sourcemap', '--no-line-comments'
 
 desc 'Compile the SCSS'
 task(:compile) { exec(*SCSS_OPTS) }
