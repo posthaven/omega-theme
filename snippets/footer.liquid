@@ -27,7 +27,7 @@
 
     {% if site.tags.size > 0 %}
       <section id="tag_list_menu" class="tags">
-        <h3>Tags</h3>
+        <h4>Tags</h4>
 
         <ul>
           {% for t in site.tags %}
@@ -58,7 +58,7 @@
 </footer>
 
 <div class="posthaven">
-  <a href="https://posthaven.com">
+  <a href="https://posthaven.com?utm_content={{site.url | remove: 'https:' | remove: 'http:' | remove: '/'}}" target="_blank">
     <figure></figure>
     <svg class="posthaven-wordmark">
       <use xlink:href="#posthaven-wordmark"></use>

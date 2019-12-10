@@ -16,11 +16,11 @@ forms:
     follow_link: Subscribe
     prompt: |
       <h3>Subscribe by email</h3>
-      <span>Get email alerts about new posts. Unsubscribe anytime.</span>
+      <p>Get email alerts about new posts. Unsubscribe anytime.</p>
     unfollow_link: <strong>Unsubscribe</strong>
     instructions: |
       <h3>Subscribe by email</h3>
-      <span>Get email alerts about new posts. Unsubscribe anytime.</span>
+      <p>Get email alerts about new posts. Unsubscribe anytime.</p>
 
 read_more: Read more
 

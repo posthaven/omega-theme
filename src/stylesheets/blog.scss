@@ -363,6 +363,19 @@ section.subhead {
   }
 }
 
+#main_container {
+  position: relative;
+}
+
+.main-content {
+  min-height: 300px;
+}
+
+.main-content,
+.subscribe-footer {
+  box-sizing: border-box;
+  padding: 0 20px;
+}
 
 /*********************************************************
 *  Subscribe Form
@@ -381,18 +394,19 @@ section.subhead {
     max-width: 100%;
     margin: auto;
     font-size: 18px;
-    span {
-      display: block;
-    	opacity: 0.7;
-    	font-size: 20px;
-    	font-weight: 500;
+
+    p {
+      font-size: 20px;
+      opacity: .7;
+      margin: 0 0 10px;
      }
   }
 
   input {
-    max-width: 400px;
     margin-top: 12px;
+    max-width: 400px;
   }
+
   input[type=submit] {
     display: none;
     margin: 12px auto;
@@ -499,23 +513,28 @@ section.subhead {
 }
 
 .post-responses {
-  h4 { margin-bottom: 20px; }
+  h4 {
+    margin: 50px 0 20px;
+  }
+
   .responses {
     .response {
       position: relative;
-      margin: 10px 0px;
+      margin: 10px 0px 30px;
 	    font-size: 18px;
-	    line-height: 26px;
+	    line-height: 1.6em;
 	    text-align: justify;
 
-      p { margin: 8px 0px; }
-      p:first-child { margin: 0 0 8px; }
+      p {
+        margin: 15px 0px;
+      }
+
       .byline {
         display: flex;
         justify-content: space-between;
         flex-direction: row;
-        .response-name { font-family: "proximanova-extrabold"; }
-        .time-ago {
+
+        time {
           color: #ccc;
         }
       }
@@ -544,6 +563,68 @@ section.subhead {
 }
 
 
+
+.posthaven-checkbox-field {
+  line-height: 1.4em; // so the bottom of the checkbox doesnt get clipped
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  input[type="checkbox"] + label {
+    cursor: pointer;
+    display: flex;
+    @media (min-width: 768px) {
+      justify-content: center;
+    }
+    line-height: normal;
+    margin-left: -4px;
+    padding: 5px;
+    position: relative;
+    text-align: left;
+    user-select: none;
+
+    &:hover {
+      &:before {
+        border: solid 1px #f00;
+      }
+    }
+
+    &:before {
+      border-radius: 4px;
+      box-shadow: inset 1px 1px 3px rgba(0,0,0,.15);
+      background: #fcfcfc;
+      border: solid 1px #ccc;
+      content: "";
+      display: inline-block;
+      flex: 0 0 20px;
+      height: 20px;
+      margin: -2px 6px 0 0;
+    }
+  }
+
+  input[type="checkbox"]:checked + label {
+    &:before {
+      background-color: $primary;
+      background-image: url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><title>Checkmark</title><path d="M15.43 3.95l-1.793-1.793L6.38 9.412 2.795 5.825 1 7.62 6.38 13l1.795-1.794L15.43 3.95z" fill="%23FFF" fill-rule="evenodd"/></svg>');
+      background-position: 2px 2px;
+      background-repeat: no-repeat;
+      border: solid 1px $primary;
+    }
+  }
+
+  input[type="checkbox"]:not(:checked) + label {
+    &:hover:before {
+      background: #fff;
+      border: solid 1px #aaa;
+    }
+
+    &:active:before {
+      background: #eee;
+      border: solid 1px $primary;
+    }
+  }
+}
 
 
 .posthaven-comment-form {
@@ -574,12 +655,6 @@ section.subhead {
 
     &.posthaven-comment-notify-field {
       label {
-        display: inline;
-      	opacity: 0.7;
-      	font-family: "proximanova-medium";
-      	font-size: 18px;
-      	font-weight: 500;
-      	line-height: 30px;
       }
     }
     &.posthaven-comment-body-field {
@@ -726,7 +801,6 @@ li.archive-entry {
 
   .search-highlight {
   	color: #333333;
-  	font-family: "proximanova-medium";
   	font-size: 22px;
   	font-weight: 500;
   	line-height: 34px;
@@ -758,7 +832,6 @@ li.archive-entry {
 .archive-pagination {
   a {
   	color: inherit;
-  	font-family: "proximanova-medium";
   	font-size: 18px;
   	font-weight: 500;
   	line-height: 22px;
@@ -795,10 +868,8 @@ li.archive-entry {
 
 
 @media handheld, only screen and (max-width: 767px) {
-  .menu_navigation, .subscribe-footer, footer { padding: 10px 20px; }
   #header, #main, #topbar, .alert, section.subhead, .post-aside {
-    margin: 0px 20px 20px; float: none;
-    position: inherit; right: inherit; top: inherit;
+    
   }
   .alert { width: auto; }
   #main_container { margin-top: 30px; }
