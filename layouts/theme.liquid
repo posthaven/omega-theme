@@ -80,20 +80,18 @@
 
     <script type="text/javascript">
 
-      if(Posthaven.$(window).width() < 769) {
-
-        Posthaven.$(window).resize(function () {
-          resize();
-        });
-          
-        Posthaven.$(document).ready(function () {
-            resize();
-        });
-
-        function resize(){
+      function resize(){
+        if(Posthaven.$(window).width() < 769) {
           Posthaven.$(".navigation nav.menu").insertAfter("#container");
-        };
+        }
       };
+      Posthaven.$(window).resize(function () {
+        resize();
+      });
+
+      Posthaven.$(document).ready(function () {
+          resize();
+      });
 
       Posthaven.$(document).ready(function () {
         Posthaven.$(".menu-trigger").click(function(){
