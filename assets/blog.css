@@ -1488,98 +1488,99 @@ aside ul li {
 /* line 171, ../src/stylesheets/post.scss */
 .post .post-title h2 {
   font-size: 30px;
+  line-height: 1.2em;
   margin-top: 0;
   margin-bottom: 5px;
 }
-/* line 176, ../src/stylesheets/post.scss */
+/* line 177, ../src/stylesheets/post.scss */
 .post .post-title h2 a {
   color: #000;
 }
-/* line 179, ../src/stylesheets/post.scss */
+/* line 180, ../src/stylesheets/post.scss */
 .post .post-title h2 a:hover {
   border-bottom: 2px dashed rgba(0, 0, 0, 0.1);
 }
-/* line 184, ../src/stylesheets/post.scss */
+/* line 185, ../src/stylesheets/post.scss */
 .post .post-title .author {
   font-size: 13px;
   color: #999;
 }
-/* line 188, ../src/stylesheets/post.scss */
+/* line 189, ../src/stylesheets/post.scss */
 .post .post-title .author a {
   color: #999;
 }
-/* line 195, ../src/stylesheets/post.scss */
+/* line 196, ../src/stylesheets/post.scss */
 .post .homepage-post-footer {
   margin: 30px 0;
   font-size: 14px;
   text-align: center;
 }
-/* line 199, ../src/stylesheets/post.scss */
+/* line 200, ../src/stylesheets/post.scss */
 .post .homepage-post-footer .tags {
   margin: 10px 0;
   font-size: 12px;
 }
-/* line 202, ../src/stylesheets/post.scss */
+/* line 203, ../src/stylesheets/post.scss */
 .post .homepage-post-footer .tags h6 {
   font-weight: normal;
   color: #999;
   font-size: 12px;
   display: inline;
 }
-/* line 203, ../src/stylesheets/post.scss */
+/* line 204, ../src/stylesheets/post.scss */
 .post .homepage-post-footer .tags ul {
   padding-left: 10px;
   margin-left: 0;
   display: inline;
 }
-/* line 204, ../src/stylesheets/post.scss */
+/* line 205, ../src/stylesheets/post.scss */
 .post .homepage-post-footer .tags ul li {
   display: inline;
   margin-right: 10px;
 }
-/* line 205, ../src/stylesheets/post.scss */
+/* line 206, ../src/stylesheets/post.scss */
 .post .homepage-post-footer .tags ul li a {
   white-space: nowrap;
 }
-/* line 209, ../src/stylesheets/post.scss */
+/* line 210, ../src/stylesheets/post.scss */
 .post table {
   border-bottom: 1px solid #ddd;
   width: 100%;
   border-collapse: collapse;
 }
-/* line 210, ../src/stylesheets/post.scss */
+/* line 211, ../src/stylesheets/post.scss */
 .post table, .post th, .post td {
   border-top: 1px solid #ddd;
 }
-/* line 211, ../src/stylesheets/post.scss */
+/* line 212, ../src/stylesheets/post.scss */
 .post table th, .post table td {
   padding: 4px 5px;
 }
-/* line 212, ../src/stylesheets/post.scss */
+/* line 213, ../src/stylesheets/post.scss */
 .post table p:first-child {
   margin-top: 0px;
 }
-/* line 213, ../src/stylesheets/post.scss */
+/* line 214, ../src/stylesheets/post.scss */
 .post table p:last-child {
   margin-bottom: 0px;
 }
 
-/* line 216, ../src/stylesheets/post.scss */
+/* line 217, ../src/stylesheets/post.scss */
 .gist {
   font-size: 13px;
 }
 
-/* line 220, ../src/stylesheets/post.scss */
+/* line 221, ../src/stylesheets/post.scss */
 .post:first-child {
   margin-top: 0px;
 }
 
-/* line 224, ../src/stylesheets/post.scss */
+/* line 225, ../src/stylesheets/post.scss */
 .posthaven-file-download {
   display: inline-flex !important;
 }
 
-/* line 228, ../src/stylesheets/post.scss */
+/* line 229, ../src/stylesheets/post.scss */
 .posthaven-gallery-modal-glasspane {
   z-index: 15 !important;
 }
