@@ -5,7 +5,6 @@
 /**
  * Correct `block` display not defined in IE 8/9.
  */
-/* line 11, ../src/stylesheets/normalize.scss */
 article,
 aside,
 details,
@@ -24,7 +23,6 @@ summary {
 /**
  * Correct `inline-block` display not defined in IE 8/9.
  */
-/* line 30, ../src/stylesheets/normalize.scss */
 audio,
 canvas,
 video {
@@ -35,7 +33,6 @@ video {
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
-/* line 41, ../src/stylesheets/normalize.scss */
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -44,7 +41,6 @@ audio:not([controls]) {
 /**
  * Address styling not present in IE 8/9.
  */
-/* line 50, ../src/stylesheets/normalize.scss */
 [hidden] {
   display: none;
 }
@@ -57,7 +53,6 @@ audio:not([controls]) {
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-/* line 64, ../src/stylesheets/normalize.scss */
 html {
   font-family: sans-serif;
   /* 1 */
@@ -70,7 +65,6 @@ html {
 /**
  * Remove default margin.
  */
-/* line 74, ../src/stylesheets/normalize.scss */
 body {
   margin: 0;
 }
@@ -81,7 +75,6 @@ body {
 /**
  * Address `outline` inconsistency between Chrome and other browsers.
  */
-/* line 86, ../src/stylesheets/normalize.scss */
 a:focus {
   outline: thin dotted;
 }
@@ -89,7 +82,6 @@ a:focus {
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
-/* line 94, ../src/stylesheets/normalize.scss */
 a:active,
 a:hover {
   outline: 0;
@@ -102,7 +94,6 @@ a:hover {
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari 5, and Chrome.
  */
-/* line 108, ../src/stylesheets/normalize.scss */
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
@@ -111,7 +102,6 @@ h1 {
 /**
  * Address styling not present in IE 8/9, Safari 5, and Chrome.
  */
-/* line 117, ../src/stylesheets/normalize.scss */
 abbr[title] {
   border-bottom: 1px dotted;
 }
@@ -119,7 +109,6 @@ abbr[title] {
 /**
  * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
  */
-/* line 125, ../src/stylesheets/normalize.scss */
 b,
 strong {
   font-weight: bold;
@@ -128,7 +117,6 @@ strong {
 /**
  * Address styling not present in Safari 5 and Chrome.
  */
-/* line 134, ../src/stylesheets/normalize.scss */
 dfn {
   font-style: italic;
 }
@@ -136,7 +124,6 @@ dfn {
 /**
  * Address differences between Firefox and other browsers.
  */
-/* line 142, ../src/stylesheets/normalize.scss */
 hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -146,7 +133,6 @@ hr {
 /**
  * Address styling not present in IE 8/9.
  */
-/* line 152, ../src/stylesheets/normalize.scss */
 mark {
   background: #ff0;
   color: #000;
@@ -155,7 +141,6 @@ mark {
 /**
  * Correct font family set oddly in Safari 5 and Chrome.
  */
-/* line 161, ../src/stylesheets/normalize.scss */
 code,
 kbd,
 pre,
@@ -167,7 +152,6 @@ samp {
 /**
  * Improve readability of pre-formatted text in all browsers.
  */
-/* line 173, ../src/stylesheets/normalize.scss */
 pre {
   white-space: pre-wrap;
 }
@@ -175,7 +159,6 @@ pre {
 /**
  * Set consistent quote types.
  */
-/* line 181, ../src/stylesheets/normalize.scss */
 q {
   quotes: "\201C" "\201D" "\2018" "\2019";
 }
@@ -183,7 +166,6 @@ q {
 /**
  * Address inconsistent and variable font size in all browsers.
  */
-/* line 189, ../src/stylesheets/normalize.scss */
 small {
   font-size: 80%;
 }
@@ -191,7 +173,6 @@ small {
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-/* line 197, ../src/stylesheets/normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -200,12 +181,10 @@ sup {
   vertical-align: baseline;
 }
 
-/* line 205, ../src/stylesheets/normalize.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 209, ../src/stylesheets/normalize.scss */
 sub {
   bottom: -0.25em;
 }
@@ -216,7 +195,6 @@ sub {
 /**
  * Remove border when inside `a` element in IE 8/9.
  */
-/* line 221, ../src/stylesheets/normalize.scss */
 img {
   border: 0;
 }
@@ -224,7 +202,6 @@ img {
 /**
  * Correct overflow displayed oddly in IE 9.
  */
-/* line 229, ../src/stylesheets/normalize.scss */
 svg:not(:root) {
   overflow: hidden;
 }
@@ -235,7 +212,6 @@ svg:not(:root) {
 /**
  * Address margin not present in IE 8/9 and Safari 5.
  */
-/* line 241, ../src/stylesheets/normalize.scss */
 figure {
   margin: 0;
 }
@@ -246,7 +222,6 @@ figure {
 /**
  * Define consistent border, margin, and padding.
  */
-/* line 253, ../src/stylesheets/normalize.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
@@ -257,7 +232,6 @@ fieldset {
  * 1. Correct `color` not being inherited in IE 8/9.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
-/* line 264, ../src/stylesheets/normalize.scss */
 legend {
   border: 0;
   /* 1 */
@@ -270,7 +244,6 @@ legend {
  * 2. Correct font size not being inherited in all browsers.
  * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
  */
-/* line 275, ../src/stylesheets/normalize.scss */
 button,
 input,
 select,
@@ -287,7 +260,6 @@ textarea {
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-/* line 289, ../src/stylesheets/normalize.scss */
 button,
 input {
   line-height: normal;
@@ -299,7 +271,6 @@ input {
  * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
  * Correct `select` style inheritance in Firefox 4+ and Opera.
  */
-/* line 301, ../src/stylesheets/normalize.scss */
 button,
 select {
   text-transform: none;
@@ -312,7 +283,6 @@ select {
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  */
-/* line 314, ../src/stylesheets/normalize.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -326,7 +296,6 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-/* line 326, ../src/stylesheets/normalize.scss */
 button[disabled],
 html input[disabled] {
   cursor: default;
@@ -336,7 +305,6 @@ html input[disabled] {
  * 1. Address box sizing set to `content-box` in IE 8/9.
  * 2. Remove excess padding in IE 8/9.
  */
-/* line 336, ../src/stylesheets/normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -350,7 +318,6 @@ input[type="radio"] {
  * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
-/* line 348, ../src/stylesheets/normalize.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -364,7 +331,6 @@ input[type="search"] {
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-/* line 360, ../src/stylesheets/normalize.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -373,7 +339,6 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-/* line 369, ../src/stylesheets/normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -384,7 +349,6 @@ input::-moz-focus-inner {
  * 1. Remove default vertical scrollbar in IE 8/9.
  * 2. Improve readability and alignment in all browsers.
  */
-/* line 380, ../src/stylesheets/normalize.scss */
 textarea {
   overflow: auto;
   /* 1 */
@@ -398,7 +362,6 @@ textarea {
 /**
  * Remove most spacing between table cells.
  */
-/* line 393, ../src/stylesheets/normalize.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -430,7 +393,6 @@ table {
  * Classes added:
  *  1) hint
  */
-/* line 28, ../src/stylesheets/hint.scss */
 .hint, [data-hint] {
   position: relative;
   display: inline-block;
@@ -442,7 +404,6 @@ table {
    */
 }
 
-/* line 37, ../src/stylesheets/hint.scss */
 .hint:before, .hint:after, [data-hint]:before, [data-hint]:after {
   position: absolute;
   visibility: hidden;
@@ -454,13 +415,11 @@ table {
   transition: 0.3s ease;
 }
 
-/* line 46, ../src/stylesheets/hint.scss */
 .hint:hover:before, .hint:hover:after, [data-hint]:hover:before, [data-hint]:hover:after {
   visibility: visible;
   opacity: 1;
 }
 
-/* line 49, ../src/stylesheets/hint.scss */
 .hint:before, [data-hint]:before {
   content: '';
   position: absolute;
@@ -469,7 +428,6 @@ table {
   z-index: 1000001;
 }
 
-/* line 55, ../src/stylesheets/hint.scss */
 .hint:after, [data-hint]:after {
   content: attr(data-hint);
   background: #383838;
@@ -496,22 +454,18 @@ table {
 /**
  * set default color for tooltip arrows
  */
-/* line 80, ../src/stylesheets/hint.scss */
 .hint--top:before {
   border-top-color: #383838;
 }
 
-/* line 83, ../src/stylesheets/hint.scss */
 .hint--bottom:before {
   border-bottom-color: #383838;
 }
 
-/* line 86, ../src/stylesheets/hint.scss */
 .hint--left:before {
   border-left-color: #383838;
 }
 
-/* line 89, ../src/stylesheets/hint.scss */
 .hint--right:before {
   border-right-color: #383838;
 }
@@ -519,23 +473,19 @@ table {
 /**
  * top tooltip
  */
-/* line 95, ../src/stylesheets/hint.scss */
 .hint--top:before {
   margin-bottom: -12px;
 }
 
-/* line 97, ../src/stylesheets/hint.scss */
 .hint--top:after {
   margin-left: -18px;
 }
 
-/* line 99, ../src/stylesheets/hint.scss */
 .hint--top:before, .hint--top:after {
   bottom: 100%;
   left: 50%;
 }
 
-/* line 102, ../src/stylesheets/hint.scss */
 .hint--top:hover:before, .hint--top:hover:after {
   -webkit-transform: translateY(-8px);
   -moz-transform: translateY(-8px);
@@ -545,23 +495,19 @@ table {
 /**
  * bottom tooltip
  */
-/* line 110, ../src/stylesheets/hint.scss */
 .hint--bottom:before {
   margin-top: -12px;
 }
 
-/* line 112, ../src/stylesheets/hint.scss */
 .hint--bottom:after {
   margin-left: -18px;
 }
 
-/* line 114, ../src/stylesheets/hint.scss */
 .hint--bottom:before, .hint--bottom:after {
   top: 100%;
   left: 50%;
 }
 
-/* line 117, ../src/stylesheets/hint.scss */
 .hint--bottom:hover:before, .hint--bottom:hover:after {
   -webkit-transform: translateY(8px);
   -moz-transform: translateY(8px);
@@ -571,24 +517,20 @@ table {
 /**
  * right tooltip
  */
-/* line 125, ../src/stylesheets/hint.scss */
 .hint--right:before {
   margin-left: -12px;
   margin-bottom: -6px;
 }
 
-/* line 128, ../src/stylesheets/hint.scss */
 .hint--right:after {
   margin-bottom: -14px;
 }
 
-/* line 130, ../src/stylesheets/hint.scss */
 .hint--right:before, .hint--right:after {
   left: 100%;
   bottom: 50%;
 }
 
-/* line 133, ../src/stylesheets/hint.scss */
 .hint--right:hover:before, .hint--right:hover:after {
   -webkit-transform: translateX(8px);
   -moz-transform: translateX(8px);
@@ -598,24 +540,20 @@ table {
 /**
  * left tooltip
  */
-/* line 141, ../src/stylesheets/hint.scss */
 .hint--left:before {
   margin-right: -12px;
   margin-bottom: -6px;
 }
 
-/* line 144, ../src/stylesheets/hint.scss */
 .hint--left:after {
   margin-bottom: -14px;
 }
 
-/* line 146, ../src/stylesheets/hint.scss */
 .hint--left:before, .hint--left:after {
   right: 100%;
   bottom: 50%;
 }
 
-/* line 149, ../src/stylesheets/hint.scss */
 .hint--left:hover:before, .hint--left:hover:after {
   -webkit-transform: translateX(-8px);
   -moz-transform: translateX(-8px);
@@ -637,28 +575,23 @@ table {
 /**
  * Error
  */
-/* line 169, ../src/stylesheets/hint.scss */
 .hint--error:after {
   background-color: #b34e4d;
   text-shadow: 0 -1px 0px #5a2626;
 }
 
-/* line 172, ../src/stylesheets/hint.scss */
 .hint--error.hint--top:before {
   border-top-color: #b34e4d;
 }
 
-/* line 174, ../src/stylesheets/hint.scss */
 .hint--error.hint--bottom:before {
   border-bottom-color: #b34e4d;
 }
 
-/* line 176, ../src/stylesheets/hint.scss */
 .hint--error.hint--left:before {
   border-left-color: #b34e4d;
 }
 
-/* line 178, ../src/stylesheets/hint.scss */
 .hint--error.hint--right:before {
   border-right-color: #b34e4d;
 }
@@ -666,28 +599,23 @@ table {
 /**
  * Warning
  */
-/* line 184, ../src/stylesheets/hint.scss */
 .hint--warning:after {
   background-color: #c09854;
   text-shadow: 0 -1px 0px #6d5228;
 }
 
-/* line 187, ../src/stylesheets/hint.scss */
 .hint--warning.hint--top:before {
   border-top-color: #c09854;
 }
 
-/* line 189, ../src/stylesheets/hint.scss */
 .hint--warning.hint--bottom:before {
   border-bottom-color: #c09854;
 }
 
-/* line 191, ../src/stylesheets/hint.scss */
 .hint--warning.hint--left:before {
   border-left-color: #c09854;
 }
 
-/* line 193, ../src/stylesheets/hint.scss */
 .hint--warning.hint--right:before {
   border-right-color: #c09854;
 }
@@ -695,28 +623,23 @@ table {
 /**
  * Info
  */
-/* line 199, ../src/stylesheets/hint.scss */
 .hint--info:after {
   background-color: #3986ac;
   text-shadow: 0 -1px 0px #193c4c;
 }
 
-/* line 202, ../src/stylesheets/hint.scss */
 .hint--info.hint--top:before {
   border-top-color: #3986ac;
 }
 
-/* line 204, ../src/stylesheets/hint.scss */
 .hint--info.hint--bottom:before {
   border-bottom-color: #3986ac;
 }
 
-/* line 206, ../src/stylesheets/hint.scss */
 .hint--info.hint--left:before {
   border-left-color: #3986ac;
 }
 
-/* line 208, ../src/stylesheets/hint.scss */
 .hint--info.hint--right:before {
   border-right-color: #3986ac;
 }
@@ -724,28 +647,23 @@ table {
 /**
  * Success
  */
-/* line 214, ../src/stylesheets/hint.scss */
 .hint--success:after {
   background-color: #458746;
   text-shadow: 0 -1px 0px #1a331a;
 }
 
-/* line 217, ../src/stylesheets/hint.scss */
 .hint--success.hint--top:before {
   border-top-color: #458746;
 }
 
-/* line 219, ../src/stylesheets/hint.scss */
 .hint--success.hint--bottom:before {
   border-bottom-color: #458746;
 }
 
-/* line 221, ../src/stylesheets/hint.scss */
 .hint--success.hint--left:before {
   border-left-color: #458746;
 }
 
-/* line 223, ../src/stylesheets/hint.scss */
 .hint--success.hint--right:before {
   border-right-color: #458746;
 }
@@ -759,34 +677,29 @@ table {
  *  1) hint--always
  *  
  */
-/* line 235, ../src/stylesheets/hint.scss */
 .hint--always:after, .hint--always:before {
   opacity: 1;
   visibility: visible;
 }
 
-/* line 238, ../src/stylesheets/hint.scss */
 .hint--always.hint--top:after, .hint--always.hint--top:before {
   -webkit-transform: translateY(-8px);
   -moz-transform: translateY(-8px);
   transform: translateY(-8px);
 }
 
-/* line 242, ../src/stylesheets/hint.scss */
 .hint--always.hint--bottom:after, .hint--always.hint--bottom:before {
   -webkit-transform: translateY(8px);
   -moz-transform: translateY(8px);
   transform: translateY(8px);
 }
 
-/* line 246, ../src/stylesheets/hint.scss */
 .hint--always.hint--left:after, .hint--always.hint--left:before {
   -webkit-transform: translateX(-8px);
   -moz-transform: translateX(-8px);
   transform: translateX(-8px);
 }
 
-/* line 250, ../src/stylesheets/hint.scss */
 .hint--always.hint--right:after, .hint--always.hint--right:before {
   -webkit-transform: translateX(8px);
   -moz-transform: translateX(8px);
@@ -802,12 +715,10 @@ table {
  *  1) hint--rounded
  *  
  */
-/* line 264, ../src/stylesheets/hint.scss */
 .hint--rounded:after {
   border-radius: 4px;
 }
 
-/* line 5, ../src/stylesheets/mixins.scss */
 .chips a, .tags ul li a, .archive-all-dates a {
   align-items: baseline;
   border-radius: 100px;
@@ -821,40 +732,33 @@ table {
   transition: all .25s ease;
   user-select: none;
 }
-/* line 18, ../src/stylesheets/mixins.scss */
 .chips a span, .tags ul li a span, .archive-all-dates a span {
   color: rgba(0, 0, 0, 0.3);
   font-size: 16px;
   margin-left: 5px;
   transition: all .25s ease;
 }
-/* line 26, ../src/stylesheets/mixins.scss */
 .chips a .x, .tags ul li a .x, .archive-all-dates a .x {
   color: #fff;
 }
-/* line 30, ../src/stylesheets/mixins.scss */
 .chips a:hover, .tags ul li a:hover, .archive-all-dates a:hover {
   border: 2px solid rgba(0, 0, 0, 0.4);
   color: rgba(0, 0, 0, 0.7);
   transition: all 0s ease;
 }
-/* line 35, ../src/stylesheets/mixins.scss */
 .chips a:hover span, .tags ul li a:hover span, .archive-all-dates a:hover span {
   color: rgba(0, 0, 0, 0.5);
   transition: all 0s ease;
 }
-/* line 41, ../src/stylesheets/mixins.scss */
 .chips a:active, .tags ul li a:active, .archive-all-dates a:active {
   border: 2px solid rgba(0, 0, 0, 0.7);
   color: rgba(0, 0, 0, 0.9);
   transition: all 0s ease;
 }
-/* line 46, ../src/stylesheets/mixins.scss */
 .chips a:active span, .tags ul li a:active span, .archive-all-dates a:active span {
   color: rgba(0, 0, 0, 0.7);
   transition: all 0s ease;
 }
-/* line 54, ../src/stylesheets/mixins.scss */
 .chips .clear-tag span, .tags ul li .clear-tag span, .archive-all-dates .clear-tag span {
   align-items: center;
   background: rgba(0, 0, 0, 0.5);
@@ -870,37 +774,30 @@ table {
   padding: 4px;
   width: 18px;
 }
-/* line 71, ../src/stylesheets/mixins.scss */
 .chips .clear-tag span svg, .tags ul li .clear-tag span svg, .archive-all-dates .clear-tag span svg {
   fill: currentColor;
 }
-/* line 77, ../src/stylesheets/mixins.scss */
 .chips .clear-tag:hover span, .tags ul li .clear-tag:hover span, .archive-all-dates .clear-tag:hover span {
   background: rgba(0, 0, 0, 0.75);
   color: choose-contrast-color(#000);
 }
-/* line 84, ../src/stylesheets/mixins.scss */
 .chips .clear-tag:active span, .tags ul li .clear-tag:active span, .archive-all-dates .clear-tag:active span {
   background: rgba(0, 0, 0, 0.9);
   color: choose-contrast-color(#000);
 }
 
-/* line 453, ../src/stylesheets/mixins.scss */
 theme-color-bg {
   background-color: #3f51b5;
 }
 
-/* line 457, ../src/stylesheets/mixins.scss */
 theme-color-bg-contrast {
   color: white;
 }
 
-/* line 4, ../src/stylesheets/header.scss */
 body.menu-active {
   overflow: hidden;
 }
 
-/* line 8, ../src/stylesheets/header.scss */
 #container {
   background: #fff;
   border-radius: 0px;
@@ -913,7 +810,6 @@ body.menu-active {
   width: 100%;
 }
 
-/* line 21, ../src/stylesheets/header.scss */
 body.menu-active #container {
   border-radius: 15px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
@@ -929,42 +825,35 @@ body.menu-active #container {
 /*********************************************************
 *  Navigation
 *********************************************************/
-/* line 37, ../src/stylesheets/header.scss */
 .navigation {
   align-items: center;
   display: flex;
 }
 @media (min-width: 1200px) {
-  /* line 37, ../src/stylesheets/header.scss */
   .navigation {
     padding: 10px 0;
   }
 }
 @media (min-width: 769px) and (max-width: 1199px) {
-  /* line 37, ../src/stylesheets/header.scss */
   .navigation {
     padding: 10px 20px;
   }
 }
 @media (max-width: 768px) {
-  /* line 37, ../src/stylesheets/header.scss */
   .navigation {
     padding: 10px;
   }
 }
-/* line 53, ../src/stylesheets/header.scss */
 .navigation .menu-trigger {
   cursor: pointer;
   font-size: 24px;
 }
 @media (min-width: 769px) {
-  /* line 59, ../src/stylesheets/header.scss */
   .navigation .menu-trigger {
     display: none;
   }
 }
 
-/* line 66, ../src/stylesheets/header.scss */
 body > nav.menu {
   display: flex;
   height: 100vh;
@@ -977,17 +866,14 @@ body > nav.menu {
   width: calc(100vw - 50px);
   z-index: -1;
 }
-/* line 78, ../src/stylesheets/header.scss */
 body > nav.menu ul {
   justify-content: center;
   padding-left: 30px !important;
 }
-/* line 83, ../src/stylesheets/header.scss */
 body > nav.menu ul li:not(:first-child) {
   padding-top: 5px;
 }
 
-/* line 90, ../src/stylesheets/header.scss */
 body.menu-active > nav.menu {
   opacity: 1;
   transition: opacity 0s ease;
@@ -1006,12 +892,10 @@ body.menu-active > nav.menu {
     z-index: 1;
   }
 }
-/* line 112, ../src/stylesheets/header.scss */
 section.menu,
 body > nav.menu {
   flex: 1;
 }
-/* line 116, ../src/stylesheets/header.scss */
 section.menu ul,
 body > nav.menu ul {
   display: flex;
@@ -1020,20 +904,17 @@ body > nav.menu ul {
   padding: 0;
 }
 @media (max-width: 768px) {
-  /* line 116, ../src/stylesheets/header.scss */
   section.menu ul,
   body > nav.menu ul {
     flex-direction: column;
   }
 }
-/* line 126, ../src/stylesheets/header.scss */
 section.menu ul li,
 body > nav.menu ul li {
   font-weight: bold;
   list-style: none;
   margin-right: 25px;
 }
-/* line 131, ../src/stylesheets/header.scss */
 section.menu ul li a,
 body > nav.menu ul li a {
   border-bottom: none;
@@ -1042,7 +923,6 @@ body > nav.menu ul li a {
   position: relative;
   transition: background .25s ease, color .4s ease, width .25s ease;
 }
-/* line 108, ../src/stylesheets/mixins.scss */
 section.menu ul li a:after,
 body > nav.menu ul li a:after {
   background: transparent;
@@ -1055,13 +935,11 @@ body > nav.menu ul li a:after {
   transition: all .25s ease;
   width: 0%;
 }
-/* line 120, ../src/stylesheets/mixins.scss */
 section.menu ul li a:hover,
 body > nav.menu ul li a:hover {
   color: black;
   transition: background .25s ease, color 0s ease, width .25s ease;
 }
-/* line 124, ../src/stylesheets/mixins.scss */
 section.menu ul li a:hover:after,
 body > nav.menu ul li a:hover:after {
   background: #000;
@@ -1072,44 +950,36 @@ body > nav.menu ul li a:hover:after {
 /*********************************************************
 *  Topbar and Header
 *********************************************************/
-/* line 146, ../src/stylesheets/header.scss */
 .header {
   text-align: center;
   max-width: 800px;
   margin: auto;
 }
 @media (min-width: 769px) {
-  /* line 146, ../src/stylesheets/header.scss */
   .header {
     padding: 100px 0 75px;
   }
 }
 @media (max-width: 768px) {
-  /* line 146, ../src/stylesheets/header.scss */
   .header {
     padding: 100px 10px 75px;
   }
 }
-/* line 157, ../src/stylesheets/header.scss */
 .header h1 {
   margin: 0 0 5px;
   text-transform: uppercase;
 }
-/* line 161, ../src/stylesheets/header.scss */
 .header h1:hover {
   text-decoration: none;
 }
-/* line 165, ../src/stylesheets/header.scss */
 .header h5 {
   margin: 0px;
 }
 
-/* line 171, ../src/stylesheets/header.scss */
 .posthaven-user-menu {
   flex: 0 auto;
   position: relative;
 }
-/* line 176, ../src/stylesheets/header.scss */
 .posthaven-user-menu figure {
   background: white;
   border-radius: 40px;
@@ -1125,39 +995,31 @@ body > nav.menu ul li a:hover:after {
   width: 40px;
   z-index: 10;
 }
-/* line 192, ../src/stylesheets/header.scss */
 .posthaven-user-menu figure.active {
   border: solid 2px rgba(128, 128, 128, 0.5);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
-/* line 199, ../src/stylesheets/header.scss */
 .posthaven-user-menu figure.active span i {
   opacity: 1;
 }
-/* line 202, ../src/stylesheets/header.scss */
 .posthaven-user-menu figure.active span i:before {
   top: 2px;
   transform: rotate(-45deg);
 }
-/* line 206, ../src/stylesheets/header.scss */
 .posthaven-user-menu figure.active span i:after {
   bottom: 1px;
   transform: rotate(45deg);
 }
-/* line 214, ../src/stylesheets/header.scss */
 .posthaven-user-menu figure:hover {
   border: solid 2px rgba(128, 128, 128, 0.5);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
-/* line 219, ../src/stylesheets/header.scss */
 .posthaven-user-menu figure:hover span i {
   opacity: 1;
 }
-/* line 223, ../src/stylesheets/header.scss */
 .posthaven-user-menu figure:hover span:after {
   top: calc(50% - 8px);
 }
-/* line 229, ../src/stylesheets/header.scss */
 .posthaven-user-menu figure span {
   align-items: center;
   background: #3F3F3F;
@@ -1170,7 +1032,6 @@ body > nav.menu ul li a:hover:after {
   position: relative;
   width: 32px;
 }
-/* line 242, ../src/stylesheets/header.scss */
 .posthaven-user-menu figure span i {
   display: inline-block;
   height: 6px;
@@ -1180,7 +1041,6 @@ body > nav.menu ul li a:hover:after {
   transition: opacity .25s ease;
   width: 16px;
 }
-/* line 251, ../src/stylesheets/header.scss */
 .posthaven-user-menu figure span i:before, .posthaven-user-menu figure span i:after {
   background: #fff;
   border-radius: 3px;
@@ -1190,15 +1050,12 @@ body > nav.menu ul li a:hover:after {
   transition: all .25s ease;
   width: 16px;
 }
-/* line 262, ../src/stylesheets/header.scss */
 .posthaven-user-menu figure span i:before {
   top: -2px;
 }
-/* line 266, ../src/stylesheets/header.scss */
 .posthaven-user-menu figure span i:after {
   bottom: -2px;
 }
-/* line 272, ../src/stylesheets/header.scss */
 .posthaven-user-menu figure span:before {
   background: #1285F9;
   content: '';
@@ -1209,7 +1066,6 @@ body > nav.menu ul li a:hover:after {
   top: 0;
   width: 10px;
 }
-/* line 285, ../src/stylesheets/header.scss */
 .posthaven-user-menu .ph-menu {
   border: solid 1px rgba(0, 0, 0, 0.05);
   border-radius: 4px;
@@ -1221,21 +1077,17 @@ body > nav.menu ul li a:hover:after {
   top: 22px;
   z-index: 9;
 }
-/* line 296, ../src/stylesheets/header.scss */
 .posthaven-user-menu .ph-menu ul {
   margin: 0;
   padding: 0;
 }
-/* line 300, ../src/stylesheets/header.scss */
 .posthaven-user-menu .ph-menu ul li {
   background: #fff;
   list-style: none;
 }
-/* line 304, ../src/stylesheets/header.scss */
 .posthaven-user-menu .ph-menu ul li:not(:first-child) {
   border-top: solid 1px rgba(0, 0, 0, 0.05);
 }
-/* line 308, ../src/stylesheets/header.scss */
 .posthaven-user-menu .ph-menu ul li a {
   display: flex;
   left: 0;
@@ -1245,12 +1097,10 @@ body > nav.menu ul li a:hover:after {
   user-select: none;
   white-space: nowrap;
 }
-/* line 317, ../src/stylesheets/header.scss */
 .posthaven-user-menu .ph-menu ul li a:hover {
   left: 5px;
 }
 
-/* line 326, ../src/stylesheets/header.scss */
 .ph-canvas {
   background: rgba(255, 255, 255, 0);
   display: none;
@@ -1261,100 +1111,81 @@ body > nav.menu ul li a:hover:after {
   transition: background .25s ease;
   width: 100%;
 }
-/* line 336, ../src/stylesheets/header.scss */
 .ph-canvas.active {
   background: rgba(255, 255, 255, 0.5);
   display: block;
 }
 
-/* line 4, ../src/stylesheets/post.scss */
 aside {
   margin: 0 auto 25px;
   color: rgba(0, 0, 0, 0.3);
   font-size: 18px;
 }
-/* line 5, ../src/stylesheets/post.scss */
 aside section {
   margin-bottom: 10px;
 }
-/* line 13, ../src/stylesheets/post.scss */
 aside a {
   color: rgba(68, 68, 68, 0.3);
 }
-/* line 17, ../src/stylesheets/post.scss */
 aside .tag-count {
   font-size: 12px;
 }
-/* line 21, ../src/stylesheets/post.scss */
 aside .show-tags {
   font-size: 12px;
   margin-top: 5px;
 }
-/* line 26, ../src/stylesheets/post.scss */
 aside h3 {
   margin: 20px 0px 5px;
   font-size: 12px;
   font-weight: normal;
 }
-/* line 32, ../src/stylesheets/post.scss */
 aside ul {
   padding-left: 0px;
   margin: 0px 0px;
 }
-/* line 36, ../src/stylesheets/post.scss */
 aside ul li {
   list-style: none;
 }
 
-/* line 43, ../src/stylesheets/post.scss */
 .post-list .post {
   margin: 0 auto 125px;
 }
 
-/* line 48, ../src/stylesheets/post.scss */
 .post {
   margin: 0 auto;
   max-width: 100%;
   width: 800px;
   font-size: 22px;
 }
-/* line 54, ../src/stylesheets/post.scss */
 .post .post-body {
   margin-top: 25px;
   /* IE8 css bug */
 }
-/* line 93, ../src/stylesheets/mixins.scss */
 .post .post-body *::-moz-selection {
   background: #000;
   color: white;
 }
-/* line 98, ../src/stylesheets/mixins.scss */
 .post .post-body *::selection {
   background: #000;
   color: white;
 }
-/* line 58, ../src/stylesheets/post.scss */
 .post .post-body p {
   line-height: 1.75em;
 }
 @media (min-width: 769px) {
-  /* line 58, ../src/stylesheets/post.scss */
   .post .post-body p {
     font-size: 22px;
   }
 }
 @media (max-width: 768px) {
-  /* line 58, ../src/stylesheets/post.scss */
   .post .post-body p {
     font-size: 20px;
     margin: 24px auto;
   }
 }
-/* line 73, ../src/stylesheets/post.scss */
 .post .post-body img {
   height: auto;
 }
-/* line 74, ../src/stylesheets/post.scss */
 .post .post-body iframe,
 .post .post-body object,
 .post .post-body embed {
@@ -1363,12 +1194,10 @@ aside ul li {
   max-width: 100%;
   max-width: inherit\9;
 }
-/* line 83, ../src/stylesheets/post.scss */
 .post .post-body blockquote {
   padding-left: 30px;
   position: relative;
 }
-/* line 87, ../src/stylesheets/post.scss */
 .post .post-body blockquote:before {
   background: rgba(0, 0, 0, 0.15);
   bottom: 0;
@@ -1379,19 +1208,15 @@ aside ul li {
   width: 8px;
   top: 0;
 }
-/* line 98, ../src/stylesheets/post.scss */
 .post .post-body pre {
   font-size: 13px;
 }
-/* line 99, ../src/stylesheets/post.scss */
 .post .post-body .slash-divider {
   color: #ddd;
 }
-/* line 100, ../src/stylesheets/post.scss */
 .post .post-body .private-indicator {
   margin-top: 10px;
 }
-/* line 103, ../src/stylesheets/post.scss */
 .post .post-body .private-indicator .lock-icon {
   display: inline-block;
   width: 14px;
@@ -1400,266 +1225,213 @@ aside ul li {
   position: relative;
   top: -3px;
 }
-/* line 113, ../src/stylesheets/post.scss */
 .post .post-body h1, .post .post-body h2, .post .post-body h3 {
   margin-top: 30px;
 }
-/* line 114, ../src/stylesheets/post.scss */
 .post .post-body h1 {
   font-size: 22px;
 }
-/* line 115, ../src/stylesheets/post.scss */
 .post .post-body h2 {
   font-size: 20px;
 }
-/* line 116, ../src/stylesheets/post.scss */
 .post .post-body h3 {
   font-size: 22px;
   font-style: italic;
 }
-/* line 118, ../src/stylesheets/post.scss */
 .post .post-body a {
   border-bottom: dashed 2px rgba(0, 0, 0, 0.1);
   word-break: break-all;
 }
-/* line 122, ../src/stylesheets/post.scss */
 .post .post-body a:hover {
   border-bottom: solid 2px rgba(0, 0, 0, 0.4);
 }
-/* line 126, ../src/stylesheets/post.scss */
 .post .post-body a:active {
   border-bottom: solid 2px rgba(0, 0, 0, 0.7);
 }
 @media (max-width: 768px) {
-  /* line 131, ../src/stylesheets/post.scss */
   .post .post-body blockquote {
     margin: 0 1rem;
   }
 }
-/* line 139, ../src/stylesheets/post.scss */
 .post .posthaven-post-body .posthaven-gallery {
   text-align: center;
 }
 @media (min-width: 769px) {
-  /* line 139, ../src/stylesheets/post.scss */
   .post .posthaven-post-body .posthaven-gallery {
     margin-left: -100px;
     margin-right: -100px;
   }
 }
 @media (max-width: 768px) {
-  /* line 139, ../src/stylesheets/post.scss */
   .post .posthaven-post-body .posthaven-gallery {
     margin-left: -20px;
     margin-right: -20px;
   }
 }
-/* line 151, ../src/stylesheets/post.scss */
 .post .posthaven-post-body .posthaven-gallery .posthaven-gallery-chrome {
   margin-bottom: 10px;
 }
-/* line 154, ../src/stylesheets/post.scss */
 .post .posthaven-post-body .posthaven-gallery .posthaven-gallery-chrome .posthaven-gallery-info {
   float: none;
 }
-/* line 160, ../src/stylesheets/post.scss */
 .post .posthaven-post-body .posthaven-gallery .posthaven-file img {
   max-height: 90vh;
 }
-/* line 167, ../src/stylesheets/post.scss */
 .post .post-title {
   margin: 75px auto 20px;
   text-align: center;
 }
-/* line 171, ../src/stylesheets/post.scss */
 .post .post-title h2 {
   font-size: 30px;
   line-height: 1.2em;
   margin-top: 0;
   margin-bottom: 5px;
 }
-/* line 177, ../src/stylesheets/post.scss */
 .post .post-title h2 a {
   color: #000;
 }
-/* line 180, ../src/stylesheets/post.scss */
 .post .post-title h2 a:hover {
   border-bottom: 2px dashed rgba(0, 0, 0, 0.1);
 }
-/* line 185, ../src/stylesheets/post.scss */
 .post .post-title .author {
   font-size: 13px;
   color: #999;
 }
-/* line 189, ../src/stylesheets/post.scss */
 .post .post-title .author a {
   color: #999;
 }
-/* line 196, ../src/stylesheets/post.scss */
 .post .homepage-post-footer {
   margin: 30px 0;
   font-size: 14px;
   text-align: center;
 }
-/* line 200, ../src/stylesheets/post.scss */
 .post .homepage-post-footer .tags {
   margin: 10px 0;
   font-size: 12px;
 }
-/* line 203, ../src/stylesheets/post.scss */
 .post .homepage-post-footer .tags h6 {
   font-weight: normal;
   color: #999;
   font-size: 12px;
   display: inline;
 }
-/* line 204, ../src/stylesheets/post.scss */
 .post .homepage-post-footer .tags ul {
   padding-left: 10px;
   margin-left: 0;
   display: inline;
 }
-/* line 205, ../src/stylesheets/post.scss */
 .post .homepage-post-footer .tags ul li {
   display: inline;
   margin-right: 10px;
 }
-/* line 206, ../src/stylesheets/post.scss */
 .post .homepage-post-footer .tags ul li a {
   white-space: nowrap;
 }
-/* line 210, ../src/stylesheets/post.scss */
 .post table {
   border-bottom: 1px solid #ddd;
   width: 100%;
   border-collapse: collapse;
 }
-/* line 211, ../src/stylesheets/post.scss */
 .post table, .post th, .post td {
   border-top: 1px solid #ddd;
 }
-/* line 212, ../src/stylesheets/post.scss */
 .post table th, .post table td {
   padding: 4px 5px;
 }
-/* line 213, ../src/stylesheets/post.scss */
 .post table p:first-child {
   margin-top: 0px;
 }
-/* line 214, ../src/stylesheets/post.scss */
 .post table p:last-child {
   margin-bottom: 0px;
 }
 
-/* line 217, ../src/stylesheets/post.scss */
 .gist {
   font-size: 13px;
 }
 
-/* line 221, ../src/stylesheets/post.scss */
 .post:first-child {
   margin-top: 0px;
 }
 
-/* line 225, ../src/stylesheets/post.scss */
 .posthaven-file-download {
   display: inline-flex !important;
 }
 
-/* line 229, ../src/stylesheets/post.scss */
 .posthaven-gallery-modal-glasspane {
   z-index: 15 !important;
 }
 
-/* line 3, ../src/stylesheets/footer.scss */
 footer.footer {
   background-color: rgba(0, 0, 0, 0.05);
   border-top: solid 1px rgba(0, 0, 0, 0.15);
   border-bottom: solid 1px rgba(0, 0, 0, 0.15);
 }
 @media (min-width: 768px) {
-  /* line 3, ../src/stylesheets/footer.scss */
   footer.footer {
     padding: 50px 80px;
   }
 }
 @media (max-width: 767px) {
-  /* line 3, ../src/stylesheets/footer.scss */
   footer.footer {
     padding: 50px 20px;
   }
 }
 @media (min-width: 1200px) {
-  /* line 3, ../src/stylesheets/footer.scss */
   footer.footer {
     border: solid 1px rgba(0, 0, 0, 0.15);
   }
 }
-/* line 20, ../src/stylesheets/footer.scss */
 footer.footer h4 {
   text-align: center;
 }
-/* line 24, ../src/stylesheets/footer.scss */
 footer.footer section {
   margin-bottom: 50px;
 }
-/* line 28, ../src/stylesheets/footer.scss */
 footer.footer nav.menu {
   max-width: 800px;
   margin: auto;
   padding: 0;
 }
-/* line 32, ../src/stylesheets/footer.scss */
 footer.footer nav.menu ul {
   display: flex;
   justify-content: center;
 }
 @media (min-width: 767px) {
-  /* line 32, ../src/stylesheets/footer.scss */
   footer.footer nav.menu ul {
     flex-direction: row;
     flex-wrap: wrap;
   }
 }
-/* line 40, ../src/stylesheets/footer.scss */
 footer.footer nav.menu ul li {
   margin: 0px;
   text-align: center;
 }
-/* line 44, ../src/stylesheets/footer.scss */
 footer.footer nav.menu ul li a {
   display: inline-flex;
   margin: 0 8px;
   padding: 5px 2px;
 }
-/* line 53, ../src/stylesheets/footer.scss */
 footer.footer .menu-trigger {
   display: none;
 }
-/* line 57, ../src/stylesheets/footer.scss */
 footer.footer section.bio {
   text-align: center;
 }
-/* line 61, ../src/stylesheets/footer.scss */
 footer.footer section.bio figure img {
   border-radius: 2px;
   margin-bottom: 10px;
 }
-/* line 67, ../src/stylesheets/footer.scss */
 footer.footer section.bio h3 {
   margin: 0px;
 }
-/* line 71, ../src/stylesheets/footer.scss */
 footer.footer section.bio p {
   margin: 5px 0;
 }
 
-/* line 82, ../src/stylesheets/footer.scss */
 section.search-archive h4 a {
   position: relative;
   transition: background .25s ease, color .4s ease, width .25s ease;
 }
-/* line 108, ../src/stylesheets/mixins.scss */
 section.search-archive h4 a:after {
   background: transparent;
   bottom: -3px;
@@ -1671,24 +1443,20 @@ section.search-archive h4 a:after {
   transition: all .25s ease;
   width: 0%;
 }
-/* line 120, ../src/stylesheets/mixins.scss */
 section.search-archive h4 a:hover {
   color: black;
   transition: background .25s ease, color 0s ease, width .25s ease;
 }
-/* line 124, ../src/stylesheets/mixins.scss */
 section.search-archive h4 a:hover:after {
   background: #000;
   left: 0%;
   width: 100%;
 }
 
-/* line 87, ../src/stylesheets/footer.scss */
 section.blogroll {
   max-width: 800px;
   margin: auto;
 }
-/* line 91, ../src/stylesheets/footer.scss */
 section.blogroll ul {
   display: flex;
   flex-direction: row;
@@ -1698,7 +1466,6 @@ section.blogroll ul {
   padding: 0;
   width: 100%;
 }
-/* line 100, ../src/stylesheets/footer.scss */
 section.blogroll ul li {
   box-sizing: border-box;
   font-size: 18px;
@@ -1706,28 +1473,23 @@ section.blogroll ul li {
   margin-bottom: 3px;
 }
 @media (min-width: 768px) {
-  /* line 100, ../src/stylesheets/footer.scss */
   section.blogroll ul li {
     flex: 0 50%;
   }
 }
 @media (max-width: 767px) {
-  /* line 100, ../src/stylesheets/footer.scss */
   section.blogroll ul li {
     flex: 0 0 100%;
   }
 }
 @media (min-width: 768px) {
-  /* line 113, ../src/stylesheets/footer.scss */
   section.blogroll ul li:nth-child(odd) {
     padding-right: 25px;
   }
-  /* line 117, ../src/stylesheets/footer.scss */
   section.blogroll ul li:nth-child(even) {
     padding-left: 25px;
   }
 }
-/* line 122, ../src/stylesheets/footer.scss */
 section.blogroll ul li a {
   box-sizing: border-box;
   display: flex;
@@ -1737,7 +1499,6 @@ section.blogroll ul li a {
   position: relative;
   transition: background .25s ease, color .4s ease, width .25s ease;
 }
-/* line 108, ../src/stylesheets/mixins.scss */
 section.blogroll ul li a:after {
   background: transparent;
   bottom: -3px;
@@ -1749,47 +1510,39 @@ section.blogroll ul li a:after {
   transition: all .25s ease;
   width: 0%;
 }
-/* line 120, ../src/stylesheets/mixins.scss */
 section.blogroll ul li a:hover {
   color: black;
   transition: background .25s ease, color 0s ease, width .25s ease;
 }
-/* line 124, ../src/stylesheets/mixins.scss */
 section.blogroll ul li a:hover:after {
   background: #000;
   left: 0%;
   width: 100%;
 }
 
-/* line 2, ../src/stylesheets/social.scss */
 section.social ul {
   display: flex;
   justify-content: center;
   margin: 0;
   padding: 0;
 }
-/* line 8, ../src/stylesheets/social.scss */
 section.social ul li {
   list-style: none;
   margin: 0 5px 5px;
 }
-/* line 12, ../src/stylesheets/social.scss */
 section.social ul li a {
   opacity: .2;
   transition: opacity .25s ease;
 }
-/* line 16, ../src/stylesheets/social.scss */
 section.social ul li a svg {
   fill: currentColor;
   height: 24px;
   width: 24px;
 }
-/* line 22, ../src/stylesheets/social.scss */
 section.social ul li a:hover {
   opacity: .4;
   transition: opacity 0s ease;
 }
-/* line 27, ../src/stylesheets/social.scss */
 section.social ul li a:active {
   opacity: .6;
   transition: opacity 0s ease;
@@ -1822,7 +1575,6 @@ section.social ul li a:active {
 /*********************************************************
 *  General
 *********************************************************/
-/* line 56, ../src/stylesheets/blog.scss */
 body {
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.8);
@@ -1833,18 +1585,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 66, ../src/stylesheets/blog.scss */
 a {
   color: inherit;
   text-decoration: none;
 }
 
-/* line 71, ../src/stylesheets/blog.scss */
 a:hover {
   text-decoration: none;
 }
 
-/* line 72, ../src/stylesheets/blog.scss */
 .post-body a,
 .subscribe-footer a,
 .search-archive a,
@@ -1852,14 +1601,12 @@ section.blogroll a {
   border-bottom: 2px dashed rgba(0, 0, 0, 0.1);
   outline: none;
 }
-/* line 78, ../src/stylesheets/blog.scss */
 .post-body a:hover,
 .subscribe-footer a:hover,
 .search-archive a:hover,
 section.blogroll a:hover {
   border-bottom-color: rgba(0, 0, 0, 0.4);
 }
-/* line 81, ../src/stylesheets/blog.scss */
 .post-body a:active,
 .subscribe-footer a:active,
 .search-archive a:active,
@@ -1867,52 +1614,43 @@ section.blogroll a:active {
   border-bottom-color: rgba(0, 0, 0, 0.7);
 }
 
-/* line 90, ../src/stylesheets/blog.scss */
 section.blogroll a:hover {
   border-bottom: solid 2px transparent;
 }
 
-/* line 94, ../src/stylesheets/blog.scss */
 .small {
   font-size: 18px;
   font-weight: 300;
   opacity: 0.6;
 }
 
-/* line 100, ../src/stylesheets/blog.scss */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 800;
   line-height: 1em;
 }
 
-/* line 101, ../src/stylesheets/blog.scss */
 h1 {
   font-size: 48px;
 }
 
-/* line 102, ../src/stylesheets/blog.scss */
 h2 {
   font-size: 30px;
 }
 
-/* line 103, ../src/stylesheets/blog.scss */
 h3 {
   font-size: 36px;
 }
 
-/* line 104, ../src/stylesheets/blog.scss */
 h4 {
   font-size: 24px;
 }
 
-/* line 105, ../src/stylesheets/blog.scss */
 h5 {
   font-size: 22px;
   font-weight: normal;
   opacity: 0.6;
 }
 
-/* line 107, ../src/stylesheets/blog.scss */
 textarea, input[type=text] {
   padding: 10px 20px;
   width: 100%;
@@ -1924,36 +1662,29 @@ textarea, input[type=text] {
   font-size: 20px;
   outline: none;
 }
-/* line 117, ../src/stylesheets/blog.scss */
 textarea::-webkit-input-placeholder, input[type=text]::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   color: rgba(68, 68, 68, 0.2);
 }
-/* line 120, ../src/stylesheets/blog.scss */
 textarea::-moz-placeholder, input[type=text]::-moz-placeholder {
   /* Firefox 19+ */
   color: rgba(68, 68, 68, 0.2);
 }
-/* line 123, ../src/stylesheets/blog.scss */
 textarea:-ms-input-placeholder, input[type=text]:-ms-input-placeholder {
   /* IE 10+ */
   color: rgba(68, 68, 68, 0.2);
 }
-/* line 126, ../src/stylesheets/blog.scss */
 textarea:-moz-placeholder, input[type=text]:-moz-placeholder {
   /* Firefox 18- */
   color: rgba(68, 68, 68, 0.2);
 }
-/* line 129, ../src/stylesheets/blog.scss */
 textarea:hover, input[type=text]:hover {
   border: 2px solid rgba(0, 0, 0, 0.5);
 }
-/* line 132, ../src/stylesheets/blog.scss */
 textarea:active, input[type=text]:active {
   border: 2px solid black;
 }
 
-/* line 136, ../src/stylesheets/blog.scss */
 input[type='submit'],
 .posthaven-user-subscribe a {
   background: rgba(0, 0, 0, 0.85);
@@ -1974,39 +1705,32 @@ input[type='submit'],
   text-decoration: none;
   width: 100%;
 }
-/* line 156, ../src/stylesheets/blog.scss */
 input[type='submit']:hover,
 .posthaven-user-subscribe a:hover {
   background: black;
 }
-/* line 164, ../src/stylesheets/blog.scss */
 input[type='submit']:focus,
 .posthaven-user-subscribe a:focus {
   background: black;
   box-shadow: white 0px 0px 0px 1px, rgba(0, 0, 0, 0.25) 0px 0px 0px 3px;
 }
 
-/* line 171, ../src/stylesheets/blog.scss */
 .posthaven-share-links .posthaven-upvote {
   border: 2px solid #DDDDDD;
   padding: 3px 5px 3px 9px;
   border-radius: 4px;
 }
-/* line 175, ../src/stylesheets/blog.scss */
 .posthaven-share-links .posthaven-upvote:hover {
   border-color: rgba(0, 0, 0, 0.5);
   background-color: transparent;
 }
-/* line 179, ../src/stylesheets/blog.scss */
 .posthaven-share-links .posthaven-upvote:hover .posthaven-upvote-label,
 .posthaven-share-links .posthaven-upvote:hover .posthaven-upvoted-label {
   color: #509DFF;
 }
-/* line 183, ../src/stylesheets/blog.scss */
 .posthaven-share-links .posthaven-upvote:hover .posthaven-upvote-number {
   color: #000000;
 }
-/* line 187, ../src/stylesheets/blog.scss */
 .posthaven-share-links .posthaven-upvote .posthaven-upvote-label,
 .posthaven-share-links .posthaven-upvote .posthaven-upvoted-label {
   color: #509DFF;
@@ -2015,7 +1739,6 @@ input[type='submit']:focus,
   font-weight: bold;
   text-transform: uppercase;
 }
-/* line 195, ../src/stylesheets/blog.scss */
 .posthaven-share-links .posthaven-upvote .posthaven-upvote-number {
   color: inherit;
   font-size: 15px;
@@ -2024,7 +1747,6 @@ input[type='submit']:focus,
   opacity: 0.3;
 }
 
-/* line 204, ../src/stylesheets/blog.scss */
 .alert {
   font-size: 14px;
   margin: 10px 0px 10px 60px;
@@ -2039,7 +1761,6 @@ input[type='submit']:focus,
   border-radius: 5px;
   /* creates the smaller  triangle */
 }
-/* line 215, ../src/stylesheets/blog.scss */
 .alert:before {
   content: "";
   position: absolute;
@@ -2057,7 +1778,6 @@ input[type='submit']:focus,
   display: block;
   width: 0;
 }
-/* line 232, ../src/stylesheets/blog.scss */
 .alert:after {
   content: "";
   position: absolute;
@@ -2076,7 +1796,6 @@ input[type='submit']:focus,
   width: 0;
 }
 
-/* line 249, ../src/stylesheets/blog.scss */
 #container {
   box-sizing: border-box;
   margin: auto;
@@ -2084,46 +1803,38 @@ input[type='submit']:focus,
   position: relative;
 }
 @media (min-width: 1200px) {
-  /* line 249, ../src/stylesheets/blog.scss */
   #container {
     padding: 0 130px;
   }
 }
 
-/* line 264, ../src/stylesheets/blog.scss */
 section.subhead {
   margin: auto;
   text-align: center;
 }
-/* line 267, ../src/stylesheets/blog.scss */
 section.subhead h3 {
   margin: 0;
 }
 
-/* line 272, ../src/stylesheets/blog.scss */
 .tags {
   text-align: center;
   max-width: 800px;
   margin: auto;
 }
-/* line 277, ../src/stylesheets/blog.scss */
 .tags h4 {
   margin-bottom: 15px;
 }
-/* line 281, ../src/stylesheets/blog.scss */
 .tags .all-tags {
   display: flex;
   margin-top: 10px;
   justify-content: center;
 }
-/* line 286, ../src/stylesheets/blog.scss */
 .tags .all-tags .show-all-tags {
   cursor: pointer;
   font-weight: 800;
   position: relative;
   transition: background .25s ease, color .4s ease, width .25s ease;
 }
-/* line 108, ../src/stylesheets/mixins.scss */
 .tags .all-tags .show-all-tags:after {
   background: transparent;
   bottom: -3px;
@@ -2135,18 +1846,15 @@ section.subhead h3 {
   transition: all .25s ease;
   width: 0%;
 }
-/* line 120, ../src/stylesheets/mixins.scss */
 .tags .all-tags .show-all-tags:hover {
   color: black;
   transition: background .25s ease, color 0s ease, width .25s ease;
 }
-/* line 124, ../src/stylesheets/mixins.scss */
 .tags .all-tags .show-all-tags:hover:after {
   background: #000;
   left: 0%;
   width: 100%;
 }
-/* line 292, ../src/stylesheets/blog.scss */
 .tags ul {
   display: inline-flex;
   flex-direction: row;
@@ -2155,29 +1863,24 @@ section.subhead h3 {
   padding: 0;
   margin: 0;
 }
-/* line 300, ../src/stylesheets/blog.scss */
 .tags ul li {
   list-style: none;
   margin: 2px;
 }
-/* line 305, ../src/stylesheets/blog.scss */
 .tags ul li.hide {
   display: none;
 }
 
-/* line 318, ../src/stylesheets/blog.scss */
 .posthaven {
   display: flex;
   justify-content: center;
   margin: 50px;
 }
-/* line 323, ../src/stylesheets/blog.scss */
 .posthaven a {
   align-items: center;
   justify-content: center;
   display: inline-flex;
 }
-/* line 329, ../src/stylesheets/blog.scss */
 .posthaven figure {
   border-radius: 4px;
   height: 32px;
@@ -2186,26 +1889,22 @@ section.subhead h3 {
   position: relative;
   width: 32px;
 }
-/* line 337, ../src/stylesheets/blog.scss */
 .posthaven figure:before, .posthaven figure:after {
   bottom: 0;
   content: "";
   position: absolute;
   top: 0;
 }
-/* line 345, ../src/stylesheets/blog.scss */
 .posthaven figure:before {
   background: rgba(0, 0, 0, 0.5);
   left: 0;
   width: 22px;
 }
-/* line 351, ../src/stylesheets/blog.scss */
 .posthaven figure:after {
   background: rgba(0, 0, 0, 0.35);
   right: 0;
   width: 10px;
 }
-/* line 358, ../src/stylesheets/blog.scss */
 .posthaven .posthaven-wordmark {
   --color-1: rgba(0, 0, 0, 0.5);
   --color-2: rgba(0, 0, 0, 0.35);
@@ -2213,17 +1912,14 @@ section.subhead h3 {
   width: 120px;
 }
 
-/* line 366, ../src/stylesheets/blog.scss */
 #main_container {
   position: relative;
 }
 
-/* line 370, ../src/stylesheets/blog.scss */
 .main-content {
   min-height: 300px;
 }
 
-/* line 374, ../src/stylesheets/blog.scss */
 .main-content,
 .subscribe-footer {
   box-sizing: border-box;
@@ -2233,50 +1929,41 @@ section.subhead h3 {
 /*********************************************************
 *  Subscribe Form
 *********************************************************/
-/* line 384, ../src/stylesheets/blog.scss */
 .subscribe-footer {
   margin: 100px 0px;
   text-align: center;
 }
-/* line 388, ../src/stylesheets/blog.scss */
 .subscribe-footer h3 {
   margin-bottom: 0px;
 }
-/* line 392, ../src/stylesheets/blog.scss */
 .subscribe-footer .subscribe-wrapper {
   width: 500px;
   max-width: 100%;
   margin: auto;
   font-size: 18px;
 }
-/* line 398, ../src/stylesheets/blog.scss */
 .subscribe-footer .subscribe-wrapper p {
   font-size: 20px;
   opacity: .7;
   margin: 0 0 10px;
 }
-/* line 405, ../src/stylesheets/blog.scss */
 .subscribe-footer input {
   margin-top: 12px;
   max-width: 400px;
 }
-/* line 410, ../src/stylesheets/blog.scss */
 .subscribe-footer input[type=submit] {
   display: none;
   margin: 12px auto;
   max-width: 400px;
 }
-/* line 415, ../src/stylesheets/blog.scss */
 .subscribe-footer .posthaven-subscribe-error {
   color: #a00;
 }
 
-/* line 418, ../src/stylesheets/blog.scss */
 .post-responses h4 {
   text-align: center;
 }
 
-/* line 422, ../src/stylesheets/blog.scss */
 .posthaven-user-subscribed .post-responses .subscribe {
   display: none;
 }
@@ -2284,7 +1971,6 @@ section.subhead h3 {
 /*********************************************************
 *  Private Page
 *********************************************************/
-/* line 430, ../src/stylesheets/blog.scss */
 .posthaven-password-field {
   display: inline-block;
 }
@@ -2292,12 +1978,10 @@ section.subhead h3 {
 /*********************************************************
 *  Posts
 *********************************************************/
-/* line 438, ../src/stylesheets/blog.scss */
 #main {
   margin: auto;
 }
 
-/* line 442, ../src/stylesheets/blog.scss */
 #main.archive-results {
   max-width: 800px;
   margin: auto;
@@ -2307,13 +1991,11 @@ section.subhead h3 {
 /*********************************************************
 *  Pagination
 *********************************************************/
-/* line 452, ../src/stylesheets/blog.scss */
 .pagination {
   text-align: center;
   max-width: 800px;
   margin: auto;
 }
-/* line 457, ../src/stylesheets/blog.scss */
 .pagination ul {
   align-items: baseline;
   display: flex;
@@ -2323,22 +2005,18 @@ section.subhead h3 {
   margin: 0;
   padding: 0;
 }
-/* line 466, ../src/stylesheets/blog.scss */
 .pagination ul li {
   list-style: none;
 }
-/* line 469, ../src/stylesheets/blog.scss */
 .pagination ul li.previous, .pagination ul li.next {
   font-weight: 800;
 }
-/* line 473, ../src/stylesheets/blog.scss */
 .pagination ul li.previous a, .pagination ul li.next a {
   color: black;
   font-size: 20px;
   position: relative;
   transition: background .25s ease, color .4s ease, width .25s ease;
 }
-/* line 108, ../src/stylesheets/mixins.scss */
 .pagination ul li.previous a:after, .pagination ul li.next a:after {
   background: transparent;
   bottom: -3px;
@@ -2350,36 +2028,29 @@ section.subhead h3 {
   transition: all .25s ease;
   width: 0%;
 }
-/* line 120, ../src/stylesheets/mixins.scss */
 .pagination ul li.previous a:hover, .pagination ul li.next a:hover {
   color: black;
   transition: background .25s ease, color 0s ease, width .25s ease;
 }
-/* line 124, ../src/stylesheets/mixins.scss */
 .pagination ul li.previous a:hover:after, .pagination ul li.next a:hover:after {
   background: #000;
   left: 0%;
   width: 100%;
 }
-/* line 483, ../src/stylesheets/blog.scss */
 .pagination ul li.number.active a {
   color: rgba(0, 0, 0, 0.3);
   cursor: default;
   font-size: 18px;
 }
-/* line 488, ../src/stylesheets/blog.scss */
 .pagination ul li.number.active a:hover, .pagination ul li.number.active a:active {
   color: rgba(0, 0, 0, 0.3);
 }
-/* line 492, ../src/stylesheets/blog.scss */
 .pagination ul li.number.active a:hover:after, .pagination ul li.number.active a:active:after {
   display: none;
 }
-/* line 501, ../src/stylesheets/blog.scss */
 .pagination ul li.number, .pagination ul li.gap, .pagination ul li.first, .pagination ul li.last {
   display: none;
 }
-/* line 502, ../src/stylesheets/blog.scss */
 .pagination ul li.number.active {
   display: block;
   flex: 1;
@@ -2388,17 +2059,14 @@ section.subhead h3 {
 /*********************************************************
 *  Responses
 *********************************************************/
-/* line 510, ../src/stylesheets/blog.scss */
 #post_responses {
   margin: 40px auto;
   max-width: 600px;
 }
 
-/* line 516, ../src/stylesheets/blog.scss */
 .post-responses h4 {
   margin: 50px 0 20px;
 }
-/* line 521, ../src/stylesheets/blog.scss */
 .post-responses .responses .response {
   position: relative;
   margin: 10px 0px 30px;
@@ -2406,53 +2074,43 @@ section.subhead h3 {
   line-height: 1.6em;
   text-align: justify;
 }
-/* line 528, ../src/stylesheets/blog.scss */
 .post-responses .responses .response p {
   margin: 15px 0px;
 }
-/* line 532, ../src/stylesheets/blog.scss */
 .post-responses .responses .response .byline {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
 }
-/* line 537, ../src/stylesheets/blog.scss */
 .post-responses .responses .response .byline time {
   color: #ccc;
 }
-/* line 543, ../src/stylesheets/blog.scss */
 .post-responses .posthaven-loader {
   margin: 5em auto;
 }
 
-/* line 548, ../src/stylesheets/blog.scss */
 .posthaven-share-links {
   display: flex;
   justify-content: center;
   flex-direction: row;
 }
-/* line 552, ../src/stylesheets/blog.scss */
 .posthaven-share-links .posthaven-share-item {
   display: inline-block;
   margin: 0px 5px;
 }
 
 @media handheld, only screen and (max-width: 414px) {
-  /* line 559, ../src/stylesheets/blog.scss */
   .posthaven-share-links > .posthaven-share-item {
     display: block;
     margin: 5px 0;
   }
 }
-/* line 567, ../src/stylesheets/blog.scss */
 .posthaven-checkbox-field {
   line-height: 1.4em;
 }
-/* line 570, ../src/stylesheets/blog.scss */
 .posthaven-checkbox-field input[type="checkbox"] {
   display: none;
 }
-/* line 574, ../src/stylesheets/blog.scss */
 .posthaven-checkbox-field input[type="checkbox"] + label {
   cursor: pointer;
   display: flex;
@@ -2464,16 +2122,13 @@ section.subhead h3 {
   user-select: none;
 }
 @media (min-width: 768px) {
-  /* line 574, ../src/stylesheets/blog.scss */
   .posthaven-checkbox-field input[type="checkbox"] + label {
     justify-content: center;
   }
 }
-/* line 588, ../src/stylesheets/blog.scss */
 .posthaven-checkbox-field input[type="checkbox"] + label:hover:before {
   border: solid 1px #f00;
 }
-/* line 593, ../src/stylesheets/blog.scss */
 .posthaven-checkbox-field input[type="checkbox"] + label:before {
   border-radius: 4px;
   box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.15);
@@ -2485,7 +2140,6 @@ section.subhead h3 {
   height: 20px;
   margin: -2px 6px 0 0;
 }
-/* line 607, ../src/stylesheets/blog.scss */
 .posthaven-checkbox-field input[type="checkbox"]:checked + label:before {
   background-color: #000;
   background-image: url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><title>Checkmark</title><path d="M15.43 3.95l-1.793-1.793L6.38 9.412 2.795 5.825 1 7.62 6.38 13l1.795-1.794L15.43 3.95z" fill="%23FFF" fill-rule="evenodd"/></svg>');
@@ -2493,54 +2147,43 @@ section.subhead h3 {
   background-repeat: no-repeat;
   border: solid 1px #000;
 }
-/* line 617, ../src/stylesheets/blog.scss */
 .posthaven-checkbox-field input[type="checkbox"]:not(:checked) + label:hover:before {
   background: #fff;
   border: solid 1px #aaa;
 }
-/* line 622, ../src/stylesheets/blog.scss */
 .posthaven-checkbox-field input[type="checkbox"]:not(:checked) + label:active:before {
   background: #eee;
   border: solid 1px #000;
 }
 
-/* line 630, ../src/stylesheets/blog.scss */
 .posthaven-comment-form {
   padding: 0 0 40px;
   text-align: center;
 }
-/* line 634, ../src/stylesheets/blog.scss */
 .posthaven-comment-form .posthaven-comment-add-url {
   display: none;
 }
-/* line 636, ../src/stylesheets/blog.scss */
 .posthaven-comment-form input[type=submit] {
   display: none;
 }
-/* line 640, ../src/stylesheets/blog.scss */
 .posthaven-comment-form .posthaven-field {
   margin: 10px 0px;
   display: block !important;
 }
-/* line 644, ../src/stylesheets/blog.scss */
 .posthaven-comment-form .posthaven-field label {
   display: none;
 }
-/* line 648, ../src/stylesheets/blog.scss */
 .posthaven-comment-form .posthaven-field textarea, .posthaven-comment-form .posthaven-field input[type=text] {
   width: 100%;
 }
-/* line 652, ../src/stylesheets/blog.scss */
 .posthaven-comment-form .posthaven-field input[type=checkbox] {
   margin-right: 3px;
 }
-/* line 661, ../src/stylesheets/blog.scss */
 .posthaven-comment-form .posthaven-field.posthaven-comment-body-field label {
   font-weight: bold;
   text-align: center;
   width: 100%;
 }
-/* line 668, ../src/stylesheets/blog.scss */
 .posthaven-comment-form .posthaven-comment-verification {
   width: 500px;
   margin-bottom: 10px;
@@ -2549,25 +2192,20 @@ section.subhead h3 {
 /*********************************************************
 *  Archive
 *********************************************************/
-/* line 674, ../src/stylesheets/blog.scss */
 .archive-title {
   margin-bottom: 10px;
 }
 
-/* line 675, ../src/stylesheets/blog.scss */
 .archive-container {
   position: relative;
 }
-/* line 677, ../src/stylesheets/blog.scss */
 .archive-container .posthaven-loader {
   margin: 5em auto;
 }
 
-/* line 681, ../src/stylesheets/blog.scss */
 .archive-view {
   margin-bottom: 60px;
 }
-/* line 683, ../src/stylesheets/blog.scss */
 .archive-view a {
   color: inherit;
   font-size: 18px;
@@ -2576,43 +2214,34 @@ section.subhead h3 {
   outline: none;
   border-bottom: 2px dashed transparent;
 }
-/* line 690, ../src/stylesheets/blog.scss */
 .archive-view a:first-child {
   margin-right: 40px;
 }
-/* line 693, ../src/stylesheets/blog.scss */
 .archive-view a.active {
   border-bottom-color: rgba(0, 0, 0, 0.1);
 }
-/* line 696, ../src/stylesheets/blog.scss */
 .archive-view a:hover {
   border-bottom-color: rgba(0, 0, 0, 0.4);
 }
-/* line 699, ../src/stylesheets/blog.scss */
 .archive-view a:active {
   border-bottom-color: rgba(0, 0, 0, 0.7);
 }
 
-/* line 704, ../src/stylesheets/blog.scss */
 .archive-results {
   margin-bottom: 40px;
 }
-/* line 707, ../src/stylesheets/blog.scss */
 .archive-results ul {
   padding: 0px;
 }
 
-/* line 711, ../src/stylesheets/blog.scss */
 .posthaven-archive-all-dates {
   display: inline-block;
   margin-bottom: 40px;
 }
 
-/* line 717, ../src/stylesheets/blog.scss */
 .archive-all-dates {
   margin-bottom: 2em;
 }
-/* line 722, ../src/stylesheets/blog.scss */
 .archive-all-dates .clear-tag span, .archive-all-dates .clear-tag span:hover {
   background-repeat: no-repeat;
   background-position: center center;
@@ -2620,7 +2249,6 @@ section.subhead h3 {
   text-indent: -5000em;
 }
 
-/* line 733, ../src/stylesheets/blog.scss */
 .posthaven-archive-form input {
   width: 100%;
   padding: 5px 5px 5px 40px;
@@ -2630,17 +2258,14 @@ section.subhead h3 {
   background-size: 18px 18px;
 }
 
-/* line 743, ../src/stylesheets/blog.scss */
 .archive-link {
   font-size: 13px;
 }
 
-/* line 747, ../src/stylesheets/blog.scss */
 input.archive-search.archive-tooltip {
   color: #aaa;
 }
 
-/* line 751, ../src/stylesheets/blog.scss */
 time {
   color: rgba(0, 0, 0, 0.3);
   font-size: 18px;
@@ -2648,46 +2273,37 @@ time {
   -moz-osx-font-smoothing: auto;
 }
 
-/* line 761, ../src/stylesheets/blog.scss */
 .archive-results ul li {
   list-style: none;
   padding-bottom: 2em;
 }
-/* line 767, ../src/stylesheets/blog.scss */
 .archive-results a {
   border-bottom: transparent 2px solid;
   display: inline-flex;
   flex-direction: column;
 }
-/* line 773, ../src/stylesheets/blog.scss */
 .archive-results a h4 span {
   border-bottom: 2px none rgba(0, 0, 0, 0.1);
 }
-/* line 780, ../src/stylesheets/blog.scss */
 .archive-results a:hover h4 span {
   border-bottom: 2px dashed rgba(0, 0, 0, 0.1);
 }
-/* line 787, ../src/stylesheets/blog.scss */
 .archive-results h4 {
   margin: 5px;
 }
-/* line 791, ../src/stylesheets/blog.scss */
 .archive-results .count {
   opacity: .3;
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: auto;
 }
 
-/* line 798, ../src/stylesheets/blog.scss */
 li.archive-entry {
   margin-bottom: 40px;
 }
-/* line 800, ../src/stylesheets/blog.scss */
 li.archive-entry em {
   background-color: #eee;
   font-style: normal;
 }
-/* line 802, ../src/stylesheets/blog.scss */
 li.archive-entry .search-highlight {
   color: #333333;
   font-size: 22px;
@@ -2697,29 +2313,24 @@ li.archive-entry .search-highlight {
   margin: 18px 0px;
 }
 
-/* line 811, ../src/stylesheets/blog.scss */
 .archive-container {
   margin-bottom: 100px;
 }
 
-/* line 812, ../src/stylesheets/blog.scss */
 .archive {
   margin: 0;
   font-size: 12px;
 }
-/* line 815, ../src/stylesheets/blog.scss */
 .archive h3 {
   margin: 0 0;
 }
 
-/* line 817, ../src/stylesheets/blog.scss */
 .search-archive {
   max-width: 800px;
   margin: 0 auto 50px;
   text-align: center;
 }
 
-/* line 823, ../src/stylesheets/blog.scss */
 .search-highlight em {
   background: #000;
   color: white;
@@ -2729,25 +2340,21 @@ li.archive-entry .search-highlight {
   padding: 0 1px;
 }
 
-/* line 833, ../src/stylesheets/blog.scss */
 .archive-pagination a {
   color: inherit;
   font-size: 18px;
   font-weight: 500;
   line-height: 22px;
 }
-/* line 839, ../src/stylesheets/blog.scss */
 .archive-pagination .posthaven-archive-pagination {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
 }
-/* line 844, ../src/stylesheets/blog.scss */
 .archive-pagination .posthaven-archive-pagination .posthaven-archive-disabled {
   display: block;
 }
 
-/* line 850, ../src/stylesheets/blog.scss */
 #archive-results-by-date {
   display: none;
 }
@@ -2757,43 +2364,35 @@ li.archive-entry .search-highlight {
 *********************************************************/
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   /* Retina-specific stuff here */
-  /* line 861, ../src/stylesheets/blog.scss */
   #topbar .posthaven-tab {
     background-image: url("images/posthaven-tab-4x.png");
   }
 
-  /* line 863, ../src/stylesheets/blog.scss */
   .feed-icon {
     background-size: 14px 14px;
     background-image: url("images/feed28.png");
   }
 }
 @media handheld, only screen and (max-width: 767px) {
-  /* line 874, ../src/stylesheets/blog.scss */
   .alert {
     width: auto;
   }
 
-  /* line 875, ../src/stylesheets/blog.scss */
   #main_container {
     margin-top: 30px;
   }
 
-  /* line 877, ../src/stylesheets/blog.scss */
   #header h1 {
     font-size: 30px;
   }
-  /* line 877, ../src/stylesheets/blog.scss */
   #header h2 {
     font-size: 20px;
   }
 
-  /* line 879, ../src/stylesheets/blog.scss */
   #back_to_blog {
     display: none;
   }
 
-  /* line 880, ../src/stylesheets/blog.scss */
   .posthaven-archive-form input {
     width: 90%;
   }
