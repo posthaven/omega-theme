@@ -73,7 +73,6 @@
         {% include 'footer' %}
       </div>
     </div>
-    {% include 'nav_menu' %}
 
     {{ posthaven.includes_for_body }}
 
@@ -95,7 +94,8 @@
       });
 
       Posthaven.$(document).ready(function () {
-          resize();
+        Posthaven.$(".navigation nav.menu").clone().insertAfter("#container")
+        resize();
       });
 
       Posthaven.$(document).ready(function () {
