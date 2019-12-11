@@ -73,6 +73,7 @@
         {% include 'footer' %}
       </div>
     </div>
+    {% include 'nav_menu' %}
 
     {{ posthaven.includes_for_body }}
 
@@ -82,7 +83,11 @@
 
       function resize(){
         if(Posthaven.$(window).width() < 769) {
-          Posthaven.$(".navigation nav.menu").insertAfter("#container");
+          Posthaven.$("nav.menu").show();
+          Posthaven.$(".navigation nav.menu").hide();
+        } else {
+          Posthaven.$("nav.menu").hide();
+          Posthaven.$(".navigation nav.menu").show();
         }
       };
       Posthaven.$(window).resize(function () {
