@@ -50,22 +50,6 @@ body.menu-active #container {
     padding: 10px;
   }
 
-  // scope inside header so we don't affect footer nav
-  nav.menu {
-    @media (max-width: 768px) {
-      background: rgba(0,0,0,.1);
-      display: none;
-      height: 100vh;
-      left: 0;
-      margin-left: -100%;
-      overflow: auto;
-      position: absolute;
-      right: 0;
-      top: 0;
-      z-index: 100;
-    }
-  }
-
   .menu-trigger {
     cursor: pointer;
     font-size: 24px;
@@ -78,6 +62,7 @@ body.menu-active #container {
   }
 }
 
+// the follow applies only to mobile menu
 body > nav.menu {
   display: flex;
   height: 100vh;
@@ -139,6 +124,7 @@ body > nav.menu {
     }
 
     li {
+      font-weight: bold;
       list-style: none;
       margin-right: 25px;
 
