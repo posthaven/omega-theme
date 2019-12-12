@@ -46,7 +46,7 @@
         {% unless hide_header %}
           <header class='header'>
             <h1>
-              <a href="{{ site.url }}">{{ site.name | smarty_pants }}</a>
+              <a href="{{ site.url }}">{% if site.name != "" %}{{ site.name | smarty_pants }}{% else %}{{ site.profile.name }}{% endif %}</a>
             </h1>
 
             {% if site.description %}
