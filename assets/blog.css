@@ -1415,6 +1415,9 @@ footer.footer .menu-trigger {
   display: none;
 }
 footer.footer section.bio {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
   text-align: center;
 }
 footer.footer section.bio figure img {
@@ -1461,7 +1464,7 @@ section.blogroll ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -1483,7 +1486,7 @@ section.blogroll ul li {
   }
 }
 @media (min-width: 768px) {
-  section.blogroll ul li:nth-child(odd) {
+  section.blogroll ul li:nth-child(odd):not(:last-child) {
     padding-right: 25px;
   }
   section.blogroll ul li:nth-child(even) {
