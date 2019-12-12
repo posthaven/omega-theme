@@ -4,7 +4,7 @@ author: Posthaven
 url: https//posthaven.com/
 posts_per_page:
   include_in_settings: true
-  default: 10
+  default: 5
 settings:
 - id: header_bg_color
   label: Header Background
