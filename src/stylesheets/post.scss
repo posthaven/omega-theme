@@ -70,6 +70,18 @@ aside {
   .post-body .posthaven-gallery {
   }
 
+  .posthaven-gallery-thumb-holder {
+    a {
+      &:hover {
+        text-decoration: none;
+
+        .posthaven-gallery-thumb {
+          opacity: .6;
+        }
+      }
+    }
+  }
+
   img { height: auto; } // Don't allow max-width on imgs to distort
   iframe,
   object,
