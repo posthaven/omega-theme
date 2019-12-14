@@ -51,7 +51,7 @@ aside {
   width: $postWidth;
   font-size: $bodyFontSize;
 
-  .post-body {
+  .posthaven-post-body {
     margin-top: 25px;
     @include selection($primary);
 
@@ -67,16 +67,54 @@ aside {
       margin: 24px auto;
     }
   }
-  .post-body .posthaven-gallery {
-  }
 
-  .posthaven-gallery-thumb-holder {
-    a {
-      &:hover {
-        text-decoration: none;
+  .posthaven-gallery {
 
-        .posthaven-gallery-thumb {
-          opacity: .6;
+    .posthaven-gallery-chrome {
+      .posthaven-gallery-info {
+        align-items: center;
+        display: flex;
+        float: none;
+        font-family: $bodyFont;
+        font-size: 14px;
+        justify-content: center;
+
+        span {
+          padding: 5px 3px;
+        }
+      }
+
+      .posthaven-gallery-next {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iaWNvbi1jYXJldCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNOC4wMTQuNDc3Yy0uNjktLjY0My0xLjc0Ni0uNjQzLTIuNDExLjA0NUwuNDgzIDUuODVhMS42NjIgMS42NjIgMCAwMDAgMi4zNDJsNS4wOTYgNS4zMDRBMS42OCAxLjY4IDAgMDA2LjgyIDE0Yy40MzYgMCAuODUtLjE2IDEuMTk0LS40Ni42ODgtLjY0Mi42ODgtMS43NDUuMDQ1LTIuNDFMNC4wNjQgNy4wMmwzLjk1LTQuMTMyYy42ODgtLjY2Ni42ODgtMS43NjggMC0yLjQxMXoiIGZpbGwtcnVsZT0ibm9uemVybyIvPjwvc3ZnPg==);
+        text-indent: -5000em;
+        height: 14px;
+        margin-top: 9px;
+        width: 9px;
+
+        &.posthaven-gallery-right {
+          transform: scaleX(-1);
+        }
+      }
+    }
+
+    .posthaven-gallery-thumb-holder {
+      display: flex;
+      justify-content: center;
+
+      a {
+        flex: 0 0 50px;
+        margin-right: 5px;
+
+        &:hover {
+          text-decoration: none;
+
+          .posthaven-gallery-thumb {
+            opacity: .75;
+
+            &.posthaven-gallery-selected-thumb {
+              opacity: 1;
+            }
+          }
         }
       }
     }

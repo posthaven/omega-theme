@@ -867,8 +867,8 @@ body > nav.menu {
   z-index: -1;
 }
 body > nav.menu ul {
-  justify-content: center;
-  padding-left: 30px !important;
+  margin: auto !important;
+  padding: 30px !important;
 }
 body > nav.menu ul li:not(:first-child) {
   padding-top: 5px;
@@ -899,9 +899,14 @@ body > nav.menu {
 section.menu ul,
 body > nav.menu ul {
   display: flex;
-  flex-wrap: wrap;
   margin: 0;
   padding: 0;
+}
+@media (min-width: 769px) {
+  section.menu ul,
+  body > nav.menu ul {
+    flex-wrap: wrap;
+  }
 }
 @media (max-width: 768px) {
   section.menu ul,
@@ -1157,48 +1162,86 @@ aside ul li {
   width: 800px;
   font-size: 22px;
 }
-.post .post-body {
+.post .posthaven-post-body {
   margin-top: 25px;
   /* IE8 css bug */
 }
-.post .post-body *::-moz-selection {
+.post .posthaven-post-body *::-moz-selection {
   background: #000;
   color: white;
 }
-.post .post-body *::selection {
+.post .posthaven-post-body *::selection {
   background: #000;
   color: white;
 }
-.post .post-body p {
+.post .posthaven-post-body p {
   line-height: 1.75em;
 }
 @media (min-width: 769px) {
-  .post .post-body p {
+  .post .posthaven-post-body p {
     font-size: 22px;
   }
 }
 @media (max-width: 768px) {
-  .post .post-body p {
+  .post .posthaven-post-body p {
     font-size: 20px;
     margin: 24px auto;
   }
 }
-.post .post-body img {
+.post .posthaven-post-body .posthaven-gallery .posthaven-gallery-chrome .posthaven-gallery-info {
+  align-items: center;
+  display: flex;
+  float: none;
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 14px;
+  justify-content: center;
+}
+.post .posthaven-post-body .posthaven-gallery .posthaven-gallery-chrome .posthaven-gallery-info span {
+  padding: 5px 3px;
+}
+.post .posthaven-post-body .posthaven-gallery .posthaven-gallery-chrome .posthaven-gallery-next {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iaWNvbi1jYXJldCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNOC4wMTQuNDc3Yy0uNjktLjY0My0xLjc0Ni0uNjQzLTIuNDExLjA0NUwuNDgzIDUuODVhMS42NjIgMS42NjIgMCAwMDAgMi4zNDJsNS4wOTYgNS4zMDRBMS42OCAxLjY4IDAgMDA2LjgyIDE0Yy40MzYgMCAuODUtLjE2IDEuMTk0LS40Ni42ODgtLjY0Mi42ODgtMS43NDUuMDQ1LTIuNDFMNC4wNjQgNy4wMmwzLjk1LTQuMTMyYy42ODgtLjY2Ni42ODgtMS43NjggMC0yLjQxMXoiIGZpbGwtcnVsZT0ibm9uemVybyIvPjwvc3ZnPg==);
+  text-indent: -5000em;
+  height: 14px;
+  margin-top: 9px;
+  width: 9px;
+}
+.post .posthaven-post-body .posthaven-gallery .posthaven-gallery-chrome .posthaven-gallery-next.posthaven-gallery-right {
+  transform: scaleX(-1);
+}
+.post .posthaven-post-body .posthaven-gallery .posthaven-gallery-thumb-holder {
+  display: flex;
+  justify-content: center;
+}
+.post .posthaven-post-body .posthaven-gallery .posthaven-gallery-thumb-holder a {
+  flex: 0 0 50px;
+  margin-right: 5px;
+}
+.post .posthaven-post-body .posthaven-gallery .posthaven-gallery-thumb-holder a:hover {
+  text-decoration: none;
+}
+.post .posthaven-post-body .posthaven-gallery .posthaven-gallery-thumb-holder a:hover .posthaven-gallery-thumb {
+  opacity: .75;
+}
+.post .posthaven-post-body .posthaven-gallery .posthaven-gallery-thumb-holder a:hover .posthaven-gallery-thumb.posthaven-gallery-selected-thumb {
+  opacity: 1;
+}
+.post .posthaven-post-body img {
   height: auto;
 }
-.post .post-body iframe,
-.post .post-body object,
-.post .post-body embed {
+.post .posthaven-post-body iframe,
+.post .posthaven-post-body object,
+.post .posthaven-post-body embed {
   display: block;
   margin: 0 auto;
   max-width: 100%;
   max-width: inherit\9;
 }
-.post .post-body blockquote {
+.post .posthaven-post-body blockquote {
   padding-left: 30px;
   position: relative;
 }
-.post .post-body blockquote:before {
+.post .posthaven-post-body blockquote:before {
   background: rgba(0, 0, 0, 0.15);
   bottom: 0;
   border-radius: 8px;
@@ -1208,16 +1251,16 @@ aside ul li {
   width: 8px;
   top: 0;
 }
-.post .post-body pre {
+.post .posthaven-post-body pre {
   font-size: 13px;
 }
-.post .post-body .slash-divider {
+.post .posthaven-post-body .slash-divider {
   color: #ddd;
 }
-.post .post-body .private-indicator {
+.post .posthaven-post-body .private-indicator {
   margin-top: 10px;
 }
-.post .post-body .private-indicator .lock-icon {
+.post .posthaven-post-body .private-indicator .lock-icon {
   display: inline-block;
   width: 14px;
   height: 14px;
@@ -1225,31 +1268,31 @@ aside ul li {
   position: relative;
   top: -3px;
 }
-.post .post-body h1, .post .post-body h2, .post .post-body h3 {
+.post .posthaven-post-body h1, .post .posthaven-post-body h2, .post .posthaven-post-body h3 {
   margin-top: 30px;
 }
-.post .post-body h1 {
+.post .posthaven-post-body h1 {
   font-size: 22px;
 }
-.post .post-body h2 {
+.post .posthaven-post-body h2 {
   font-size: 20px;
 }
-.post .post-body h3 {
+.post .posthaven-post-body h3 {
   font-size: 22px;
   font-style: italic;
 }
-.post .post-body a {
+.post .posthaven-post-body a {
   border-bottom: dashed 2px rgba(0, 0, 0, 0.1);
   word-break: break-all;
 }
-.post .post-body a:hover {
+.post .posthaven-post-body a:hover {
   border-bottom: solid 2px rgba(0, 0, 0, 0.4);
 }
-.post .post-body a:active {
+.post .posthaven-post-body a:active {
   border-bottom: solid 2px rgba(0, 0, 0, 0.7);
 }
 @media (max-width: 768px) {
-  .post .post-body blockquote {
+  .post .posthaven-post-body blockquote {
     margin: 0 1rem;
   }
 }
