@@ -168,40 +168,6 @@ input[type='submit'],
   }
 }
 
-.posthaven-share-links {
-  .posthaven-upvote {
-  	border: 2px solid #DDDDDD;
-    padding: 3px 5px 3px 9px;
-    border-radius: 4px;
-    &:hover {
-      border-color: rgba(0,0,0,0.5);
-      background-color: transparent;
-
-      .posthaven-upvote-label,
-      .posthaven-upvoted-label {
-        color: #509DFF;
-      }
-      .posthaven-upvote-number {
-  	    color: #000000;
-      }
-    }
-    .posthaven-upvote-label,
-    .posthaven-upvoted-label {
-      color: #509DFF;
-      font-size: 15px;
-      line-height: 18px;
-      font-weight: bold;
-      text-transform: uppercase;
-    }
-    .posthaven-upvote-number {
-      color: inherit;
-      font-size: 15px;
-      font-weight: bold;
-      line-height: 18px;
-      opacity: 0.3;
-    }
-  }
-}
 .alert {
   font-size: 14px;
   margin: 10px 0px 10px 60px;

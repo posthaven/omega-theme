@@ -232,25 +232,18 @@ aside {
         }
       }
     }
-    .author {
-      font-size: 13px;
-      color: $lightAccentColor;
-
-      a {
-        color: $lightAccentColor;
-      }
-    }
-
   }
 
   .homepage-post-footer {
+    display: flex;
     margin: 30px 0;
-    font-size: 14px;
+    justify-content: center;
     text-align: center;
+
     .tags {
       margin: 10px 0;
       font-size: 12px;
-      h6 { font-weight: normal; color: $lightAccentColor; font-size: 12px; display: inline; }
+      h6 { font-weight: normal; font-size: 12px; display: inline; }
       ul { padding-left: 10px; margin-left: 0; display: inline; }
       ul li { display: inline; margin-right: 10px; }
       ul li a { white-space: nowrap; }
@@ -262,6 +255,47 @@ aside {
   table th, table td { padding: 4px 5px; }
   table p:first-child { margin-top: 0px;}
   table p:last-child { margin-bottom: 0px;}
+}
+
+
+.posthaven-share-links .posthaven-upvote,
+.comment-count {
+  align-items: center;
+  border: 2px solid #DDDDDD;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: "Proxima Nova";
+  display: flex;
+  height: 30px;
+  padding: 3px 5px 3px 9px;
+
+  &:hover {
+    border-color: rgba(0,0,0,0.5);
+    background-color: transparent;
+
+    .posthaven-upvote-label,
+    .posthaven-upvoted-label {
+      color: #509DFF;
+    }
+    .posthaven-upvote-number {
+      color: #000000;
+    }
+  }
+  .posthaven-upvote-label,
+  .posthaven-upvoted-label {
+    color: #509DFF;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .posthaven-upvote-number {
+    color: inherit;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 18px;
+    opacity: 0.3;
+  }
 }
 
 .gist {

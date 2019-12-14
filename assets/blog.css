@@ -1336,16 +1336,10 @@ aside ul li {
 .post .post-title h2 a:hover {
   border-bottom: 2px dashed rgba(0, 0, 0, 0.1);
 }
-.post .post-title .author {
-  font-size: 13px;
-  color: #999;
-}
-.post .post-title .author a {
-  color: #999;
-}
 .post .homepage-post-footer {
+  display: flex;
   margin: 30px 0;
-  font-size: 14px;
+  justify-content: center;
   text-align: center;
 }
 .post .homepage-post-footer .tags {
@@ -1354,7 +1348,6 @@ aside ul li {
 }
 .post .homepage-post-footer .tags h6 {
   font-weight: normal;
-  color: #999;
   font-size: 12px;
   display: inline;
 }
@@ -1386,6 +1379,51 @@ aside ul li {
 }
 .post table p:last-child {
   margin-bottom: 0px;
+}
+
+.posthaven-share-links .posthaven-upvote,
+.comment-count {
+  align-items: center;
+  border: 2px solid #DDDDDD;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: "Proxima Nova";
+  display: flex;
+  height: 30px;
+  padding: 3px 5px 3px 9px;
+}
+.posthaven-share-links .posthaven-upvote:hover,
+.comment-count:hover {
+  border-color: rgba(0, 0, 0, 0.5);
+  background-color: transparent;
+}
+.posthaven-share-links .posthaven-upvote:hover .posthaven-upvote-label,
+.posthaven-share-links .posthaven-upvote:hover .posthaven-upvoted-label,
+.comment-count:hover .posthaven-upvote-label,
+.comment-count:hover .posthaven-upvoted-label {
+  color: #509DFF;
+}
+.posthaven-share-links .posthaven-upvote:hover .posthaven-upvote-number,
+.comment-count:hover .posthaven-upvote-number {
+  color: #000000;
+}
+.posthaven-share-links .posthaven-upvote .posthaven-upvote-label,
+.posthaven-share-links .posthaven-upvote .posthaven-upvoted-label,
+.comment-count .posthaven-upvote-label,
+.comment-count .posthaven-upvoted-label {
+  color: #509DFF;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.posthaven-share-links .posthaven-upvote .posthaven-upvote-number,
+.comment-count .posthaven-upvote-number {
+  color: inherit;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 18px;
+  opacity: 0.3;
 }
 
 .gist {
@@ -1759,38 +1797,6 @@ input[type='submit']:focus,
 .posthaven-user-subscribe a:focus {
   background: black;
   box-shadow: white 0px 0px 0px 1px, rgba(0, 0, 0, 0.25) 0px 0px 0px 3px;
-}
-
-.posthaven-share-links .posthaven-upvote {
-  border: 2px solid #DDDDDD;
-  padding: 3px 5px 3px 9px;
-  border-radius: 4px;
-}
-.posthaven-share-links .posthaven-upvote:hover {
-  border-color: rgba(0, 0, 0, 0.5);
-  background-color: transparent;
-}
-.posthaven-share-links .posthaven-upvote:hover .posthaven-upvote-label,
-.posthaven-share-links .posthaven-upvote:hover .posthaven-upvoted-label {
-  color: #509DFF;
-}
-.posthaven-share-links .posthaven-upvote:hover .posthaven-upvote-number {
-  color: #000000;
-}
-.posthaven-share-links .posthaven-upvote .posthaven-upvote-label,
-.posthaven-share-links .posthaven-upvote .posthaven-upvoted-label {
-  color: #509DFF;
-  font-size: 15px;
-  line-height: 18px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-.posthaven-share-links .posthaven-upvote .posthaven-upvote-number {
-  color: inherit;
-  font-size: 15px;
-  font-weight: bold;
-  line-height: 18px;
-  opacity: 0.3;
 }
 
 .alert {
