@@ -1982,7 +1982,7 @@ section.subhead h3 {
 *  Subscribe Form
 *********************************************************/
 .subscribe-footer {
-  margin: 100px 0px;
+  margin: 0 0 100px;
   text-align: center;
 }
 .subscribe-footer h3 {
@@ -2031,7 +2031,7 @@ section.subhead h3 {
 *  Posts
 *********************************************************/
 #main {
-  margin: auto;
+  margin: 0 auto 100px;
 }
 
 #main.archive-results {
