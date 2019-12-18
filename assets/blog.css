@@ -1241,6 +1241,9 @@ aside ul li {
   max-width: 100%;
   max-width: inherit\9;
 }
+.post .posthaven-post-body audio, .post .posthaven-post-body canvas, .post .posthaven-post-body video {
+  display: block;
+}
 .post .posthaven-post-body blockquote {
   padding-left: 30px;
   position: relative;
@@ -2067,7 +2070,14 @@ section.subhead h3 {
   list-style: none;
 }
 .pagination ul li.previous, .pagination ul li.next {
+  flex: 0 0 100px;
   font-weight: 800;
+}
+.pagination ul li.previous.previous, .pagination ul li.next.previous {
+  text-align: left;
+}
+.pagination ul li.previous.next, .pagination ul li.next.next {
+  text-align: right;
 }
 .pagination ul li.previous a, .pagination ul li.next a {
   color: black;

@@ -137,6 +137,10 @@ aside {
     max-width: inherit\9;
   } /* IE8 css bug */
 
+  audio, canvas, video {
+    display: block;
+  }
+
   blockquote {
     padding-left: 30px;
     position: relative;
