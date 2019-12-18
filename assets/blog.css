@@ -1188,6 +1188,9 @@ aside ul li {
     margin: 24px auto;
   }
 }
+.post .posthaven-post-body ul li, .post .posthaven-post-body ol li {
+  line-height: 1.75em;
+}
 .post .posthaven-post-body .posthaven-gallery .posthaven-gallery-chrome .posthaven-gallery-info {
   align-items: center;
   display: flex;
