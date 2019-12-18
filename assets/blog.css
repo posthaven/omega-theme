@@ -1770,12 +1770,12 @@ textarea:active, input[type=text]:active {
 }
 
 input[type='submit'],
-.posthaven-user-subscribe a {
+.posthaven-user-subscribe a,
+.posthaven-read-more-link a {
   background: rgba(0, 0, 0, 0.85);
   border-radius: 2px;
   border: 2px solid #000000;
   box-sizing: border-box;
-  height: 50px;
   color: white;
   cursor: pointer;
   display: inline-block;
@@ -1783,18 +1783,20 @@ input[type='submit'],
   font-weight: bold;
   margin: 0px;
   outline: none;
-  padding: 9px 0px;
+  padding: 7px 0px;
   position: relative;
   text-align: center;
   text-decoration: none;
   width: 100%;
 }
 input[type='submit']:hover,
-.posthaven-user-subscribe a:hover {
+.posthaven-user-subscribe a:hover,
+.posthaven-read-more-link a:hover {
   background: black;
 }
 input[type='submit']:focus,
-.posthaven-user-subscribe a:focus {
+.posthaven-user-subscribe a:focus,
+.posthaven-read-more-link a:focus {
   background: black;
   box-shadow: white 0px 0px 0px 1px, rgba(0, 0, 0, 0.25) 0px 0px 0px 3px;
 }
