@@ -1214,11 +1214,12 @@ aside ul li {
   justify-content: center;
 }
 .post .posthaven-post-body .posthaven-gallery .posthaven-gallery-thumb-holder a {
+  border-bottom: solid 2px transparent;
   flex: 0 0 50px;
   margin-right: 5px;
 }
 .post .posthaven-post-body .posthaven-gallery .posthaven-gallery-thumb-holder a:hover {
-  text-decoration: none;
+  border-bottom: solid 2px transparent;
 }
 .post .posthaven-post-body .posthaven-gallery .posthaven-gallery-thumb-holder a:hover .posthaven-gallery-thumb {
   opacity: .75;
