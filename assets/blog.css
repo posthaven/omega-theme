@@ -1286,7 +1286,7 @@ aside ul li {
   font-style: italic;
 }
 .post .posthaven-post-body a {
-  border-bottom: dashed 2px rgba(0, 0, 0, 0.1);
+  border-bottom: dashed 2px rgba(0, 0, 0, 0.25);
   word-break: break-all;
 }
 .post .posthaven-post-body a:hover {
