@@ -9,9 +9,6 @@ settings:
 - id: header_bg_color
   label: Header Background
   type: color
-- id: header_font_color
-  label: Header Font Color
-  type: color
 - id: social_dribbble
   label: Dribbble URL
   type: text
