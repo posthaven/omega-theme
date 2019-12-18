@@ -224,10 +224,6 @@ input[type='submit'],
   }
 }
 
-
-
-
-
 section.subhead {
   margin: auto;
   text-align: center;
@@ -435,7 +431,16 @@ section.subhead {
 
       &.previous,
       &.next {
+        flex: 0 0 100px;
         font-weight: 800;
+
+      &.previous {
+        text-align: left;
+      }
+
+      &.next {
+        text-align: right;
+      }
 
         a {
           color: rgba($primary, 1);
