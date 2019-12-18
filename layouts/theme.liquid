@@ -25,49 +25,51 @@
   </head>
 
   <body id="site_{{ site.id }}">
-    <div id="header_parent">
-      <div class="container">
-        <div class="navigation">
-          {% include "nav_menu" %}
-          {{ posthaven.user_menu_v2 }}
+    <div id="site-container">
+      <div id="header_parent">
+        <div class="container">
+          <div class="navigation">
+            {% include "nav_menu" %}
+            {{ posthaven.user_menu_v2 }}
+          </div>
         </div>
+
+          <div id="flash">
+            {% for alert in posthaven.alerts %}
+              <div class="alert alert-{{ alert.type }}">
+                {{ alert.message }}
+              </div>
+            {% endfor %}
+          </div>
+
+          {% unless hide_header %}
+            <header class="header">
+              <h1>
+                <a href="{{ site.url }}">{% if site.name != "" %}{{ site.name | smarty_pants }}{% else %}{{ site.profile.name }}{% endif %}</a>
+              </h1>
+
+              {% if site.description %}
+                <h5>{{ site.description | smarty_pants }}</h5>
+              {% endif %}
+
+            </header>
+          {% endunless %}
       </div>
 
-        <div id="flash">
-          {% for alert in posthaven.alerts %}
-            <div class="alert alert-{{ alert.type }}">
-              {{ alert.message }}
-            </div>
-          {% endfor %}
+      <div class="container">
+        <div id="main_container">
+          {% if subhead_content %}
+            <section class="subhead">
+              {{ subhead_content }}
+            </section>
+          {% endif %}
+
+          <div class="main-content">
+            {{ content_for_layout }}
+          </div>
+
+          {% include "footer" %}
         </div>
-
-        {% unless hide_header %}
-          <header class="header">
-            <h1>
-              <a href="{{ site.url }}">{% if site.name != "" %}{{ site.name | smarty_pants }}{% else %}{{ site.profile.name }}{% endif %}</a>
-            </h1>
-
-            {% if site.description %}
-              <h5>{{ site.description | smarty_pants }}</h5>
-            {% endif %}
-
-          </header>
-        {% endunless %}
-    </div>
-
-    <div class="container">
-      <div id="main_container">
-        {% if subhead_content %}
-          <section class="subhead">
-            {{ subhead_content }}
-          </section>
-        {% endif %}
-
-        <div class="main-content">
-          {{ content_for_layout }}
-        </div>
-
-        {% include "footer" %}
       </div>
     </div>
 
@@ -91,7 +93,7 @@
       });
 
       Posthaven.$(document).ready(function () {
-        Posthaven.$(".navigation nav.menu").clone().insertAfter("#container")
+        Posthaven.$(".navigation nav.menu").clone().insertAfter("#site-container")
         resize();
       });
 

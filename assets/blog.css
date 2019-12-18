@@ -798,7 +798,7 @@ body.menu-active {
   overflow: hidden;
 }
 
-#container {
+#site-container {
   background: #fff;
   border-radius: 0px;
   left: 0%;
@@ -810,7 +810,7 @@ body.menu-active {
   width: 100%;
 }
 
-body.menu-active #container {
+body.menu-active #site-container {
   border-radius: 15px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
   border-radius: 15px;
