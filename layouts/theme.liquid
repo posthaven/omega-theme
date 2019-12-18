@@ -7,7 +7,7 @@
 
     {{ meta_tags }}
 
-    <link href="{{ "images/favicon.ico" | asset_url }}" rel="shortcut icon" type="image/x-icon">
+    <link href="{{ 'images/favicon.ico' | asset_url }}" rel="shortcut icon" type="image/x-icon">
     {% comment %}
     {{ "blog.css" | local_file | style_tag }}
     {% endcomment %}
@@ -110,7 +110,7 @@
           Posthaven.$(".ph-trigger").toggleClass("active");
           Posthaven.$(".ph-canvas").toggleClass("active");
         });
-        Posthaven.$.get( "{{ "images/icons.svg" | asset_url }}", function( icons ) {
+        Posthaven.$.get( "{{ 'images/icons.svg' | asset_url }}", function( icons ) {
           Posthaven.$( "#svg-icons" ).html( icons.getElementsByTagName("svg")[0] );
         });
       });
