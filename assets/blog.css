@@ -1854,14 +1854,14 @@ input[type='submit']:focus,
   width: 0;
 }
 
-#container {
+.container {
   box-sizing: border-box;
   margin: auto;
   max-width: 1600px;
   position: relative;
 }
 @media (min-width: 1200px) {
-  #container {
+  .container {
     padding: 0 130px;
   }
 }

@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html class='no-js'>
+<html class="no-js">
   <head>
     <title>{{ request.page_title }}</title>
 
-    <meta content='width=device-width,initial-scale=1' name='viewport'>
+    <meta content="width=device-width,initial-scale=1" name="viewport">
 
     {{ meta_tags }}
 
-    <link href="{{ 'images/favicon.ico' | asset_url }}" rel='shortcut icon' type='image/x-icon'>
+    <link href="{{ "images/favicon.ico" | asset_url }}" rel="shortcut icon" type="image/x-icon">
+    {{ "blog.css" | local_file | style_tag }}
     {% comment %}
-    {{ 'blog.css' | local_file | style_tag }}
+    {{ "blog.css" | asset_url | stylesheet_tag }}
     {% endcomment %}
-    {{ 'blog.css' | asset_url | stylesheet_tag }}
 
     {{ posthaven.includes_for_head }}
 
@@ -27,15 +27,16 @@
 
   </head>
 
-  <body id='site_{{ site.id }}'>
-    <div id='container'>
-      <div id='header_parent'>
+  <body id="site_{{ site.id }}">
+    <div id="header_parent">
+      <div class="container">
         <div class="navigation">
-          {% include 'nav_menu' %}
+          {% include "nav_menu" %}
           {{ posthaven.user_menu_v2 }}
         </div>
+      </div>
 
-        <div id='flash'>
+        <div id="flash">
           {% for alert in posthaven.alerts %}
             <div class="alert alert-{{ alert.type }}">
               {{ alert.message }}
@@ -44,7 +45,7 @@
         </div>
 
         {% unless hide_header %}
-          <header class='header'>
+          <header class="header">
             <h1>
               <a href="{{ site.url }}">{% if site.name != "" %}{{ site.name | smarty_pants }}{% else %}{{ site.profile.name }}{% endif %}</a>
             </h1>
@@ -55,22 +56,21 @@
 
           </header>
         {% endunless %}
+    </div>
 
-      </div>
-
-
-      <div id='main_container'>
+    <div class="container">
+      <div id="main_container">
         {% if subhead_content %}
           <section class="subhead">
             {{ subhead_content }}
           </section>
         {% endif %}
 
-        <div class='main-content'>
+        <div class="main-content">
           {{ content_for_layout }}
         </div>
 
-        {% include 'footer' %}
+        {% include "footer" %}
       </div>
     </div>
 
@@ -113,7 +113,7 @@
           Posthaven.$(".ph-trigger").toggleClass("active");
           Posthaven.$(".ph-canvas").toggleClass("active");
         });
-        Posthaven.$.get( "{{ 'images/icons.svg' | asset_url }}", function( icons ) {
+        Posthaven.$.get( "{{ "images/icons.svg" | asset_url }}", function( icons ) {
           Posthaven.$( "#svg-icons" ).html( icons.getElementsByTagName("svg")[0] );
         });
       });
