@@ -159,6 +159,7 @@ body > nav.menu {
   h1 {
     margin: 0 0 5px;
     text-transform: uppercase;
+    word-wrap: break-word;
 
     &:hover {
       text-decoration: none;
@@ -166,6 +167,7 @@ body > nav.menu {
   }
   h5 {
     margin: 0px;
+    word-wrap: break-word;
   }
 
 }
