@@ -226,8 +226,9 @@ input[type='submit'],
 }
 
 section.subhead {
-  margin: auto;
+  margin: 50px 0 20px;
   text-align: center;
+  
   h3 {
     margin: 0;
   }
@@ -648,7 +649,6 @@ section.subhead {
 /*********************************************************
 *  Archive
 *********************************************************/
-.archive-title { margin-bottom: 10px;}
 .archive-container {
   position: relative;
   .posthaven-loader {

@@ -18,6 +18,16 @@
                 <a href="{{ post.url }}">{{ post.published_at | relative_date }}</a>
                 on {{ post.published_at | local_date: "%B %e, %Y" }} at {{ post.published_at | local_date: "%l:%M %p" }}
               </time>
+              {% if request.template == 'post' and post.show_byline? %}
+                <span class="author">
+                  by
+                  {% if post.author.url %}
+                    <a href="{{ post.author.url }}">{{ post.author.name }}</a>
+                  {% else %}
+                    {{ post.author.name }}
+                  {% endif %}
+                </span>
+              {% endif %}
               <span class="stat">
                 &bullet; {{ post | view_count }}
               </span>
@@ -41,17 +51,6 @@
             </section>
           {% endif %}
         </aside>
-      {% endif %}
-
-      {% if request.template == 'post' and post.show_byline? %}
-        <div class="author">
-          by
-          {% if post.author.url %}
-            <a href="{{ post.author.url }}">{{ post.author.name }}</a>
-          {% else %}
-            {{ post.author.name }}
-          {% endif %}
-        </div>
       {% endif %}
     </div>
   </header>
