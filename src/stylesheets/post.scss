@@ -105,7 +105,7 @@ aside {
 
     .posthaven-gallery-thumb-holder {
       display: flex;
-      justify-content: center;
+      // justify-content: center; @todo needs a <div> inside so we can margin: auto to center automatically
 
       a {
         border-bottom: solid 2px transparent;

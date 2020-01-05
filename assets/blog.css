@@ -973,12 +973,14 @@ body > nav.menu ul li a:hover:after {
 .header h1 {
   margin: 0 0 5px;
   text-transform: uppercase;
+  word-wrap: break-word;
 }
 .header h1:hover {
   text-decoration: none;
 }
 .header h5 {
   margin: 0px;
+  word-wrap: break-word;
 }
 
 .posthaven-user-menu {
@@ -1130,7 +1132,7 @@ aside section {
   margin-bottom: 10px;
 }
 aside a {
-  color: rgba(68, 68, 68, 0.3);
+  color: rgba(0, 0, 0, 0.3);
 }
 aside .tag-count {
   font-size: 12px;
@@ -1214,7 +1216,6 @@ aside ul li {
 }
 .post .posthaven-post-body .posthaven-gallery .posthaven-gallery-thumb-holder {
   display: flex;
-  justify-content: center;
 }
 .post .posthaven-post-body .posthaven-gallery .posthaven-gallery-thumb-holder a {
   border-bottom: solid 2px transparent;
@@ -1290,7 +1291,7 @@ aside ul li {
 }
 .post .posthaven-post-body a {
   border-bottom: dashed 2px rgba(0, 0, 0, 0.25);
-  word-break: break-all;
+  word-break: break-word;
 }
 .post .posthaven-post-body a:hover {
   border-bottom: solid 2px rgba(0, 0, 0, 0.4);
@@ -1544,11 +1545,13 @@ section.search-archive h4 a:hover:after {
   width: 100%;
 }
 
-section.blogroll {
+section.blogroll,
+section.contributors {
   max-width: 800px;
   margin: auto;
 }
-section.blogroll ul {
+section.blogroll ul,
+section.contributors ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -1557,31 +1560,37 @@ section.blogroll ul {
   padding: 0;
   width: 100%;
 }
-section.blogroll ul li {
+section.blogroll ul li,
+section.contributors ul li {
   box-sizing: border-box;
   font-size: 18px;
   list-style: none;
   margin-bottom: 3px;
 }
 @media (min-width: 768px) {
-  section.blogroll ul li {
+  section.blogroll ul li,
+  section.contributors ul li {
     flex: 0 50%;
   }
 }
 @media (max-width: 767px) {
-  section.blogroll ul li {
+  section.blogroll ul li,
+  section.contributors ul li {
     flex: 0 0 100%;
   }
 }
 @media (min-width: 768px) {
-  section.blogroll ul li:nth-child(odd):not(:last-child) {
+  section.blogroll ul li:nth-child(odd):not(:last-child),
+  section.contributors ul li:nth-child(odd):not(:last-child) {
     padding-right: 25px;
   }
-  section.blogroll ul li:nth-child(even) {
+  section.blogroll ul li:nth-child(even),
+  section.contributors ul li:nth-child(even) {
     padding-left: 25px;
   }
 }
-section.blogroll ul li a {
+section.blogroll ul li a,
+section.contributors ul li a {
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -1590,7 +1599,8 @@ section.blogroll ul li a {
   position: relative;
   transition: background .25s ease, color .4s ease, width .25s ease;
 }
-section.blogroll ul li a:after {
+section.blogroll ul li a:after,
+section.contributors ul li a:after {
   background: transparent;
   bottom: -3px;
   content: "";
@@ -1601,11 +1611,13 @@ section.blogroll ul li a:after {
   transition: all .25s ease;
   width: 0%;
 }
-section.blogroll ul li a:hover {
+section.blogroll ul li a:hover,
+section.contributors ul li a:hover {
   color: black;
   transition: background .25s ease, color 0s ease, width .25s ease;
 }
-section.blogroll ul li a:hover:after {
+section.blogroll ul li a:hover:after,
+section.contributors ul li a:hover:after {
   background: #000;
   left: 0%;
   width: 100%;
@@ -1688,20 +1700,23 @@ a:hover {
 .post-body a,
 .subscribe-footer a,
 .search-archive a,
-section.blogroll a {
+section.blogroll a,
+section.contributors a {
   border-bottom: 2px dashed rgba(0, 0, 0, 0.1);
   outline: none;
 }
 .post-body a:hover,
 .subscribe-footer a:hover,
 .search-archive a:hover,
-section.blogroll a:hover {
+section.blogroll a:hover,
+section.contributors a:hover {
   border-bottom-color: rgba(0, 0, 0, 0.4);
 }
 .post-body a:active,
 .subscribe-footer a:active,
 .search-archive a:active,
-section.blogroll a:active {
+section.blogroll a:active,
+section.contributors a:active {
   border-bottom-color: rgba(0, 0, 0, 0.7);
 }
 
@@ -1754,25 +1769,25 @@ textarea, input[type=text] {
   outline: none;
 }
 textarea::-webkit-input-placeholder, input[type=text]::-webkit-input-placeholder {
-  /* Chrome/Opera/Safari */
-  color: rgba(68, 68, 68, 0.2);
-}
-textarea::-moz-placeholder, input[type=text]::-moz-placeholder {
-  /* Firefox 19+ */
-  color: rgba(68, 68, 68, 0.2);
-}
-textarea:-ms-input-placeholder, input[type=text]:-ms-input-placeholder {
-  /* IE 10+ */
-  color: rgba(68, 68, 68, 0.2);
+  color: rgba(0, 0, 0, 0.5);
+  font-style: normal;
 }
 textarea:-moz-placeholder, input[type=text]:-moz-placeholder {
-  /* Firefox 18- */
-  color: rgba(68, 68, 68, 0.2);
+  color: rgba(0, 0, 0, 0.5);
+  font-style: normal;
+}
+textarea::-moz-placeholder, input[type=text]::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  font-style: normal;
+}
+textarea:-ms-input-placeholder, input[type=text]:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  font-style: normal;
 }
 textarea:hover, input[type=text]:hover {
   border: 2px solid rgba(0, 0, 0, 0.5);
 }
-textarea:active, input[type=text]:active {
+textarea:active, textarea:focus, input[type=text]:active, input[type=text]:focus {
   border: 2px solid black;
 }
 
@@ -1870,7 +1885,7 @@ input[type='submit']:focus,
 }
 
 section.subhead {
-  margin: auto;
+  margin: 50px 0 20px;
   text-align: center;
 }
 section.subhead h3 {
@@ -2252,6 +2267,9 @@ section.subhead h3 {
   text-align: center;
   width: 100%;
 }
+.posthaven-comment-form .posthaven-field.posthaven-comment-body-field textarea {
+  min-height: 70px;
+}
 .posthaven-comment-form .posthaven-comment-verification {
   width: 500px;
   margin-bottom: 10px;
@@ -2260,10 +2278,6 @@ section.subhead h3 {
 /*********************************************************
 *  Archive
 *********************************************************/
-.archive-title {
-  margin-bottom: 10px;
-}
-
 .archive-container {
   position: relative;
 }
