@@ -9,7 +9,6 @@
 
 <footer class="footer">
     {% include 'bio' %}
-    {% include 'contributors_section' %}
     {% include 'social' %}
 
     {% if site.navigation_menu and site.navigation_menu.items != empty %}
@@ -24,6 +23,7 @@
     </section>
 
     {% include 'blogroll' %}
+    {% include 'contributors_section' %}
 
     {% if site.tags.size > 0 %}
       <section id="tag_list_menu" class="tags">
