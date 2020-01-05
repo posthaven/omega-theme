@@ -20,39 +20,6 @@
         #header_parent { background-color: {{ settings.header_bg_color }} !important; }
         .header { padding-bottom: 130px !important; }
       {% endif %}
-      {% if settings.left_align %}
-        .post .post-title,
-        footer.homepage-post-footer,
-        .posthaven-gallery-info,
-        #main.archive-results,
-        section.subhead,
-        .post .posthaven-post-body .posthaven-gallery,
-        .post .posthaven-post-body .posthaven-gallery .posthaven-gallery-thumb-holder {
-          justify-content: flex-start !important;
-          text-align: left !important;
-        }
-
-        .post .posthaven-post-body .posthaven-gallery .posthaven-gallery-thumb-holder {
-          margin: 0 auto;
-          max-width: 1000px;
-        }
-
-        @media (min-width: 769px) {
-          .post .posthaven-post-body .posthaven-gallery {
-            margin-left: 0;
-            margin-right: 0;
-          }
-        }
-
-        section.subhead {
-          margin: 0 auto;
-          max-width: 800px;
-        }
-
-        .archive-results h4 {
-          margin-left: 0;
-        }
-      {% endif %}
     </style>
 
   </head>
