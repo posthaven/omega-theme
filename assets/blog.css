@@ -1158,6 +1158,23 @@ aside ul li {
   margin: 0 auto 125px;
 }
 
+.private-indicator {
+  align-items: center;
+  background: #000;
+  border-radius: 100%;
+  display: inline-flex;
+  height: 26px;
+  justify-content: center;
+  position: relative;
+  top: -2px;
+  width: 26px;
+}
+.private-indicator svg {
+  fill: #fff;
+  height: 12px;
+  width: 10px;
+}
+
 .post {
   margin: 0 auto;
   max-width: 100%;
@@ -1264,17 +1281,6 @@ aside ul li {
 }
 .post .posthaven-post-body .slash-divider {
   color: #ddd;
-}
-.post .posthaven-post-body .private-indicator {
-  margin-top: 10px;
-}
-.post .posthaven-post-body .private-indicator .lock-icon {
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  background-image: url("images/lock-icon.png");
-  position: relative;
-  top: -3px;
 }
 .post .posthaven-post-body h1, .post .posthaven-post-body h2, .post .posthaven-post-body h3 {
   margin-top: 30px;

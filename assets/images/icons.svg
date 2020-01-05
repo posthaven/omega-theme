@@ -1,5 +1,7 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
+	<symbol id="icon-lock" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg"><path d="M6 0C3.79 0 2 1.79 2 4v2H0v8h12V6h-2V4c0-2.21-1.79-4-4-4zm0 2c1.19 0 2 .81 2 2v2H4V4c0-1.19.81-2 2-2z" fill-rule="nonzero"/></symbol>
+
 	<symbol id="icon-caret" xmlns="http://www.w3.org/2000/svg"><path d="M8.014.477c-.69-.643-1.746-.643-2.411.045L.483 5.85a1.662 1.662 0 000 2.342l5.096 5.304A1.68 1.68 0 006.82 14c.436 0 .85-.16 1.194-.46.688-.642.688-1.745.045-2.41L4.064 7.02l3.95-4.132c.688-.666.688-1.768 0-2.411z" fill-rule="nonzero"/></symbol>
 
 	<symbol id="icon-x" width='10' height='10' xmlns='http://www.w3.org/2000/svg'><path d='M10 1.814L8.185 0 5 3.184 1.815 0 0 1.814 3.185 5 0 8.183l1.815 1.815L5 6.814 8.185 10 10 8.184 6.815 4.998z' /></symbol>
