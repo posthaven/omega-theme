@@ -635,6 +635,10 @@ section.subhead {
         text-align: center;
         width: 100%;
       }
+
+      textarea {
+        min-height: 70px;
+      }
     }
   }
   .posthaven-comment-verification { width: 500px; margin-bottom: 10px; }
