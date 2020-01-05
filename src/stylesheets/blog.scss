@@ -116,22 +116,14 @@ textarea, input[type=text] {
 	background-color: #FFFFFF;
   font-size: 20px;
   outline: none;
-  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-    color: rgba(68, 68, 68, 0.2);
-  }
-  &::-moz-placeholder { /* Firefox 19+ */
-    color: rgba(68, 68, 68, 0.2);
-  }
-  &:-ms-input-placeholder { /* IE 10+ */
-    color: rgba(68, 68, 68, 0.2);
-  }
-  &:-moz-placeholder { /* Firefox 18- */
-    color: rgba(68, 68, 68, 0.2);
-  }
+  
+  @include placeholder(rgba(0,0,0,.5));
+
   &:hover {
   	border: 2px solid rgba(0,0,0,0.5);
   }
-  &:active {
+  &:active,
+  &:focus {
   	border: 2px solid rgba(0,0,0,1);
   }
 }
@@ -228,7 +220,7 @@ input[type='submit'],
 section.subhead {
   margin: 50px 0 20px;
   text-align: center;
-  
+
   h3 {
     margin: 0;
   }

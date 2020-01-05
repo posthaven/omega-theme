@@ -89,6 +89,28 @@
   }
 }
 
+@mixin placeholder($color) {
+  &::-webkit-input-placeholder {
+    color: $color;
+    font-style: normal;
+  }
+
+  &:-moz-placeholder {
+    color: $color;
+    font-style: normal;
+  }
+
+  &::-moz-placeholder {
+    color: $color;
+    font-style: normal;
+  }
+
+  &:-ms-input-placeholder {
+    color: $color;
+    font-style: normal;
+  }
+}
+
 @mixin selection($color) {
   *::-moz-selection {
     background: $color;
