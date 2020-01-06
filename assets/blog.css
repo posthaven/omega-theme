@@ -1233,6 +1233,7 @@ aside ul li {
 }
 .post .posthaven-post-body .posthaven-gallery .posthaven-gallery-thumb-holder {
   display: flex;
+  justify-content: center;
 }
 .post .posthaven-post-body .posthaven-gallery .posthaven-gallery-thumb-holder a {
   border-bottom: solid 2px transparent;
@@ -1520,7 +1521,7 @@ footer.footer section.bio figure img {
   margin-bottom: 10px;
 }
 footer.footer section.bio h3 {
-  margin: 0px;
+  margin: 0 0 5px;
 }
 footer.footer section.bio p {
   margin: 5px 0;
