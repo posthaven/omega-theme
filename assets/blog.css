@@ -1198,12 +1198,12 @@ aside ul li {
 }
 @media (min-width: 769px) {
   .post .posthaven-post-body p {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 @media (max-width: 768px) {
   .post .posthaven-post-body p {
-    font-size: 20px;
+    font-size: 18px;
     margin: 24px auto;
   }
 }
@@ -1240,7 +1240,6 @@ aside ul li {
 .post .posthaven-post-body .posthaven-gallery .posthaven-gallery-thumb-holder a {
   border-bottom: solid 2px transparent;
   flex: 0 0 50px;
-  margin-right: 5px;
 }
 .post .posthaven-post-body .posthaven-gallery .posthaven-gallery-thumb-holder a:hover {
   border-bottom: solid 2px transparent;
