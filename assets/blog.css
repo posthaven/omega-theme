@@ -1233,7 +1233,9 @@ aside ul li {
 }
 .post .posthaven-post-body .posthaven-gallery .posthaven-gallery-thumb-holder {
   display: flex;
-  justify-content: center;
+}
+.post .posthaven-post-body .posthaven-gallery .posthaven-gallery-thumb-holder div {
+  margin: auto;
 }
 .post .posthaven-post-body .posthaven-gallery .posthaven-gallery-thumb-holder a {
   border-bottom: solid 2px transparent;
