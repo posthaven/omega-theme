@@ -77,7 +77,7 @@ aside {
     line-height: 1.75em;
 
     @media (min-width: 769px) {
-      font-size: 20px;
+      font-size: $bodyFontSize;
     }
 
     @media (max-width: 768px) {
