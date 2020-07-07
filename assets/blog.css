@@ -1408,7 +1408,7 @@ aside ul li {
 }
 
 .posthaven-share-links .posthaven-upvote,
-.comment-count {
+.posthaven-comment-count {
   align-items: center;
   border: 2px solid #DDDDDD;
   border-radius: 4px;
@@ -1419,24 +1419,26 @@ aside ul li {
   padding: 3px 5px 3px 9px;
 }
 .posthaven-share-links .posthaven-upvote:hover,
-.comment-count:hover {
+.posthaven-comment-count:hover {
   border-color: rgba(0, 0, 0, 0.5);
   background-color: transparent;
 }
 .posthaven-share-links .posthaven-upvote:hover .posthaven-upvote-label,
 .posthaven-share-links .posthaven-upvote:hover .posthaven-upvoted-label,
-.comment-count:hover .posthaven-upvote-label,
-.comment-count:hover .posthaven-upvoted-label {
+.posthaven-comment-count:hover .posthaven-upvote-label,
+.posthaven-comment-count:hover .posthaven-upvoted-label {
   color: #509DFF;
 }
 .posthaven-share-links .posthaven-upvote:hover .posthaven-upvote-number,
-.comment-count:hover .posthaven-upvote-number {
+.posthaven-comment-count:hover .posthaven-upvote-number {
   color: #000000;
 }
+.posthaven-share-links .posthaven-upvote .posthaven-comment-label,
 .posthaven-share-links .posthaven-upvote .posthaven-upvote-label,
 .posthaven-share-links .posthaven-upvote .posthaven-upvoted-label,
-.comment-count .posthaven-upvote-label,
-.comment-count .posthaven-upvoted-label {
+.posthaven-comment-count .posthaven-comment-label,
+.posthaven-comment-count .posthaven-upvote-label,
+.posthaven-comment-count .posthaven-upvoted-label {
   color: #509DFF;
   font-size: 15px;
   line-height: 18px;
@@ -1444,7 +1446,7 @@ aside ul li {
   text-transform: uppercase;
 }
 .posthaven-share-links .posthaven-upvote .posthaven-upvote-number,
-.comment-count .posthaven-upvote-number {
+.posthaven-comment-count .posthaven-upvote-number {
   color: inherit;
   font-size: 15px;
   font-weight: bold;

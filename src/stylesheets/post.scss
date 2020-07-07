@@ -291,7 +291,7 @@ aside {
 
 
 .posthaven-share-links .posthaven-upvote,
-.comment-count {
+.posthaven-comment-count {
   align-items: center;
   border: 2px solid #DDDDDD;
   border-radius: 4px;
@@ -313,6 +313,8 @@ aside {
       color: #000000;
     }
   }
+  
+  .posthaven-comment-label,
   .posthaven-upvote-label,
   .posthaven-upvoted-label {
     color: #509DFF;
