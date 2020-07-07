@@ -1,8 +1,21 @@
 {% if post %}
-
   <header>
-
     <div class="post-title">
+    
+      {% if post.post_image %}
+        {% if post.url.current_page? %}
+          <figure>
+            <img src="{{ post.post_image.large.url }}" />
+          </figure>
+        {% else %}
+          <figure>
+            <a href="{{ post.url }}">
+              <img src="{{ post.post_image.large.url }}" />
+            </a>
+          </figure>
+        {% endif %}
+      {% endif %}
+      
       <h2>
         {% if post.private? %}
           <span class="private-indicator" title="This post is private. Only you and people you've sent the link to have access to this post.">

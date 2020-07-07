@@ -1340,6 +1340,16 @@ aside ul li {
   margin: 75px auto 20px;
   text-align: center;
 }
+.post .post-title figure {
+  margin-bottom: 20px;
+}
+.post .post-title figure a {
+  display: block;
+}
+.post .post-title figure img {
+  max-height: 60vh;
+  max-width: 100%;
+}
 .post .post-title h2 {
   font-size: 30px;
   line-height: 1.2em;

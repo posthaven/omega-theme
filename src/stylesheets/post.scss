@@ -237,6 +237,19 @@ aside {
     margin: 75px auto 20px;
     text-align: center;
 
+    figure {
+      margin-bottom: 20px;
+
+      a {
+        display: block;
+      }
+
+      img {
+        max-height: 60vh;
+        max-width: 100%;
+      }
+    }
+
     h2 {
       font-size: 30px;
       line-height: 1.2em;
